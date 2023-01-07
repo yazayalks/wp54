@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../components/Header/Header";
 import Layout from "../components/Layout/Layout";
+import Hero from "../components/Hero/Hero";
 
 
 export default function Index() {
@@ -14,6 +15,7 @@ export default function Index() {
                 <link rel="icon" type="image/svg" sizes="32x32" href="/images/logo/wp54_icon.svg"/>
             </Head>
             <Layout>
+                <Hero/>
                 <main>
 
                 </main>

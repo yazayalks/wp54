@@ -25,7 +25,7 @@ const Header = () => {
         {text: 'О нас', href: '/about'},
     ]
 
-    const isMobile = useMediaQuery(640);
+    const isMobile = useMediaQuery(1200);
     const [menuOpen, setMenuOpen] = useState(false);
     const currentMenuItemClass = isMobile ? stylesMenu.menu__item : styles.header__nav__list__item;
 
