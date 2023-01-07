@@ -1,13 +1,11 @@
 import Head from "next/head";
-import Header from "../components/Header/Header";
-import Layout from "../components/Layout/Layout";
+import Layout from "../../components/Layout/Layout";
 
-
-export default function Index() {
+const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | Main</title>
+                <title>wp54 | Prices</title>
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE-edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,9 +13,16 @@ export default function Index() {
             </Head>
             <Layout>
                 <main>
-
+                    Prices
                 </main>
             </Layout>
+
         </>
     )
-}
+};
+
+export default Index;
+
+
+
+

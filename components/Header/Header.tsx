@@ -1,41 +1,62 @@
-import {Link} from 'react-scroll';
-import styles from '../../styles/header.module.scss';
+
 import Logo from '../Logo/Logo';
+import {useMediaQuery} from "../../hooks";
+import React, {useState} from "react";
+import {useRouter} from "next/router";
+
+import styles from '../../styles/header.module.scss';
+import stylesMenu from '../../styles/mobileMenu.module.scss';
+import Link from "next/link";
 const Header = () => {
     const spy = true;
     const smooth = true;
     const offset = 140;
     const duration = 500;
+
+    const router = useRouter()
+
+    const menuItems = [
+        {text: 'Главная', href: '/'},
+        {text: 'Зал', href: '/hall'},
+        {text: 'Игровая', href: '/game'},
+        {text: 'Услуги', href: '/services'},
+        {text: 'Мероприятия', href: '/events'},
+        {text: 'Цены', href: '/prices'},
+        {text: 'О нас', href: '/about'},
+    ]
+
+    const isMobile = useMediaQuery(640);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const currentMenuItemClass = isMobile ? stylesMenu.menu__item : styles.header__nav__list__item;
+
+    const handleToggleMenu = () => {
+        (document.querySelector('body') as HTMLBodyElement).classList.toggle('overflow-hidden');
+        setMenuOpen(!menuOpen);
+    }
+
+    const closeMenu = () => {
+        (document.querySelector('body') as HTMLBodyElement).classList.remove('overflow-hidden');
+        setMenuOpen(false);
+    }
     return (
         <header>
             <div className={`container ${styles.header__container}`}>
                 <div  className={styles.header__logo}>
                     <Logo/>
                 </div>
+                {isMobile && <button className={`${styles.burger_menu} ${menuOpen ? styles.open : ''}`} onClick={handleToggleMenu}>
+                    <span/>
+                    <span/>
+                    <span/>
+                </button> }
 
-                <nav className={styles.header__nav}>
-                    <ul className={styles.header__nav__list}>
-                        <li className={styles.header__nav__list__item}>
-                            <Link href="/" to='Main' className={styles.header__nav__list__item__link}>Главная</Link>
-                        </li>
-                        <li className={styles.header__nav__list__item}>
-                            <Link href="/" to='Hall' className={styles.header__nav__list__item__link}>Зал</Link>
-                        </li>
-                        <li className={styles.header__nav__list__item}>
-                            <Link href="/" to='Game' className={styles.header__nav__list__item__link}>Игровая</Link>
-                        </li>
-                        <li className={styles.header__nav__list__item}>
-                            <Link href="/" to='Services' className={styles.header__nav__list__item__link}>Услуги</Link>
-                        </li>
-                        <li className={styles.header__nav__list__item}>
-                            <Link href="/" to='Events' className={styles.header__nav__list__item__link}>Мероприятия</Link>
-                        </li>
-                        <li className={styles.header__nav__list__item}>
-                            <Link href="/" to='Prices' className={styles.header__nav__list__item__link}>Цены</Link>
-                        </li>
-                        {/*<li className={styles.header__nav__list__item}>*/}
-                        {/*    <Link href="/" to='About' className={styles.header__nav__list__item__link}>О нас</Link>*/}
-                        {/*</li>*/}
+                <nav className={`${ isMobile ? stylesMenu.menu : styles.header__nav} ${menuOpen ? stylesMenu.open : ''}`}>
+                    <ul className={`${isMobile ? styles.list_reset : styles.header__nav__list}`}>
+                        {menuItems.map(({text, href}, index) => (
+                            <li key={href} className={styles.header__nav__list__item} >
+                                <Link href={href} className={`${styles.header__nav__list__item__link} ${(router.pathname === href) ? styles.header__nav__list__item__link__active : ''}`}>{text}</Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
             </div>

@@ -1,10 +1,8 @@
-import Link from "next/link";
-import styles from "../../styles/logo.module.scss"
 
-const Logo = () => <Link href='/'>
-    <svg className={styles.wp54_logo} preserveAspectRatio="none" x="0px" y="0px" width="75" height="75"
-         viewBox="0 0 1020 1020">
-        <path className={styles.logo} fill="white" stroke="none" d="
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="1020px" height="1020px" viewBox="0 0 1020 1020">
+<defs>
+<g id="Layer0_0_FILL">
+<path fill="#FFFFFF" stroke="none" d="
 M 900 850
 Q 900.001953125 845.855859375 897.05 842.9 894.144140625 839.998046875 890 840 885.855859375 839.998046875 882.9 842.9 879.998046875 845.855859375 880 850
 L 880 1010
@@ -445,10 +443,10 @@ L 750 360
 Q 745.855859375 359.998046875 742.9 362.9 739.998046875 365.855859375 740 370 739.998046875 374.144140625 742.9 377.05 745.855859375 380.001953125 750 380
 L 830 380
 Q 868.6375 379.991796875 903.95 365.05 938.0404296875 350.6482421875 964.35 324.35 990.64921875 298.0927734375 1005.05 264 1019.9912109375 228.6888671875 1020 190 Z"/>
+</g>
+</defs>
 
-
-    </svg>
-
-</Link>
-
-export default Logo;
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Layer0_0_FILL"/>
+</g>
+</svg>
