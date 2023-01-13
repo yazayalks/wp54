@@ -2,11 +2,16 @@
 
   .logo {
     fill: var(--icon-color);
+    transition: fill 500ms linear
   }
   &:hover {
     .logo {
       fill: var(--icon-color-hover);
+      transition: fill 500ms linear;
     }
   }
 }
 
+.link {
+  font-size: 0;
+}

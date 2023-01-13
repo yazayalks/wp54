@@ -87,6 +87,7 @@ p {
 
 .emphasis {
     color: var(--text-emphasis-color);
+    transition: color 500ms linear;
 }
 
 /*.title {*/
@@ -102,6 +103,7 @@ h2 {
     text-transform: uppercase;
     color: var(--title-color);
     text-wrap: normal;
+    transition: color 500ms linear;
 }
 
 h3 {
@@ -109,6 +111,7 @@ h3 {
     text-overflow: ellipsis;
     text-transform: uppercase;
     color: var(--title-color-over);
+    transition: color 500ms linear;
 }
 
 * {
@@ -117,9 +120,12 @@ h3 {
 
 ul {
     padding-inline-start: 0;
-    list-style-type: none;
+
 }
 
+li {
+    list-style-type: none;
+}
 
 table {
     table-layout: fixed;
@@ -149,7 +155,7 @@ table td {
     padding: 10px;
     color: var(--text-color);
     font-size: 20px;
-
+    transition: color 500ms linear, border 500ms linear;
 }
 
 
@@ -159,8 +165,7 @@ table td {
 }
 
 .container {
-    max-width: 1408px;
-    min-width: 230px;
+
     padding: 0 25px;
     margin: 0 auto;
 }
@@ -174,7 +179,7 @@ table td {
 
 @media all and (max-width: 1080px) {
     .container {
-        padding: 0 32px;
+        padding: 0 25px;
     }
 
     .sub-container {
@@ -190,7 +195,7 @@ table td {
 
 @media all and (max-width: 485px) {
     .container, .sub-container {
-        padding: 0 16px;
+        padding: 0 25px;
     }
 }
 
@@ -271,6 +276,7 @@ table td {
     background-color: var(--background-color);
     overflow-x: hidden;
     overflow-y: hidden;
+    transition: background-color 500ms linear;
 }
 
 #ball-one:active,
@@ -476,6 +482,7 @@ table td {
 
 .slick-dots li.slick-active button:before {
     color: var(--icon-color-over-hover) !important;
+    transition: color 500ms linear;
 }
 
 .slick-prev:before, .slick-prev:focus:before, .slick-next:before, .slick-next:focus:before {
@@ -484,7 +491,8 @@ table td {
 
 
 .slick-prev:hover:before, .slick-prev:focus:before, .slick-next:hover:before, .slick-next:focus:before {
-    color: var(--icon-color-over-hover) !important
+    color: var(--icon-color-over-hover) !important;
+    transition: color 500ms linear;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -500,10 +508,11 @@ table td {
 /*GALLERY*/
 
 .fslightbox-flex-centered svg path {
-    fill: var(--icon-color-over) !important
+    fill: var(--icon-color-over) !important;
 }
 
 .fslightbox-flex-centered:hover  svg path {
-    fill: var(--icon-color-over-hover) !important
+    fill: var(--icon-color-over-hover) !important;
+    transition: color 500ms linear;
 }
 

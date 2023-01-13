@@ -13,13 +13,13 @@
   background: var(--background-color);
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
-  transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+  transition: background 500ms linear, visibility .3s ease-in-out, opacity .3s ease-in-out;
   z-index: 300;
 
   &.open {
     opacity: 1;
     visibility: visible;
-    transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
+
   }
 
   &__item {

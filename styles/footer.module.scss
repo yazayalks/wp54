@@ -1,0 +1,156 @@
+.footer__inner {
+  display: block;
+}
+
+.footer__left {
+  width: 200px;
+
+}
+
+.footer__left_and_right {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.footer__info2 {
+  display: none;
+}
+
+.map {
+  iframe {
+    border-width: 0;
+  }
+
+
+}
+
+.footer__right {
+  text-align: center;
+  width: 200px;
+
+  p {
+
+    margin: 0 0 5px 0;
+    color: var(--text-color);
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__politics {
+
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+
+    column-count: 2;
+
+    &__item {
+      margin: 5px;
+      transition: opacity .3s ease-in-out;
+
+
+      &__link {
+        font-family: 'Lato';
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--link-color);
+
+        &:hover {
+          color: var(--link-color-hover);
+        }
+
+      }
+    }
+  }
+
+}
+
+.footer__copyright {
+  text-align: center;
+
+  p {
+    color: var(--text-color);
+  }
+
+}
+
+.icon {
+  margin: 5px;
+}
+
+.whatsapp__logo, .vk__logo, .instagram__logo {
+  cursor: pointer;
+
+  &:hover {
+    path {
+      fill: var(--icon-color-over-hover)
+    }
+  }
+
+  path {
+    fill: var(--icon-color)
+  }
+}
+
+
+@media all and (max-width: 900px) {
+  .footer__politics__list {
+    text-align: center;
+    column-count: 1;
+  }
+  .map {
+    display: none;
+  }
+  .footer__left {
+    margin: auto 0;
+    width: 200px;
+  }
+  .footer__info {
+    display: none;
+  }
+  .footer__info2 {
+    display: block;
+    text-align: center;
+    width: 200px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .footer__info2 {
+    display: none;
+    text-align: center;
+    width: 200px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media all and (max-width: 400px) {
+  .footer__left {
+    text-align: center;
+    width: auto;
+  }
+  .footer__right {
+    text-align: center;
+    width: auto;
+  }
+  .footer__left_and_right {
+
+    display: block;
+  }
+}
+

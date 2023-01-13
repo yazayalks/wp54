@@ -55,7 +55,7 @@ const Header = () => {
                 </button> }
 
                 <nav className={`${ isMobile ? (stylesMenu.menu) : styles.header__nav} ${(menuOpen && isMobile) ? stylesMenu.open : ''}`}>
-                    <ul className={`${isMobile ? styles.list_reset : styles.header__nav__list }`}>
+                    <ul className={`${isMobile ? styles.list_reset : styles.header__nav__list}`}>
                         {menuItems.map(({text, href}, index) => (
                             <li key={href} className={styles.header__nav__list__item} >
                                 <Link href={href} className={`${styles.header__nav__list__item__link} ${(router.pathname === href) ? styles.header__nav__list__item__link__active : ''}`}>{text}</Link>
