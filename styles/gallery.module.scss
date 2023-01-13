@@ -1,0 +1,44 @@
+
+.imageCard {
+  padding: 10px;
+  height: 500px;
+  cursor: pointer;
+}
+
+
+.imageM {
+  width: 100%;
+  display: inline-block;
+
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  object-fit: cover;
+}
+
+.nextArrow{
+  display: block;
+  background: none;
+  position: fixed;
+  z-index:100;
+  right: 50px;
+}
+
+.prevArrow {
+  display: block;
+  background: none;
+  position: fixed;
+  z-index:100;
+  left: 25px;
+}
+
+
+
+
+

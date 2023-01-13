@@ -1,0 +1,41 @@
+.switch {
+
+
+
+}
+
+.checkbox {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  -webkit-appearance: none;
+  outline: none;
+  background: var(--checkbox-background-color);
+  border-radius: 20px;
+  transition: .5s;
+
+}
+
+.checkbox:checked{
+  background: var(--checkbox-background-color);
+
+}
+
+.checkbox:before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: var(--checkbox-color);
+  transition: .5s;
+  transform: scale(1.1);
+
+}
+
+.checkbox:checked:before {
+  left: 40px;
+  background: var(--checkbox-color);
+}

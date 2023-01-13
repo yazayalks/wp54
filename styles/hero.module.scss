@@ -1,11 +1,40 @@
 
 .heroContainer{
-
-
-  height: 100vh;
+  margin-top: 25px;
+  height: 100%;
   width: 100%;
-  min-width: 230px;
+
+
 }
+
+.containerHero {
+position: relative;
+
+
+}
+
+.containerHero2{
+  position: absolute;
+  max-width: 1200px;
+  z-index: 2;
+  min-width: 230px;
+  padding-top: 4vh;
+  padding-right: 20px;
+  padding-left: 20px;
+
+}
+
+.title {
+  position: relative;
+  color: var(--title-color);
+
+}
+
+.description{
+  color: var(--text-color-over);
+  position: relative;
+}
+
 .image {
 
   width: 100%;
@@ -21,7 +50,14 @@
 
 
 .imageCard {
-  height: 700px;
+  height: 1000px;
+
   overflow: hidden;
 }
 
+@media all and (max-width: 600px) {
+  .imageCard {
+    height: 600px;
+
+  }
+}

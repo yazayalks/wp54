@@ -7,7 +7,10 @@ import {useRouter} from "next/router";
 import styles from '../../styles/header.module.scss';
 import stylesMenu from '../../styles/mobileMenu.module.scss';
 import Link from "next/link";
+import Checkbox from "../Сheckbox/Checkbox";
+
 const Header = () => {
+
     const spy = true;
     const smooth = true;
     const offset = 140;
@@ -41,24 +44,30 @@ const Header = () => {
     return (
         <header>
             <div className={`container ${styles.header__container}`}>
-                <div  className={styles.header__logo}>
+
                     <Logo/>
-                </div>
+
+                {isMobile &&<Checkbox/>}
                 {isMobile && <button className={`${styles.burger_menu} ${menuOpen ? styles.open : ''}`} onClick={handleToggleMenu}>
                     <span/>
                     <span/>
                     <span/>
                 </button> }
 
-                <nav className={`${ isMobile ? stylesMenu.menu : styles.header__nav} ${menuOpen ? stylesMenu.open : ''}`}>
-                    <ul className={`${isMobile ? styles.list_reset : styles.header__nav__list}`}>
+                <nav className={`${ isMobile ? (stylesMenu.menu) : styles.header__nav} ${(menuOpen && isMobile) ? stylesMenu.open : ''}`}>
+                    <ul className={`${isMobile ? styles.list_reset : styles.header__nav__list }`}>
                         {menuItems.map(({text, href}, index) => (
                             <li key={href} className={styles.header__nav__list__item} >
                                 <Link href={href} className={`${styles.header__nav__list__item__link} ${(router.pathname === href) ? styles.header__nav__list__item__link__active : ''}`}>{text}</Link>
                             </li>
                         ))}
+
                     </ul>
+
+
+
                 </nav>
+                {!isMobile &&<Checkbox/>}
             </div>
         </header>
     );

@@ -16,11 +16,11 @@
     justify-content: space-between;
   }
 
-  &__logo {
-    margin-right: 25px;
-  }
+
 
   &__nav {
+
+
     width: 80%;
 
     &__list {
@@ -28,6 +28,8 @@
       margin: 0;
       padding: 0;
       display: flex;
+
+      justify-content: center;
       align-items: center;
 
       &__item {
@@ -35,18 +37,18 @@
         white-space: nowrap;
 
         &__link {
-          font-family: 'Lato';
+          //font-family: 'Lato';
           font-weight: 700;
           font-size: 20px;
           text-transform: uppercase;
           margin-right: 40px;
-          color: #F2F2F2;
+          color: var(--link-color);
 
           &__active {
-            color: #16FFBD;
+            color: var(--link-color-hover);
           }
           &:hover {
-            color: #16FFBD;
+            color:  var(--link-color-hover);
           }
         }
       }
@@ -67,6 +69,7 @@
 
 .burger_menu {
   width: 64px;
+  min-width: 64px;
   height: 40px;
   position: relative;
   cursor: pointer;
@@ -80,11 +83,11 @@
 
 .burger_menu:hover {
   & span {
-    background-color: #16FFBD;
+    background-color: var(--icon-color-hover);
   }
 }
 .burger_menu span {
-  background-color: white;
+  background-color: var(--icon-color);
   position: absolute;
   border-radius: 2px;
   width: 100%;

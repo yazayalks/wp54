@@ -1,6 +1,12 @@
-.wp54_logo:hover {
-  .logo{
-    fill: #16FFBD;
+.wp54_logo {
+
+  .logo {
+    fill: var(--icon-color);
+  }
+  &:hover {
+    .logo {
+      fill: var(--icon-color-hover);
+    }
   }
 }
 

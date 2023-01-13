@@ -10,7 +10,7 @@
   height: 100vh;
   opacity: 0;
   visibility: hidden;
-  background: black;
+  background: var(--background-color);
   -webkit-backdrop-filter: blur(60px);
   backdrop-filter: blur(60px);
   transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
