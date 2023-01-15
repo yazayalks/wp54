@@ -83,6 +83,7 @@ a {
 p {
     color: var(--text-color-over);
     font-size: 20px;
+
 }
 
 .emphasis {
@@ -90,13 +91,14 @@ p {
     transition: color 500ms linear;
 }
 
-/*.title {*/
-/*    color: var(--title-color);*/
-/*    font-size: 30px;*/
+.small-text {
+    font-family: 'Lato';
+    font-weight: 700;
+    line-height: 14px;
+    font-size: 12px;
+}
 
-/*    text-transform: uppercase;*/
 
-/*}*/
 h2 {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -189,7 +191,7 @@ table td {
 
 @media all and (max-width: 800px) {
     .container, .sub-container {
-        padding: 25px;
+        padding: 0 25px;
     }
 }
 
@@ -252,7 +254,7 @@ table td {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 400;
-    src: url(/fonts/Montserrat-Regular.woff) format("woff");
+    src: url(//fonts/Montserrat-Regular.woff) format("woff");
 }
 
 /*@media (prefers-color-scheme: dark) {*/
@@ -503,6 +505,11 @@ table td {
 .slick-prev, .slick-next {
     width: 42px !important;
     height: 42px !important;
+}
+
+.slick-slide, .slick-active, .slick-current > div{
+
+
 }
 
 /*GALLERY*/

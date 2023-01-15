@@ -8,7 +8,7 @@ import React from "react";
 
 const Hero = ({heroItems, heroSettings}  : any) => {
     return (
-        <div className={styles.heroContainer2}>
+
             <Slider {...heroSettings}>
                 {heroItems.map((item: any) => (
                     <div key={item.id} className={styles.imageCard}>
@@ -24,7 +24,7 @@ const Hero = ({heroItems, heroSettings}  : any) => {
                     </div>
                 ))}
             </Slider>
-        </div>
+
     );
 };
 

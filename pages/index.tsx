@@ -21,12 +21,12 @@ const heroMainSettings = {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     appendDots: (dots: React.ReactNode) => (
-        <div style={{margin: "0px", position: 'absolute', bottom: '100px',}}>
-            <ul> {dots} </ul>
+        <div style={{margin: "0px", padding: "0px", bottom: '100px'}}>
+            <ul > {dots} </ul>
         </div>
     ),
 };
