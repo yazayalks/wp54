@@ -21,3 +21,23 @@ export const HeroMainItems = [
         url: `/images/heroMain/img-3.png`,
     },
 ];
+
+export const HeroHallItems = [
+    {
+        id: 1,
+        name: 'img-1.png',
+        title: "Зал",
+        description: "Что-то нужно написать, это помещение\n" + "15 кв.м.",
+        url: `/images/heroHall/img-1.jpg`,
+    },
+]
+
+export const HeroGameItems = [
+    {
+        id: 1,
+        name: 'img-1.png',
+        title: "Игровая",
+        description: "Здесь тоже нужно что-то написать, это помещение\n" + "10 кв.м.",
+        url: `/images/heroGame/img-1.jpg`,
+    },
+]

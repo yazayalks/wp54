@@ -11,7 +11,7 @@ import styles from '../../styles/gallery.module.scss'
 import Image from "next/image";
 
 
-const Gallery = ({galleryItems, gallerySettings, sliderSettings}: any) => {
+const Gallery = ({galleryItems, gallerySliderSettings}: any) => {
     const [lightboxController, setLightboxController] = useState({
         toggler: false,
         slide: 1
@@ -24,44 +24,7 @@ const Gallery = ({galleryItems, gallerySettings, sliderSettings}: any) => {
         });
     }
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        nextArrow: <SampleNextArrow/>,
-        prevArrow: <SamplePrevArrow/>,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
 
-                }
-            },
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
 
     const getSources = () => {
         let arr: Array<string> = [];
@@ -79,7 +42,7 @@ const Gallery = ({galleryItems, gallerySettings, sliderSettings}: any) => {
                 slide={lightboxController.slide}
                 sources={getSources()}
             />
-            <Slider {...settings}>
+            <Slider {...gallerySliderSettings}>
                 {galleryItems.map((item: any) => (
 
                     <div key={item.id} className={styles.imageCard}>

@@ -11,10 +11,10 @@ const Hero = ({heroItems, heroSettings}  : any) => {
 
             <Slider {...heroSettings}>
                 {heroItems.map((item: any) => (
-                    <div key={item.id} className={styles.imageCard}>
+                    <div key={item.id} className={styles.item}>
 
-                        <div className={styles.containerHero}>
-                            <div className={styles.containerHero2}>
+                        <div className={styles.text__container}>
+                            <div className={styles.text__container_inner}>
                                 <h2>{item.title}</h2>
                                 <p className={styles.description}>{item.description}</p>
                             </div>

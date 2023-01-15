@@ -1,14 +1,9 @@
 
-
-
-.containerHero {
-position: relative;
-
-
-
+.text__container {
+  position: relative;
 }
 
-.containerHero2{
+.text__container_inner {
   position: absolute;
   max-width: 1200px;
   z-index: 2;
@@ -19,19 +14,12 @@ position: relative;
 
 }
 
-.title {
-  position: relative;
-  color: var(--title-color);
-
-}
-
-.description{
+.description {
   color: var(--text-color-over);
   position: relative;
 }
 
 .image {
-
   width: 100%;
   height: 100%;
   display: flex;
@@ -39,20 +27,15 @@ position: relative;
   justify-content: center;
   user-select: none;
   object-fit: cover;
-
-
-
 }
 
-
-.imageCard {
+.item {
   height: 1000px;
   overflow: hidden;
 }
 
 @media all and (max-width: 600px) {
-  .imageCard {
+  .item {
     height: 600px;
-
   }
 }

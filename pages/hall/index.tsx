@@ -1,7 +1,28 @@
 import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
+import React from "react";
+import Hero from "../../components/Hero/Hero";
+import {HeroHallItems} from "../api/data/heroItems";
+import Description from "../../components/Description/Description";
+
 
 const Index = () => {
+    const heroHallSettings = {
+        dots: false,
+        arrows: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
+        appendDots: (dots: React.ReactNode) => (
+            <div style={{margin: "0px", padding: "0px", bottom: '100px'}}>
+                <ul > {dots} </ul>
+            </div>
+        ),
+    };
     return (
         <>
             <Head>
@@ -13,7 +34,8 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    Hall
+                    <Hero heroItems = {HeroHallItems} heroSettings = {heroHallSettings} />
+                    <Description descriptionName={'hall'}/>
                 </main>
             </Layout>
 

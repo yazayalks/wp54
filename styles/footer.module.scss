@@ -66,23 +66,16 @@
 
   &__politics__list {
     display: grid;
-
+    grid-template-columns: 1fr 1fr;
     margin: 25px 0 0 0;
 
     &__item__link {
-
-
       color: var(--link-color);
 
       &:hover {
         color: var(--link-color-hover);
       }
-
-
     }
-
-
-    grid-template-columns: 1fr 1fr;
 
     &__item:nth-child(1), {
       margin-bottom: 10px;
@@ -104,20 +97,16 @@
   &__copyright {
     text-align: center;
     margin: 25px 0 25px 0;
-   &__link {
 
+    &__link {
+      color: var(--link-color);
+      margin: 25px 0 25px 0;
 
-     color: var(--link-color);
-     margin: 25px 0 25px 0;
-     &:hover {
-       color: var(--link-color-hover);
-     }
-
-
-   }
+      &:hover {
+        color: var(--link-color-hover);
+      }
+    }
   }
-
-
 }
 
 .whatsapp__logo, .vk__logo, .instagram__logo {
@@ -126,261 +115,88 @@
   &:hover {
     path {
       fill: var(--icon-color-over-hover);
-
     }
   }
 
   path {
     fill: var(--icon-color);
-    //transition: fill 500ms linear;
-
   }
 }
 
 @media all and (max-width: 910px) {
-  .footer__map {
-    display: none;
-  }
+  .footer {
 
-  .footer__item:first-child {
-    display: grid;
-    grid-template-areas:
+    &__map {
+      display: none;
+    }
+
+    &__item:first-child {
+      display: grid;
+      grid-template-areas:
     "logo contacts work";
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+      grid-template-columns: 1fr 1fr 1fr;
+    }
 
-  .footer__contacts {
-    justify-self: center;
-    text-align: center;
-  }
+    &__contacts {
+      justify-self: center;
+      text-align: center;
+    }
 
-  .footer__working_mode {
-    margin-top: 0;
-    text-align: center;
-    justify-self: right;
+    &__working_mode {
+      margin-top: 0;
+      text-align: center;
+      justify-self: right;
 
-    &__inner {
-      width: auto;
+      &__inner {
+        width: auto;
+      }
     }
   }
 }
 
 @media all and (max-width: 511px) {
-  .footer__item:first-child {
-    display: grid;
-    grid-template-areas:
+  .footer {
+
+    &__item:first-child {
+      display: grid;
+      grid-template-areas:
     "logo"
     "contacts"
     "work";
-    grid-template-columns: 1fr;
-  }
-
-  .footer__logo {
-    justify-self: center;
-  }
-  .footer__contacts {
-    margin-top: 25px;
-  }
-
-  .footer__working_mode {
-    margin-top: 25px;
-    text-align: center;
-    justify-self: center;
-  }
-  .footer__politics__list {
-    display: grid;
-
-
-    grid-template-columns: 1fr;
-
-
-    &__item:nth-child(odd) {
-      text-align: center;
-      margin-bottom: 10px;
+      grid-template-columns: 1fr;
     }
 
-    &__item:nth-child(even) {
+    &__logo {
+      justify-self: center;
+    }
+
+    &__contacts {
+      margin-top: 25px;
+    }
+
+    &__working_mode {
+      margin-top: 25px;
       text-align: center;
-      margin-bottom: 10px;
+      justify-self: center;
+    }
+
+    &__politics__list {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      &__item:nth-child(odd) {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      &__item:nth-child(even) {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      &__item:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
-
-//.footer__logo {
-//  width: 33%;
-//}
-//
-//.footer__contacts__and__working_mode {
-//  display: flex;
-//  //justify-content: space-between;
-//  width: 66%;
-//}
-//.footer__contacts {
-//  width: 50%;
-//}
-//.footer__working_mode {
-//  display: flex;
-//  justify-content: end;
-//  width: 50%;
-//}
-//.footer__working_mode__inner {
-//
-//}
-
-
-//.footer__inner {
-//  display: block;
-//}
-//
-//.footer__left {
-//  width: 200px;
-//
-//}
-//
-//.footer__left_and_right {
-//  display: flex;
-//  justify-content: space-between;
-//  margin-bottom: 25px;
-//}
-//
-//.footer__info2 {
-//  display: none;
-//}
-//
-//.map {
-//  iframe {
-//    border-width: 0;
-//  }
-//
-//
-//}
-//
-//.footer__right {
-//  text-align: center;
-//  width: 200px;
-//
-//  p {
-//
-//    margin: 0 0 5px 0;
-//    color: var(--text-color);
-//  }
-//}
-//
-//.footer__contacts {
-//  display: flex;
-//  justify-content: center;
-//}
-//
-//.footer__politics {
-//
-//
-//  &__list {
-//    list-style-type: none;
-//    margin: 0;
-//    padding: 0;
-//
-//
-//    column-count: 2;
-//
-//    &__item {
-//      margin: 5px;
-//      transition: opacity .3s ease-in-out;
-//
-//
-//      &__link {
-//        font-family: 'Lato';
-//        font-weight: 700;
-//        font-size: 20px;
-//        color: var(--link-color);
-//
-//        &:hover {
-//          color: var(--link-color-hover);
-//        }
-//
-//      }
-//    }
-//  }
-//
-//}
-//
-//.footer__copyright {
-//  text-align: center;
-//
-//  p {
-//    color: var(--text-color);
-//  }
-//
-//}
-//
-//.icon {
-//  margin: 5px;
-//}
-//
-//.whatsapp__logo, .vk__logo, .instagram__logo {
-//  cursor: pointer;
-//
-//  &:hover {
-//    path {
-//      fill: var(--icon-color-over-hover)
-//    }
-//  }
-//
-//  path {
-//    fill: var(--icon-color)
-//  }
-//}
-//
-//
-//@media all and (max-width: 900px) {
-//  .footer__politics__list {
-//    text-align: center;
-//    column-count: 1;
-//  }
-//  .map {
-//    display: none;
-//  }
-//  .footer__left {
-//    margin: auto 0;
-//    width: 200px;
-//  }
-//  .footer__info {
-//    display: none;
-//  }
-//  .footer__info2 {
-//    display: block;
-//    text-align: center;
-//    width: 200px;
-//
-//    p {
-//      margin: 0;
-//    }
-//  }
-//}
-//
-//@media all and (max-width: 700px) {
-//  .footer__info2 {
-//    display: none;
-//    text-align: center;
-//    width: 200px;
-//
-//    p {
-//      margin: 0;
-//    }
-//  }
-//}
-//
-//@media all and (max-width: 400px) {
-//  .footer__left {
-//    text-align: center;
-//    width: auto;
-//  }
-//  .footer__right {
-//    text-align: center;
-//    width: auto;
-//  }
-//  .footer__left_and_right {
-//
-//    display: block;
-//  }
-//}
-

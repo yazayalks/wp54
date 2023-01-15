@@ -21,7 +21,7 @@ const heroMainSettings = {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 5000,
     pauseOnHover: true,
     appendDots: (dots: React.ReactNode) => (
@@ -31,7 +31,7 @@ const heroMainSettings = {
     ),
 };
 
-const galleryMainSettings = {
+const gallerySliderSettings = {
     dots: false,
     infinite: true,
     speed: 500,
@@ -80,10 +80,11 @@ export default function Index({heroMainItems} : any) {
                 <link rel="icon" type="image/svg" sizes="32x32" href="/images/logo/wp54_icon.svg"/>
             </Head>
             <Layout>
-                <Hero heroItems = {HeroMainItems} heroSettings = {heroMainSettings} />
+
                 <main>
-                    <Description/>
-                    <Gallery galleryItems = {GalleryMainItems}/>
+                    <Hero heroItems = {HeroMainItems} heroSettings = {heroMainSettings} />
+                    <Description descriptionName={'main'}/>
+                    <Gallery galleryItems = {GalleryMainItems} gallerySliderSettings={gallerySliderSettings }/>
                     <PriceTable/>
                 </main>
             </Layout>
