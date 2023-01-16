@@ -3,8 +3,7 @@ import React, {useState} from 'react';
 
 import FsLightbox from "fslightbox-react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 import SampleNextArrow from "../Arrows/SampleNextArrow";
 import SamplePrevArrow from "../Arrows/SamplePrevArrow";
 import styles from '../../styles/gallery.module.scss'

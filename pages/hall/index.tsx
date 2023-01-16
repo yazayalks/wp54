@@ -4,6 +4,10 @@ import React from "react";
 import Hero from "../../components/Hero/Hero";
 import {HeroHallItems} from "../api/data/heroItems";
 import Description from "../../components/Description/Description";
+import GridGallery from "../../components/GridGallery/GridGallery";
+import {gridGalleryHallItems} from "../api/data/gridGalleryItems";
+import SampleNextArrow from "../../components/Arrows/SampleNextArrow";
+import SamplePrevArrow from "../../components/Arrows/SamplePrevArrow";
 
 
 const Index = () => {
@@ -23,6 +27,20 @@ const Index = () => {
             </div>
         ),
     };
+    const gallerySliderSettings = {
+        dots: false,
+        infinite: true,
+        arrows: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
+        nextArrow: <SampleNextArrow/>,
+        prevArrow: <SamplePrevArrow/>,
+
+    };
     return (
         <>
             <Head>
@@ -36,6 +54,8 @@ const Index = () => {
                 <main>
                     <Hero heroItems = {HeroHallItems} heroSettings = {heroHallSettings} />
                     <Description descriptionName={'hall'}/>
+                    <GridGallery gridGalleryItems={gridGalleryHallItems} gridGallerySliderSettings={gallerySliderSettings}/>
+
                 </main>
             </Layout>
 

@@ -78,6 +78,8 @@ export default function Index({heroMainItems} : any) {
                 <meta httpEquiv="X-UA-Compatible" content="IE-edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <link rel="icon" type="image/svg" sizes="32x32" href="/images/logo/wp54_icon.svg"/>
+                <link rel="stylesheet" type="text/css" charSet="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+                <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
             </Head>
             <Layout>
 

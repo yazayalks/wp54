@@ -67,8 +67,10 @@ html[data-theme='light'] {
 }
 html,
 body {
-    padding: 0;
-    margin: 0;
+    padding: 0!important;
+    margin: 0!important;
+    /*padding: 0;*/
+    /*margin: 0;*/
     min-width: 250px;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -78,11 +80,15 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
 
 p {
     color: var(--text-color-over);
     font-size: 20px;
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -94,8 +100,7 @@ p {
 .small-text {
     font-family: 'Lato';
     font-weight: 700;
-    line-height: 14px;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 
@@ -106,6 +111,9 @@ h2 {
     color: var(--title-color);
     text-wrap: normal;
     transition: color 500ms linear;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding: 0;
 }
 
 h3 {
@@ -114,6 +122,8 @@ h3 {
     text-transform: uppercase;
     color: var(--title-color-over);
     transition: color 500ms linear;
+    margin: 0;
+    padding: 0;
 }
 
 * {
@@ -122,7 +132,8 @@ h3 {
 
 ul {
     padding-inline-start: 0;
-
+    margin: 0;
+    padding: 0;
 }
 
 li {
@@ -170,33 +181,13 @@ table td {
 }
 
 .sub-container {
-    max-width: 1174px;
+    max-width: 1200px;
     min-width: 230px;
     padding: 25px;
-    margin: 0 auto;
+    margin:  0 auto;
 }
 
-@media all and (max-width: 1080px) {
-    .container {
-        padding: 0 25px;
-    }
 
-    .sub-container {
-        max-width: 833px;
-    }
-}
-
-@media all and (max-width: 800px) {
-    .container, .sub-container {
-        padding: 0 25px;
-    }
-}
-
-@media all and (max-width: 485px) {
-    .container, .sub-container {
-        padding: 0 25px;
-    }
-}
 
 @font-face {
     font-display: swap;
@@ -455,24 +446,29 @@ table td {
 
 /*DELETE*/
 
-:root {
-    --heights: 50vh;
-    --widths: 100%;
-}
 
-.slider-container {
-    height: var(--heights);
-    width: var(--widths);
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-}
+
 
 
 /*TO CHANGE CUSTOM LIBRARY STYLES*/
 
 
 /*HERO*/
+.slick-slider, .slick-initialized {
+    overflow: hidden;
+}
+
+.slick-list {
+    margin-left: -15px!important;
+    margin-right: -15px!important;
+    overflow: hidden;
+}
+
+.slick-slide div {
+    display: flex;
+    outline: none
+}
+
 .slick-dots li button:before {
     color: var(--icon-color-over)!important;
     opacity: 1 !important;
@@ -504,13 +500,15 @@ table td {
     height: 42px !important;
 }
 
-.slick-slide, .slick-active, .slick-current > div{
 
-
-}
 
 /*GALLERY*/
 
+.fslightbox-container {
+    /*scale: 100%;*/
+    /*width: 100%!important;*/
+    /*margin-right: 17px!important;*/
+}
 .fslightbox-flex-centered svg path {
     fill: var(--icon-color-over) !important;
 }
@@ -519,4 +517,3 @@ table td {
     fill: var(--icon-color-over-hover) !important;
     transition: color 500ms linear;
 }
-
