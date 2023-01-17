@@ -1,9 +1,14 @@
 .priceTable {
 justify-content: center;
+
   p {
     color: var(--text-color-over)
   }
   &:first-child {
     margin-bottom: 25px;
   }
+}
+
+.priceTableContainer {
+  margin-top: 25px;
 }

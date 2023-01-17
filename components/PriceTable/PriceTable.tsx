@@ -1,9 +1,10 @@
 import styles from '../../styles/priceTable.module.scss'
+
 const PriceTable = () => {
     return (
 
-            <div className="sub-container">
-
+        <div className="sub-container">
+            <div className={styles.priceTableContainer}>
                 <table className={styles.priceTable}>
                     <caption><h2>ЦЕНЫ ПН-ЧТ</h2></caption>
                     <thead>
@@ -46,6 +47,7 @@ const PriceTable = () => {
                     </tbody>
                 </table>
             </div>
+        </div>
 
     );
 };

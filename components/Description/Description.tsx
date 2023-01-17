@@ -5,7 +5,7 @@ const Description = ({descriptionName}: any) => {
     if (descriptionName === 'main') {
         return (
             <div className="sub-container">
-                <div className={styles.description}>
+                <div className={styles.descriptionContainer}>
                     <h2> Аренда лофт помещения для мероприятий в Новосибирске</h2>
                     <p>
                         Предлагаем Вам арендовать наше помещение для проведения мероприятий:
@@ -50,7 +50,7 @@ const Description = ({descriptionName}: any) => {
     if (descriptionName === 'hall') {
         return (
             <div className="sub-container">
-                <div className={styles.description}>
+                <div className={styles.descriptionContainer}>
                 <p>Не знаю сколько квадратных метров пространства.</p>
 
                 <p>Высота потолков наверное блльшая.</p>
@@ -74,7 +74,7 @@ const Description = ({descriptionName}: any) => {
     if (descriptionName === 'game') {
         return (
             <div className="sub-container">
-                <div className={styles.description}>
+                <div className={styles.descriptionContainer}>
                 <h2>НУ ТУТ ВООБЩЕ СКАЗКА</h2>
                 <h2>Игровая имеет площадь $$$ квадратных метров.</h2>
 

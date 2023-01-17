@@ -1,9 +1,11 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import Menu from "../Header/Header";
 
 const Layout = ({children} : {children: React.ReactNode}) => (
 
         <>
+            {/*<Header/>*/}
             <Header/>
             {children}
             <Footer/>

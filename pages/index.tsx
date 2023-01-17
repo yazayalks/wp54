@@ -13,6 +13,7 @@ import SamplePrevArrow from "../components/Arrows/SamplePrevArrow";
 import Gallery from "../components/Gallery/Gallery";
 import Prices from "./prices";
 import PriceTable from "../components/PriceTable/PriceTable";
+import Services from "../components/Services/Services";
 
 const heroMainSettings = {
     dots: true,
@@ -87,6 +88,7 @@ export default function Index({heroMainItems} : any) {
                     <Hero heroItems = {HeroMainItems} heroSettings = {heroMainSettings} />
                     <Description descriptionName={'main'}/>
                     <Gallery galleryItems = {GalleryMainItems} gallerySliderSettings={gallerySliderSettings }/>
+                    <Services/>
                     <PriceTable/>
                 </main>
             </Layout>

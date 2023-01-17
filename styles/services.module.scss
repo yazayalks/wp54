@@ -1,0 +1,31 @@
+.servicesContainer {
+ margin-top: 25px;
+justify-content: center;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+
+.icon {
+  cursor: pointer;
+  width: 130px;
+  height: 130px;
+  //margin: 0 10px;
+  padding: 15px;
+  background-color: var(--background-color-over);
+  transition: background-color 500ms linear;
+
+  &:hover {
+    path{
+    fill: var(--icon-color-hover);
+    }
+  }
+
+  path {
+    fill: var(--icon-color);
+    transition: fill 300ms linear;
+
+  }
+}

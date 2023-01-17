@@ -34,7 +34,7 @@ const Gallery = ({galleryItems, gallerySliderSettings}: any) => {
     }
 
     return (
-        <>
+        <div className={styles.galleryContainer}>
 
             <FsLightbox
                 toggler={lightboxController.toggler}
@@ -51,7 +51,7 @@ const Gallery = ({galleryItems, gallerySliderSettings}: any) => {
 
                 ))}
             </Slider>
-        </>
+        </div>
     );
 };
 

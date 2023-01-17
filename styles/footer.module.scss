@@ -116,6 +116,7 @@
 .whatsapp__logo, .vk__logo, .instagram__logo {
   cursor: pointer;
 
+
   &:hover {
     path {
       fill: var(--icon-color-over-hover);
@@ -124,6 +125,7 @@
 
   path {
     fill: var(--icon-color);
+    transition: fill 300ms linear;
   }
 }
 

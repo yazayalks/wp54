@@ -1,8 +1,18 @@
 
-/*DARK THEME*/
 
+.services {
+     background-color: yellow!important;
+ }
+
+
+
+
+
+
+/*DARK THEME*/
 html[data-theme='dark'] {
     --background-color: #000000;
+    --background-color-over: rgba(0,0,0,0.7);
 
     --button-text-color: #ffffff;
     --button-background-color: #1B473C;
@@ -36,6 +46,7 @@ html[data-theme='dark'] {
 /*LIGHT THEME*/
 html[data-theme='light'] {
     --background-color: #ffffff;
+    --background-color-over: rgba(255,255,255,0.7);
 
     --button-text-color: #ffffff;
     --button-background-color: #2C1B47;
@@ -69,10 +80,8 @@ html,
 body {
     padding: 0!important;
     margin: 0!important;
-    /*padding: 0;*/
-    /*margin: 0;*/
     min-width: 250px;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: 'Roboto', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 
 }
@@ -89,6 +98,7 @@ p {
     font-size: 20px;
     margin: 0;
     padding: 0;
+    transition: color 300ms linear;
 
 }
 
@@ -98,11 +108,48 @@ p {
 }
 
 .small-text {
-    font-family: 'Lato';
     font-weight: 700;
     font-size: 16px;
+    transition: color 300ms linear;
 }
 
+.big-text {
+    font-weight: 700;
+    font-size: 24px;
+    transition: color 300ms linear;
+}
+
+
+h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-size: 5vw;
+    text-wrap: normal;
+    transition: color 500ms linear;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+
+@media all and (max-width: 1025px) {
+    h1 {
+        font-size: 6vw;
+    }
+}
+
+@media all and (max-width: 759px) {
+    h1 {
+        font-size: 10vw;
+    }
+}
+@media all and (max-width: 320px) {
+    h1 {
+        font-size: 2em;
+    }
+}
 
 h2 {
     overflow: hidden;
@@ -122,9 +169,10 @@ h3 {
     text-transform: uppercase;
     color: var(--title-color-over);
     transition: color 500ms linear;
-    margin: 0;
+    margin:  0;
     padding: 0;
 }
+
 
 * {
     box-sizing: border-box;
@@ -143,14 +191,6 @@ li {
 table {
     table-layout: fixed;
     width: 100%;
-
-
-
-
-
-}
-.separate {
-    border-collapse: separate;
 }
 
 thead th:nth-child(1) {
@@ -171,9 +211,6 @@ table td {
     transition: color 500ms linear, border 500ms linear;
 }
 
-
-
-
 .container {
 
     padding: 0 25px;
@@ -183,78 +220,9 @@ table td {
 .sub-container {
     max-width: 1200px;
     min-width: 230px;
-    padding: 25px;
+    padding: 0 25px;
     margin:  0 auto;
 }
-
-
-
-@font-face {
-    font-display: swap;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/fonts/Lato-Regular.woff) format("woff");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 500;
-    src: url(/fonts/Lato-Medium.woff) format("woff");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 700;
-    src: url(/fonts/Lato-Bold.woff) format("woff");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 700;
-    src: url(/fonts/Raleway-Bold.woff) format("woff");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 600;
-    src: url(/fonts/Raleway-SemiBold.woff) format("woff");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: Raleway;
-    font-style: normal;
-    font-weight: 400;
-    src: url(/fonts/Raleway-Regular.woff) format("woff");
-}
-
-@font-face {
-    font-display: swap;
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 400;
-    src: url(//fonts/Montserrat-Regular.woff) format("woff");
-}
-
-/*@media (prefers-color-scheme: dark) {*/
-/*    html {*/
-/*        color-scheme: dark;*/
-/*    }*/
-
-/*    body {*/
-
-/*        background: black;*/
-/*    }*/
-/*}*/
 
 .background-animation {
     position: fixed;
@@ -443,16 +411,7 @@ table td {
     }
 }
 
-
-/*DELETE*/
-
-
-
-
-
 /*TO CHANGE CUSTOM LIBRARY STYLES*/
-
-
 /*HERO*/
 .slick-slider, .slick-initialized {
     overflow: hidden;
@@ -500,15 +459,7 @@ table td {
     height: 42px !important;
 }
 
-
-
 /*GALLERY*/
-
-.fslightbox-container {
-    /*scale: 100%;*/
-    /*width: 100%!important;*/
-    /*margin-right: 17px!important;*/
-}
 .fslightbox-flex-centered svg path {
     fill: var(--icon-color-over) !important;
 }

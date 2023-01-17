@@ -15,8 +15,8 @@ const Hero = ({heroItems, heroSettings}  : any) => {
 
                         <div className={styles.text__container}>
                             <div className={styles.text__container_inner}>
-                                <h2>{item.title}</h2>
-                                <p className={styles.description}>{item.description}</p>
+                                <h1>{item.title}</h1>
+                                <p className="big-text">{item.description}</p>
                             </div>
                         </div>
                         <Image className={styles.image} src={item.url} width={1900}

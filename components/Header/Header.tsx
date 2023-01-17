@@ -1,76 +1,145 @@
-
-import Logo from '../Logo/Logo';
-import {useMediaQuery} from "../../hooks";
+import styles from '../../styles/header.module.scss'
+import Logo from "../Logo/Logo";
 import React, {useState} from "react";
-import {useRouter} from "next/router";
-
-import styles from '../../styles/header.module.scss';
-import stylesMenu from '../../styles/mobileMenu.module.scss';
-import Link from "next/link";
 import Checkbox from "../Сheckbox/Checkbox";
+
+import Link from "next/link";
+import {useRouter} from "next/router";
 
 const Header = () => {
 
-    const spy = true;
-    const smooth = true;
-    const offset = 140;
-    const duration = 500;
+        const {pathname} = useRouter()
+        const menuItems = [
+            {text: 'Главная', href: '/', type: 'link'},
+            {text: 'Зал', href: '/hall', type: 'link'},
+            {text: 'Игровая', href: '/game', type: 'link'},
+            {text: 'Услуги', href: 'services', type: 'submenu'},
+            {text: 'Мероприятия', href: 'events', type: 'submenu'},
+            {text: 'Цены', href: 'prices', type: 'submenu'},
+            {text: 'О нас', href: '/about', type: 'link'},
+        ]
 
-    const router = useRouter()
+        const subMenuServicesItems = [
+            {text: 'Оборудование', href: '/equipment', type: 'link'},
+            {text: 'Караоке', href: '/karaoke', type: 'link'},
+            {text: 'Проектор', href: '/projector', type: 'link'},
+            {text: 'Кальян', href: '/hookah', type: 'link'},
+        ]
 
-    const menuItems = [
-        {text: 'Главная', href: '/'},
-        {text: 'Зал', href: '/hall'},
-        {text: 'Игровая', href: '/game'},
-        {text: 'Услуги', href: '/services'},
-        {text: 'Мероприятия', href: '/events'},
-        {text: 'Цены', href: '/prices'},
-        {text: 'О нас', href: '/about'},
-    ]
+        const subMenuEventsItems = [
+            {text: 'Дискотеки', href: '/discos', type: 'link'},
+            {text: 'Вечеринки', href: '/parties', type: 'link'},
+            {text: 'Корпоративы', href: '/corporate', type: 'link'},
+            {text: 'Дни рождения', href: '/birthdays', type: 'link'},
+            {text: 'Фильмы', href: '/movies', type: 'link'},
+        ]
 
-    const isMobile = useMediaQuery(1200);
-    const [menuOpen, setMenuOpen] = useState(false);
-    const currentMenuItemClass = isMobile ? stylesMenu.menu__item : styles.header__nav__list__item;
+        const subMenuPricesItems = [
+            {text: 'Основные цены', href: '/basic-prices', type: 'link'},
+            {text: 'Новогодние цены', href: '/  new-year-prices', type: 'link'},
+            {text: 'Акции', href: '/stock', type: 'link'},
 
-    const handleToggleMenu = () => {
-        (document.querySelector('body') as HTMLBodyElement).classList.toggle('overflow-hidden');
-        setMenuOpen(!menuOpen);
-    }
+        ]
 
-    const closeMenu = () => {
-        (document.querySelector('body') as HTMLBodyElement).classList.remove('overflow-hidden');
-        setMenuOpen(false);
-    }
-    return (
-        <header>
-            <div className={`container ${styles.header__container}`}>
+        function getSubMenuItems(href: any) {
+            if (href === 'services') {
+                return subMenuServicesItems;
+            }
+            if (href === 'events') {
+                return subMenuEventsItems;
+            }
+            if (href === 'prices') {
+                return subMenuPricesItems;
+            }
+            return [];
+        }
 
+        function handleToggleSubMenu(href: any) {
+            if (href === 'services') {
+                setSubMenuServicesOpen(!subMenuServicesOpen)
+                setSubMenuEventsOpen(false)
+                setSubMenuPricesOpen(false)
+            }
+            if (href === 'events') {
+                setSubMenuEventsOpen(!subMenuEventsOpen)
+                setSubMenuPricesOpen(false)
+                setSubMenuServicesOpen(false)
+            }
+            if (href === 'prices') {
+                setSubMenuPricesOpen(!subMenuPricesOpen)
+                setSubMenuServicesOpen(false)
+                setSubMenuEventsOpen(false)
+            }
+        }
+
+
+        const handleToggleMenu = () => {
+            setMenuOpen(!menuOpen);
+        }
+
+
+        const [menuOpen, setMenuOpen] = useState(false);
+        const [subMenuServicesOpen, setSubMenuServicesOpen] = useState(false);
+        const [subMenuEventsOpen, setSubMenuEventsOpen] = useState(false);
+        const [subMenuPricesOpen, setSubMenuPricesOpen] = useState(false);
+        console.log('subMenuServicesOpen ' + subMenuServicesOpen)
+    console.log('subMenuEventsOpen ' + subMenuEventsOpen)
+    console.log('subMenuPricesOpen ' + subMenuPricesOpen)
+        return (
+            <header>
+
+                <div className={`container ${styles.header__container}`}>
                     <Logo/>
 
-                {isMobile &&<Checkbox/>}
-                {isMobile && <button className={`${styles.burger_menu} ${menuOpen ? styles.open : ''}`} onClick={handleToggleMenu}>
-                    <span/>
-                    <span/>
-                    <span/>
-                </button> }
+                    <nav className={`${styles.header__nav} ${(menuOpen) ? styles.open : ''}`}>
+                        <ul className={styles.header__nav__list}>
+                            {menuItems.map((item, index) => (
+                                item.type === 'link' ?
+                                    <li key={item.href} className={styles.header__nav__list__item}>
+                                        <Link href={item.href}
+                                              className={`${styles.header__nav__list__item__link} ${(pathname === item.href) ? styles.header__nav__list__item__link__active : ''}`}>{item.text}</Link>
+                                    </li>
+                                    :
+                                    <div key={item.href}>
+                                        <div onClick={() => handleToggleSubMenu(item.href)}
+                                             className={`${styles.header__nav__list__item__link} ${(pathname === item.href) ? styles.header__nav__list__item__link__active : ''}`}>{item.text}</div>
+                                        <ul className={`
+                                        ${styles.sub_menu__nav__list}
+                                        ${(item.href === 'services') ? styles.sub_menu__nav__list__services : ''} 
+                                        ${(item.href === 'events') ? styles.sub_menu__nav__list__events : ''} 
+                                        ${(item.href === 'prices') ? styles.sub_menu__nav__list__prices : ''} 
+                                           ${styles.sub_menu__nav__list__open}
+                                        ${subMenuServicesOpen ? styles.open__services : ''}
+                                        ${subMenuEventsOpen ? styles.open__events : ''}
+                                        ${subMenuPricesOpen ? styles.open__prices : ''}`}>
+                                            {(getSubMenuItems(item.href)).map(({text, href, type}, index) => (
 
-                <nav className={`${ isMobile ? (stylesMenu.menu) : styles.header__nav} ${(menuOpen && isMobile) ? stylesMenu.open : ''}`}>
-                    <ul className={`${isMobile ? styles.list_reset : styles.header__nav__list}`}>
-                        {menuItems.map(({text, href}, index) => (
-                            <li key={href} className={styles.header__nav__list__item} >
-                                <Link href={href} className={`${styles.header__nav__list__item__link} ${(router.pathname === href) ? styles.header__nav__list__item__link__active : ''}`}>{text}</Link>
-                            </li>
-                        ))}
+                                                <li key={href} >
+                                                    <Link href={href}
+                                                          className={styles.header__nav__list__item__link}>{text} </Link>
 
-                    </ul>
+                                                </li>
 
+                                            ))}
+                                        </ul>
+                                    </div>
 
+                            ))}
 
-                </nav>
-                {!isMobile &&<Checkbox/>}
-            </div>
-        </header>
-    );
-};
+                        </ul>
+                    </nav>
+                    <Checkbox/>
+
+                    <button className={`${styles.burger_menu} ${menuOpen ? styles.open : ''}`} onClick={handleToggleMenu}>
+                        <span/>
+                        <span/>
+                        <span/>
+                    </button>
+                </div>
+
+            </header>
+        );
+    }
+;
+
 export default Header;
-

@@ -4,13 +4,15 @@
 }
 
 .text__container_inner {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  max-width: 1200px;
+
   z-index: 2;
   min-width: 230px;
-  padding-top: 4vh;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-top: 25px;
+  padding-right: 45px;
+  padding-left: 45px;
 
 }
 
