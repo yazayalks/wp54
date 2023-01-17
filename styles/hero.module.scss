@@ -1,15 +1,28 @@
 
 .text__container {
   position: relative;
+
+}
+
+.text__container__center {
+  text-align: center;
+}
+
+.text__container__left {
+  text-align: left;
+}
+
+.text__container__right {
+  text-align: right;
 }
 
 .text__container_inner {
   display: flex;
   flex-direction: column;
   position: absolute;
-
   z-index: 2;
   min-width: 230px;
+  width: 100%;
   padding-top: 25px;
   padding-right: 45px;
   padding-left: 45px;

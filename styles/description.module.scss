@@ -1,7 +1,13 @@
-.descriptionContainer{
+.description__container{
   margin-top: 25px;
   text-align: center;
   height: auto;
+  &__left{
+    text-align: left;
+  }
+  &__right{
+    text-align: right;
+  }
 
   p{
     color: var(--text-color)

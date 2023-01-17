@@ -41,3 +41,31 @@ export const HeroGameItems = [
         url: `/images/heroGame/img-1.jpg`,
     },
 ]
+export const HeroDiscosItems = [
+    {
+        id: 1,
+        name: 'img-1.png',
+        title: "Дискотека для твоей компании",
+        description: "Скажи Welcome тусовке",
+        url: `/images/heroDiscos/img1.jpg`,
+    },
+]
+
+export const HeroPartiesItems = [
+    {
+        id: 1,
+        name: 'img-1.png',
+        title: "Вечеринки",
+        description: "",
+        url: `/images/heroParties/img1.jpg`,
+    },
+]
+export const HeroCorporateItems = [
+    {
+        id: 1,
+        name: 'img-1.png',
+        title: "Корпоративы",
+        description: "",
+        url: `/images/heroCorporate/img1.jpg`,
+    },
+]

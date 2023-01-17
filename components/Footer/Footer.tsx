@@ -75,7 +75,7 @@ const Footer = () => {
                     </div>
                     <div className={styles.footer__item}>
                         <div className={styles.footer__copyright}>
-                            <a className={`${styles.footer__copyright__link} small-text`} href='https://vk.com/ya_za_ya' target="_blank">
+                            <a className={`${styles.footer__copyright__link} small-text`} href='https://vk.com/ya_za_ya' >
                                 © 2022-2023 «lks studio»
                             </a>
 

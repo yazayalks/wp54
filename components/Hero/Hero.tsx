@@ -6,24 +6,29 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import React from "react";
 
-const Hero = ({heroItems, heroSettings}  : any) => {
+const Hero = ({heroItems, heroSettings, textAlign}: any) => {
     return (
 
-            <Slider {...heroSettings}>
-                {heroItems.map((item: any) => (
-                    <div key={item.id} className={styles.item}>
+        <Slider {...heroSettings}>
+            {heroItems.map((item: any) => (
+                <div key={item.id} className={styles.item}>
 
-                        <div className={styles.text__container}>
-                            <div className={styles.text__container_inner}>
-                                <h1>{item.title}</h1>
-                                <p className="big-text">{item.description}</p>
-                            </div>
+                    <div className={`
+                        ${styles.text__container}
+                            ${textAlign === 'center' ? styles.text__container__center : ''}
+                            ${textAlign === 'left' ? styles.text__container__left : ''}
+                            ${textAlign === 'right' ? styles.text__container__right : ''}
+                            `}>
+                        <div className={styles.text__container_inner}>
+                            <h1>{item.title}</h1>
+                            <p className="big-text">{item.description}</p>
                         </div>
-                        <Image className={styles.image} src={item.url} width={1900}
-                               height={840} alt={item.name}/>
                     </div>
-                ))}
-            </Slider>
+                    <Image className={styles.image} src={item.url} width={1900}
+                           height={840} alt={item.name}/>
+                </div>
+            ))}
+        </Slider>
 
     );
 };

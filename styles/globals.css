@@ -157,7 +157,7 @@ h2 {
     text-transform: uppercase;
     color: var(--title-color);
     text-wrap: normal;
-    transition: color 500ms linear;
+    transition: color 300ms linear;
     margin-top: 0;
     margin-bottom: 25px;
     padding: 0;
@@ -168,7 +168,7 @@ h3 {
     text-overflow: ellipsis;
     text-transform: uppercase;
     color: var(--title-color-over);
-    transition: color 500ms linear;
+    transition: color 300ms linear;
     margin:  0;
     padding: 0;
 }
@@ -222,6 +222,10 @@ table td {
     min-width: 230px;
     padding: 0 25px;
     margin:  0 auto;
+}
+
+.text-container {
+
 }
 
 .background-animation {

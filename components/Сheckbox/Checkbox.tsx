@@ -1,5 +1,5 @@
 import styles from '../../styles/checkbox.module.scss'
-import {useTheme} from "../../hooks/use-theme";
+import {useTheme} from "../../hooks/useTheme";
 import {useState} from "react";
 
 const Checkbox = () => {
