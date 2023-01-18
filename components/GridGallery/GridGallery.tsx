@@ -28,7 +28,8 @@ const GridGallery = ({gridGalleryItems, gridGallerySliderSettings}: any) => {
         }
         return arr;
     }
-    return (<div className={styles.gridGalleryContainer}>
+    return (
+        <div className={styles.gridGalleryContainer}>
             <FsLightbox
                 toggler={lightboxController.toggler}
                 slide={lightboxController.slide}

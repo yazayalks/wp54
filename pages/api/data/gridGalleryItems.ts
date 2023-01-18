@@ -206,3 +206,92 @@ export const gridGalleryCorporateItems = [
         url: `/images/galleryCorporate/img8.jpg`
     },
 ];
+export const gridGalleryBirthdaysItems = [
+    {
+        id: 1,
+        name: 'img1.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryBirthdays/img1.jpg`
+    },
+    {
+        id: 2,
+        name: 'img2.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryBirthdays/img2.jpg`
+    },
+    {
+        id: 3,
+        name: 'img3.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryBirthdays/img3.jpg`
+    },
+    {
+        id: 4,
+        name: 'img4.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryBirthdays/img4.jpg`
+    },
+    {
+        id: 5,
+        name: 'img5.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryBirthdays/img5.jpg`
+    },
+    {
+        id: 6,
+        name: 'img6.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryBirthdays/img6.jpg`
+    },
+    {
+        id: 7,
+        name: 'img7.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryBirthdays/img7.jpg`
+    },
+    {
+        id: 8,
+        name: 'img8.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryBirthdays/img8.jpg`
+    },
+];
+export const gridGalleryMoviesItems = [
+    {
+        id: 1,
+        name: 'img1.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryMovies/img1.jpg`
+    },
+    {
+        id: 2,
+        name: 'img2.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryMovies/img2.jpg`
+    },
+    {
+        id: 3,
+        name: 'img3.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryMovies/img3.jpg`
+    },
+    {
+        id: 4,
+        name: 'img4.jpg',
+        title: '',
+        description: '',
+        url: `/images/galleryMovies/img4.jpg`
+    },
+
+];

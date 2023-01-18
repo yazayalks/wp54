@@ -14,6 +14,7 @@ import Gallery from "../components/Gallery/Gallery";
 import Prices from "./prices";
 import PriceTable from "../components/PriceTable/PriceTable";
 import Services from "../components/Services/Services";
+import Contact from "../components/Contact/Contact";
 
 const heroMainSettings = {
     dots: true,
@@ -90,6 +91,7 @@ export default function Index({heroMainItems} : any) {
                     <Gallery galleryItems = {GalleryMainItems} gallerySliderSettings={gallerySliderSettings }/>
                     <Services/>
                     <PriceTable/>
+                    <Contact/>
                 </main>
             </Layout>
         </>

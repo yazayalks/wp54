@@ -69,3 +69,22 @@ export const HeroCorporateItems = [
         url: `/images/heroCorporate/img1.jpg`,
     },
 ]
+export const HeroBirthdaysItems = [
+    {
+        id: 1,
+        name: 'img1.png',
+        title: "Дни рождения",
+        description: "",
+        url: `/images/heroBirthdays/img1.jpg`,
+    },
+]
+export const HeroMoviesItems = [
+    {
+        id: 1,
+        name: 'img1.png',
+        title: "Киновечер",
+        description: "",
+        url: `/images/heroMovies/img1.jpg`,
+    },
+]
+

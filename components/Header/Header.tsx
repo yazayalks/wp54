@@ -36,7 +36,7 @@ const Header = () => {
 
         const subMenuPricesItems = [
             {text: 'Основные цены', href: '/basic-prices', type: 'link'},
-            {text: 'Новогодние цены', href: '/  new-year-prices', type: 'link'},
+            {text: 'Новогодние цены', href: '/new-year-prices', type: 'link'},
             {text: 'Акции', href: '/stock', type: 'link'},
 
         ]

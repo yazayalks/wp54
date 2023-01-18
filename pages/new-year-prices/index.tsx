@@ -2,12 +2,14 @@ import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
 import Description from "../../components/Description/Description";
 import React from "react";
+import Services from "../../components/Services/Services";
+import PriceTable from "../../components/PriceTable/PriceTable";
 
 const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | About</title>
+                <title>wp54 | New year prices</title>
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE-edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,7 +17,9 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <Description descriptionName={'about'}/>
+                    <Description descriptionName={'new-year-prices'}/>
+
+                    <Services/>
                 </main>
             </Layout>
 
@@ -24,7 +28,5 @@ const Index = () => {
 };
 
 export default Index;
-
-
 
 

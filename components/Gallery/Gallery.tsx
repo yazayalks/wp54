@@ -4,8 +4,7 @@ import React, {useState} from 'react';
 import FsLightbox from "fslightbox-react";
 import Slider from "react-slick";
 
-import SampleNextArrow from "../Arrows/SampleNextArrow";
-import SamplePrevArrow from "../Arrows/SamplePrevArrow";
+
 import styles from '../../styles/gallery.module.scss'
 import Image from "next/image";
 
