@@ -1,13 +1,13 @@
 import styles from '../../styles/checkbox.module.scss'
-import {useTheme} from "../../hooks/useTheme";
-import {useState} from "react";
+import { useTheme } from 'next-themes'
 
 const Checkbox = () => {
     const {theme, setTheme} = useTheme();
-    // const [checked, setChecked] = useState(true);
+
     const handleThemeClick = () => {
-        setTheme(theme == 'dark' ? 'light' : 'dark')
-        // setChecked(!checked)
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        setTheme(currentTheme == 'dark' ? 'light' : 'dark')
+
     }
     return (
         <div className={styles.switch}>
