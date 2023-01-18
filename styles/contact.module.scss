@@ -1,3 +1,48 @@
+.contact__container {
+  margin-top: 25px;
+}
+
 .contact__inner {
+  display: grid;
+
+  grid-template-areas:
+    "d f"
+    "m f";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 
 }
+.contact__description {
+  grid-area: d;
+  
+}
+
+.contact__contacts_messengers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  grid-area: m;
+
+
+
+}
+
+.contact__form {
+  grid-area: f;
+
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+@media all and (max-width: 800px) {
+  .contact__inner {
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
+

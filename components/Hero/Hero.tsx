@@ -21,7 +21,7 @@ const Hero = ({heroItems, heroSettings, textAlign}: any) => {
                             `}>
                         <div className={styles.text__container_inner}>
                             <h1>{item.title}</h1>
-                            <p className="big-text">{item.description}</p>
+                            <p className="big-text white-text">{item.description}</p>
                         </div>
                     </div>
                     <Image className={styles.image} src={item.url} width={1900}

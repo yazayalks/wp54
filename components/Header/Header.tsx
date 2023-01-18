@@ -82,9 +82,7 @@ const Header = () => {
         const [subMenuServicesOpen, setSubMenuServicesOpen] = useState(false);
         const [subMenuEventsOpen, setSubMenuEventsOpen] = useState(false);
         const [subMenuPricesOpen, setSubMenuPricesOpen] = useState(false);
-        console.log('subMenuServicesOpen ' + subMenuServicesOpen)
-    console.log('subMenuEventsOpen ' + subMenuEventsOpen)
-    console.log('subMenuPricesOpen ' + subMenuPricesOpen)
+
         return (
             <header>
 

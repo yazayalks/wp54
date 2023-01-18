@@ -1,7 +1,5 @@
 .description__container{
-  margin-top: 25px;
   text-align: center;
-  height: auto;
   &__left{
     text-align: left;
   }
@@ -9,6 +7,11 @@
     text-align: right;
   }
 
+
+
+}
+.description__container, .description__container__left,.description__container__right {
+  margin-top: 25px;
   p{
     color: var(--text-color)
   }
@@ -17,5 +20,24 @@
     margin-top: 15px;
     margin-bottom: 15px;
   }
+}
 
+.description__title {
+  text-align: center;
+  &__left {
+    text-align: left;
+  }
+  &__right {
+    text-align: right;
+  }
+}
+
+.description__text {
+  text-align: center;
+  &__left {
+    text-align: left;
+  }
+  &__right {
+    text-align: right;
+  }
 }

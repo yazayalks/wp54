@@ -1,0 +1,23 @@
+.contacts_messengers__inner {
+  white-space: nowrap;
+}
+
+.icon {
+  cursor: pointer;
+
+  &:hover {
+    path {
+      fill: var(--icon-color-over-hover);
+    }
+  }
+
+  path {
+    fill: var(--icon-color);
+    transition: fill 300ms linear;
+  }
+
+  &:nth-child(2) {
+    margin: 0 15px;
+  }
+
+}

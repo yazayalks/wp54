@@ -1,27 +1,22 @@
 
-
 .services {
-     background-color: yellow!important;
- }
-
-
-
-
+    background-color: yellow !important;
+}
 
 
 /*DARK THEME*/
 html[data-theme='dark'] {
     --background-color: #000000;
-    --background-color-over: rgba(0,0,0,0.7);
+    --background-color-over: rgba(0, 0, 0, 0.7);
 
     --button-text-color: #ffffff;
     --button-background-color: #1B473C;
     --button-background-color-hover: #16FFBD;
 
-    --icon-color:#ffffff;
+    --icon-color: #ffffff;
     --icon-color-hover: #16FFBD;
 
-    --icon-color-over:#ffffff;
+    --icon-color-over: #ffffff;
     --icon-color-over-hover: #16FFBD;
 
     --text-color: #ffffff;
@@ -46,16 +41,16 @@ html[data-theme='dark'] {
 /*LIGHT THEME*/
 html[data-theme='light'] {
     --background-color: #ffffff;
-    --background-color-over: rgba(255,255,255,0.7);
+    --background-color-over: rgba(255, 255, 255, 0.7);
 
     --button-text-color: #ffffff;
     --button-background-color: #2C1B47;
     --button-background-color-hover: #9816FF;
 
-    --icon-color:#000000;
+    --icon-color: #000000;
     --icon-color-hover: #9816FF;
 
-    --icon-color-over:#ffffff;
+    --icon-color-over: #ffffff;
     --icon-color-over-hover: #9816FF;
 
     --text-color: #000000;
@@ -76,10 +71,11 @@ html[data-theme='light'] {
 
     --border-color: #000000;
 }
+
 html,
 body {
-    padding: 0!important;
-    margin: 0!important;
+    padding: 0 !important;
+    margin: 0 !important;
     min-width: 250px;
     font-family: 'Roboto', BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -87,14 +83,20 @@ body {
 }
 
 a {
-    color: inherit;
+    color: var(--text-color);
+    font-size: 20px;
     text-decoration: none;
     margin: 0;
     padding: 0;
 }
 
+a:hover {
+    color: var(--link-color-hover);
+    transition: color 300ms linear;
+}
+
 p {
-    color: var(--text-color-over);
+    color: var(--text-color);
     font-size: 20px;
     margin: 0;
     padding: 0;
@@ -102,13 +104,17 @@ p {
 
 }
 
-.emphasis {
+.emphasis-text  {
     color: var(--text-emphasis-color);
     transition: color 500ms linear;
 }
 
+.white-text {
+    color: var(--text-color-over);
+}
+
 .small-text {
-    font-weight: 700;
+
     font-size: 16px;
     transition: color 300ms linear;
 }
@@ -119,6 +125,14 @@ p {
     transition: color 300ms linear;
 }
 
+strong {
+    font-weight: 700;
+}
+
+.clear-li-text {
+    list-style-type: none;
+    margin-left: 0;
+}
 
 h1 {
     overflow: hidden;
@@ -145,6 +159,7 @@ h1 {
         font-size: 10vw;
     }
 }
+
 @media all and (max-width: 320px) {
     h1 {
         font-size: 2em;
@@ -169,7 +184,7 @@ h3 {
     text-transform: uppercase;
     color: var(--title-color-over);
     transition: color 300ms linear;
-    margin:  0;
+    margin: 0;
     padding: 0;
 }
 
@@ -185,7 +200,8 @@ ul {
 }
 
 li {
-    list-style-type: none;
+    margin-left: 25px;
+    list-style-type: disc;
 }
 
 table {
@@ -201,6 +217,7 @@ thead th:nth-child(1) {
 thead th:nth-child(2) {
     width: 50%;
 }
+
 table th,
 table td {
     text-align: center;
@@ -221,11 +238,7 @@ table td {
     max-width: 1200px;
     min-width: 230px;
     padding: 0 25px;
-    margin:  0 auto;
-}
-
-.text-container {
-
+    margin: 0 auto;
 }
 
 .background-animation {
@@ -419,11 +432,12 @@ table td {
 /*HERO*/
 .slick-slider, .slick-initialized {
     overflow: hidden;
+    user-select: auto !important;
 }
 
 .slick-list {
-    margin-left: -15px!important;
-    margin-right: -15px!important;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
     overflow: hidden;
 }
 
@@ -433,7 +447,7 @@ table td {
 }
 
 .slick-dots li button:before {
-    color: var(--icon-color-over)!important;
+    color: var(--icon-color-over) !important;
     opacity: 1 !important;
     font-size: 20px !important;
 }
@@ -468,7 +482,7 @@ table td {
     fill: var(--icon-color-over) !important;
 }
 
-.fslightbox-flex-centered:hover  svg path {
+.fslightbox-flex-centered:hover svg path {
     fill: var(--icon-color-over-hover) !important;
     transition: color 500ms linear;
 }

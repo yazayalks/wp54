@@ -25,15 +25,6 @@
     grid-area: work;
     text-align: center;
     justify-self: right;
-
-    &__inner {
-      width: 180px;
-    }
-
-    p {
-      color: var(--text-color);
-      margin: 0;
-    }
   }
 
   &__map {
@@ -45,7 +36,7 @@
     }
   }
 
-  &__contacts {
+  &__contacts_messengers {
     justify-self: right;
     text-align: center;
 
@@ -74,13 +65,17 @@
     margin: 25px 0 0 0;
 
     &__item__link {
+
       color: var(--link-color);
 
       &:hover {
         color: var(--link-color-hover);
       }
     }
-
+  &__item {
+    list-style-type: none;
+    margin-left: 0;
+  }
     &__item:nth-child(1), {
       margin-bottom: 10px;
     }
@@ -143,7 +138,7 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
 
-    &__contacts {
+    &__contacts_messengers {
       justify-self: center;
       text-align: center;
     }
@@ -153,9 +148,6 @@
       text-align: center;
       justify-self: right;
 
-      &__inner {
-        width: auto;
-      }
     }
   }
 }
@@ -176,7 +168,7 @@
       justify-self: center;
     }
 
-    &__contacts {
+    &__contacts_messengers {
       margin-top: 25px;
     }
 

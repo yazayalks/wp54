@@ -14,6 +14,7 @@ const ContactInput = ({type, text, placeholder, name}: IContactInput) => {
                 type={type}
                 placeholder={placeholder}
                 name = {name}
+                required
 
             />
         </label>
