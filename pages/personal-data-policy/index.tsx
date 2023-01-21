@@ -1,11 +1,13 @@
 import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
+import Description from "../../components/Description/Description";
+import React from "react";
 
 const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | Prices</title>
+                <title>wp54 | Personal data policy</title>
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE-edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -13,7 +15,7 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    Prices
+                    <Description descriptionName={'personal-data-policy'}/>
                 </main>
             </Layout>
 

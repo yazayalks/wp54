@@ -36,6 +36,7 @@ html[data-theme='dark'] {
     --checkbox-background-color: #ffffff;
 
     --border-color: #ffffff;
+    --border-color-hover: #16FFBD;
 }
 
 /*LIGHT THEME*/
@@ -70,6 +71,7 @@ html[data-theme='light'] {
     --checkbox-background-color: #000000;
 
     --border-color: #000000;
+    --border-color-hover: #9816FF;
 }
 
 html,
@@ -109,8 +111,12 @@ p {
     transition: color 500ms linear;
 }
 
-.white-text {
+.over-text {
     color: var(--text-color-over);
+}
+
+.text {
+    color: var(--text-color);
 }
 
 .small-text {
@@ -172,6 +178,7 @@ h2 {
     text-transform: uppercase;
     color: var(--title-color);
     text-wrap: normal;
+    font-size: 24px;
     transition: color 300ms linear;
     margin-top: 0;
     margin-bottom: 25px;
@@ -184,6 +191,7 @@ h3 {
     text-transform: uppercase;
     color: var(--title-color-over);
     transition: color 300ms linear;
+    font-size: 18px;
     margin: 0;
     padding: 0;
 }
@@ -207,6 +215,7 @@ li {
 table {
     table-layout: fixed;
     width: 100%;
+    margin-bottom: 25px;
 }
 
 thead th:nth-child(1) {
@@ -220,8 +229,10 @@ thead th:nth-child(2) {
 
 table th,
 table td {
+
     text-align: center;
     border: 3px solid var(--border-color);
+    border-radius: 5px;
     padding: 10px;
     color: var(--text-color);
     font-size: 20px;
@@ -316,6 +327,32 @@ table td {
     animation: move3 5s infinite;
     -webkit-animation: move3 5s infinite;
 }
+
+button {
+
+     /*width: 100%;*/
+    color: var(--button-text-color);
+     padding: 10px;
+    height: 43px;
+     display: flex;
+     justify-content: center;
+     cursor: pointer;
+     border: none;
+
+     font-size: 20px;
+     background: var(--button-background-color);
+     border-radius: 5px;
+}
+
+button:hover {
+     background: var(--button-background-color-hover);
+ }
+
+button:disabled {
+     cursor: auto;
+     opacity: 0.5;
+    background: var(--button-background-color);
+ }
 
 @keyframes move1 {
     0% {
@@ -485,4 +522,49 @@ table td {
 .fslightbox-flex-centered:hover svg path {
     fill: var(--icon-color-over-hover) !important;
     transition: color 500ms linear;
+}
+
+
+.Toastify__toast-theme--light {
+
+    /*background: yellow!important;*/
+}
+.Toastify__close-button {
+    color: var(--icon-color);
+    opacity: 1;
+}
+.Toastify__close-button:hover {
+    color: var(--icon-color-over-hover);
+    background: transparent;
+}
+
+:root {
+    --toastify-color-light: var(--background-color);
+    --toastify-color-success: var(--icon-color-over-hover);
+    --toastify-color-error: #e74c3c!important;
+
+    --toastify-font-family: 'Roboto';
+
+    --toastify-text-color-light:  var(--text-color);
+
+
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--button-background-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--icon-color-over-hover);
 }

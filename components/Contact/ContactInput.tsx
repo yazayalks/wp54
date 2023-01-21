@@ -9,13 +9,12 @@ interface IContactInput {
 const ContactInput = ({type, text, placeholder, name}: IContactInput) => {
     return (
         <label htmlFor="">
-            <span>{text}</span>
-            <input
+            <p><strong>{text}:</strong></p>
+            <input maxLength={50} className={styles.contact__input}
                 type={type}
                 placeholder={placeholder}
                 name = {name}
                 required
-
             />
         </label>
     );

@@ -172,6 +172,7 @@ padding: 0;
 }
 
 .burger_menu:hover {
+  background: transparent;
 & span {
 background-color: var(--icon-color-hover);
 }

@@ -5,10 +5,10 @@ import WorkingMode from "../WorkingMode/WorkingMode";
 
 const Contact = () => {
     return (
-        <div className="container">
+
             <div className="sub-container">
                 <div className={styles.contact__container}>
-                    <h1 style={{textAlign: 'center'}}>СВЯЖИТЕСЬ С НАМИ</h1>
+                    <h2 style={{textAlign: 'center'}}>СВЯЖИТЕСЬ С НАМИ</h2>
                     <div className={styles.contact__inner}>
                         <div className={styles.contact__description}>
 
@@ -32,7 +32,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-        </div>
+
     );
 };
 

@@ -4,9 +4,9 @@ const PriceTable = () => {
     return (
 
         <div className="sub-container">
-            <div className={styles.priceTableContainer}>
+            <div className={styles.price_table__container}>
                 <table className={styles.priceTable}>
-                    <caption><h2>ЦЕНЫ ПН-ЧТ</h2></caption>
+                    <caption><h2 className="text">ЦЕНЫ ПН-ЧТ:</h2></caption>
                     <thead>
                     <tr>
                         <td><h3>ЧАСЫ АРЕНДЫ</h3></td>
@@ -26,7 +26,7 @@ const PriceTable = () => {
                 </table>
 
                 <table className={styles.priceTable}>
-                    <caption><h2>ЦЕНЫ ПТ-ВС</h2></caption>
+                    <caption><h2 className="text">ЦЕНЫ ПТ-ВС:</h2></caption>
                     <thead>
 
                     <tr>

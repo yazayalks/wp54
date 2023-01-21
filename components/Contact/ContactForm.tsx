@@ -1,36 +1,73 @@
 import styles from '../../styles/contact.module.scss'
 import ContactInput from "./ContactInput";
 import emailJs from '@emailjs/browser'
-import {MutableRefObject, useRef} from "react";
-import {Simulate} from "react-dom/test-utils";
-import error = Simulate.error;
+import React, {MutableRefObject, useRef, useState} from "react";
+import { ToastContainer, toast } from "react-toastify";
+import { PropagateLoader } from "react-spinners";
+import Link from "next/link";
+
+
+
 const ContactForm = () => {
     const formRef = useRef() as MutableRefObject<HTMLFormElement>;
+    const [acceptWithRules, setAcceptWithRules] = useState(false);
+    const [spinner, setSpinner] = useState(false);
+    const toggleAcceptWithRules = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setAcceptWithRules(!acceptWithRules)}
+    ;
     const sendForm = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
-        emailJs.sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,formRef.current, `${process.env.NEXT_PUBLIC_PUBLIC_KEY}` )
+        setSpinner(true);
+        emailJs.sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`, formRef.current, `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`)
             .then(result => {
-                console.log('ura')
+
+                setSpinner(false);
+                toast.success(`Данные отправлены`);
+
+                formRef.current.reset();
             }, error => {
+                setSpinner(false);
+                toast.error(`Данные не отправлены`);
+
                 console.log('error')
             })
-
+        setAcceptWithRules(!acceptWithRules);
     }
     return (
         <form onSubmit={sendForm} className={styles.contact__form} ref={formRef}>
             <ContactInput type="text" text="ФИО" placeholder="Укажите Ваше ФИО" name="fullName"/>
             <ContactInput type="phone" text="Телефон" placeholder="Укажите Ваш телефон" name="phone"/>
             <ContactInput type="email" text="Почта" placeholder="Укажите Вашу почту" name="email"/>
-            <textarea maxLength={500} placeholder="Введите Ваше сообщение или задайте вопрос" name="message" required></textarea>
-            <button className={styles.contact__form__btn}>
-                Отправить заявку
+            <p><strong>Сообщение:</strong></p>
+            <textarea className={styles.contact__textarea} maxLength={500}
+                      placeholder="Введите Ваше сообщение или задайте вопрос" name="message" required></textarea>
+            <button disabled={!acceptWithRules} style={{width: 'auto'}} className={styles.contact__form__btn}>
+                <strong> {spinner ? <PropagateLoader color="#fff" /> : 'Отправить заявку'}</strong>
             </button>
-            <label htmlFor="">
-                <input className={styles.contact__checkbox__input} type="checkbox"/>
-                <span className={styles.contact__checkbox__span}/>
-                <p className={styles.contact__checkbox__text}></p>
-            </label>
+            <div className={styles.contact__checkbox}>
+
+                    <label className={styles.toggle}>
+                        <input className={styles.toggle__input} onChange={(e) => toggleAcceptWithRules(e)} type="checkbox" checked={acceptWithRules}/>
+                        <span className={styles.toggle__label}>
+
+        </span>
+                    </label>
+
+
+                <p className={styles.contact__checkbox__text}>Нажимая на кнопку «Отправить заявку», я соглашаюсь с
+                    <Link  href='/privacy-policy'>
+                        <strong>
+                            {' '} Политикой конфиденциальности
+                        </strong>
+                    </Link>
+                     и даю Согласие на
+                    <Link  href='/personal-data-policy'>
+                        <strong>
+                            {' '} обработку персональных данных
+                        </strong>
+                    </Link>
+                    . </p>
+            </div>
         </form>
     );
 };

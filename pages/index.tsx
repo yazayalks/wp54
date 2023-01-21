@@ -11,10 +11,10 @@ import React from "react";
 import SampleNextArrow from "../components/Arrows/SampleNextArrow";
 import SamplePrevArrow from "../components/Arrows/SamplePrevArrow";
 import Gallery from "../components/Gallery/Gallery";
-import Prices from "./prices";
 import PriceTable from "../components/PriceTable/PriceTable";
 import Services from "../components/Services/Services";
 import Contact from "../components/Contact/Contact";
+
 
 const heroMainSettings = {
     dots: true,
@@ -86,12 +86,17 @@ export default function Index({heroMainItems} : any) {
             <Layout>
 
                 <main>
+
                     <Hero heroItems = {HeroMainItems} heroSettings = {heroMainSettings} />
                     <Description descriptionName={'main'}/>
-                    <Gallery galleryItems = {GalleryMainItems} gallerySliderSettings={gallerySliderSettings }/>
                     <Services/>
+                    <Gallery galleryItems = {GalleryMainItems} gallerySliderSettings={gallerySliderSettings }/>
+
+
+                    <h2 style={{marginTop: '25px', textAlign: 'center'}}>Основные цены</h2>
                     <PriceTable/>
                     <Contact/>
+
                 </main>
             </Layout>
         </>

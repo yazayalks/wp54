@@ -32,7 +32,7 @@ const Footer = () => {
                     <div className={styles.footer__item}>
                         <ul className={styles.footer__politics__list}>
                             <li className={styles.footer__politics__list__item}>
-                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/'>
+                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/cookie-policy'>
                                     <strong>
                                         Политика
                                         использования
@@ -41,7 +41,7 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li className={styles.footer__politics__list__item}>
-                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/'>
+                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/personal-data-policy'>
                                     <strong>
                                         Политика обработки
                                         персональных данных
@@ -49,7 +49,7 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li className={styles.footer__politics__list__item}>
-                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/'>
+                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/privacy-policy'>
                                     <strong>
                                         Политика
                                         конфиденциальности
@@ -57,7 +57,7 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li className={styles.footer__politics__list__item}>
-                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/'>
+                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/personal-data-of-clients'>
                                     <strong>
                                         Согласие на
                                         обработку персональных данных клиентов - физических лиц

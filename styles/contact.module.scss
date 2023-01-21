@@ -9,21 +9,26 @@
     "d f"
     "m f";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto 1fr;
 
 }
+
 .contact__description {
   grid-area: d;
-  
+  padding-right: 25px;
 }
 
 .contact__contacts_messengers {
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   grid-area: m;
 
+  p {
+    font-size: 20px;
+  }
 
 
 }
@@ -41,8 +46,152 @@
   .contact__inner {
     display: flex;
     flex-direction: column;
-
+  }
+  .contact__description {
+    grid-area: d;
+    padding: 0;
   }
 }
+
+.contact__input {
+
+  margin-bottom: 15px;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  border: 3px solid var(--text-color);
+  border-radius: 5px;
+  background-color: transparent;
+
+  &:focus {
+    border: 3px solid var(--border-color-hover);
+  }
+
+  &::placeholder {
+    font-size: 20px;
+    color: var(--text-color);
+  }
+}
+
+.contact__textarea {
+  resize: none;
+  height: 100px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+  border: 3px solid var(--text-color);
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: 'Roboto';
+
+  &:focus {
+    border: 3px solid var(--border-color-hover);
+  }
+
+  &::placeholder {
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: var(--text-color);
+  }
+}
+
+.contact {
+  &__checkbox {
+    position: relative;
+  margin-top: 25px;
+    display: flex;
+    &__link {
+      color: #0CAED5;
+    }
+    &__text {
+      width: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+    }
+  }
+}
+
+
+.toggle {
+  min-width: 25px;
+  min-height: 25px;
+  margin-right: 25px;
+
+}
+.toggle__input{
+  opacity: 0;
+
+
+  position: absolute;
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label{
+  cursor: pointer;
+}
+
+.toggle__label::after{
+  content: "";
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: 3px solid var(--border-color);
+  border-radius: 5px;
+  position: absolute;
+  z-index: 2;
+}
+
+.toggle__label::before{
+  content: "";
+  width: 0;
+  height: 0;
+  font-size: var(--toggleSize, 1.25rem);
+  border-left-width: 0;
+  border-bottom-width: 0;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-color: var(--icon-color);
+  position: absolute;
+  top: .5428em;
+  left: .25em;
+  z-index: 3;
+  transform-origin: left top;
+  transform: rotate(-40deg) skew(10deg);
+}
+
+.toggle__input:checked ~ .toggle__label::before{
+  --uiToggleArrowWidth: var(--toggleArrowWidth, 2px);
+  width: .5em;
+  height: .3em;
+  border-left-width: var(--uiToggleArrowWidth);
+  border-bottom-width: var(--uiToggleArrowWidth);
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label::before{
+  will-change: width, height;
+  opacity: 0;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label::before{
+  opacity: 1;
+  transition: opacity .1s ease-out .15s, width .1s ease-out .3s, height .1s ease-out .2s;
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label::after{
+  will-change: background-color;
+  transition: background-color .15s ease-out;
+}
+
+
+
+
+
+
+
+
+
+
 
 
