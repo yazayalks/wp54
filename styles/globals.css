@@ -568,3 +568,7 @@ button:disabled {
 ::-webkit-scrollbar-thumb:hover {
     background-color: var(--icon-color-over-hover);
 }
+
+.nprogress {
+    color: red!important;
+}
