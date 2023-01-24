@@ -1,12 +1,8 @@
 import styles from '../../styles/contact.module.scss'
-interface IContactInput {
-    type: string;
-    text: string;
-    placeholder: string;
-    name: string;
-}
+import {ContactInputType} from '../../types';
 
-const ContactInput = ({type, text, placeholder, name}: IContactInput) => {
+
+const ContactInput = ({type, text, placeholder, name}: ContactInputType) => {
     return (
         <label htmlFor="">
             <p><strong>{text}:</strong></p>

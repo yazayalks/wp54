@@ -1,7 +1,8 @@
 import styles from '../../styles/checkbox.module.scss'
-import { useTheme } from 'next-themes'
+import {useTheme} from 'next-themes'
+import {FC} from "react";
 
-const Checkbox = () => {
+const Checkbox: FC = () => {
     const {theme, setTheme} = useTheme();
 
     const handleThemeClick = () => {
@@ -11,7 +12,7 @@ const Checkbox = () => {
     }
     return (
         <div className={styles.switch}>
-            <input        className={styles.checkbox} type="checkbox" onClick={handleThemeClick}/>
+            <input className={styles.checkbox} type="checkbox" onClick={handleThemeClick}/>
         </div>
     );
 };

@@ -1,14 +1,14 @@
 import styles from '../../styles/contact.module.scss'
 import ContactInput from "./ContactInput";
 import emailJs from '@emailjs/browser'
-import React, {MutableRefObject, useRef, useState} from "react";
+import React, {FC, MutableRefObject, useRef, useState} from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { PropagateLoader } from "react-spinners";
 import Link from "next/link";
 
 
 
-const ContactForm = () => {
+const ContactForm: FC = () => {
     const formRef = useRef() as MutableRefObject<HTMLFormElement>;
     const [acceptWithRules, setAcceptWithRules] = useState(false);
     const [spinner, setSpinner] = useState(false);

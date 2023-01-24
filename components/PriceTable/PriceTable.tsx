@@ -1,6 +1,7 @@
 import styles from '../../styles/priceTable.module.scss'
+import {FC} from "react";
 
-const PriceTable = () => {
+const PriceTable: FC = () => {
     return (
 
         <div className="sub-container">

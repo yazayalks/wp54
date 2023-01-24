@@ -1,8 +1,8 @@
 import styles from "../../styles/workingMode.module.scss";
-import React from "react";
+import React, {FC} from "react";
 
 
-const WorkingMode = () => {
+const WorkingMode: FC = () => {
     return (
         <div className={styles.working_mode__inner}>
             <p className="small-text"><strong>Режим работы:</strong></p>

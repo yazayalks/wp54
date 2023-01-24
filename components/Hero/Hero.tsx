@@ -1,16 +1,22 @@
 import styles from '../../styles/hero.module.scss';
-import Slider from "react-slick";
+import Slider, {Settings} from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import Image from "next/image";
-import React from "react";
+import React, {FC} from "react";
+import {GalleryType} from "../../types";
 
-const Hero = ({heroItems, heroSettings, textAlign}: any) => {
+
+interface HeroProps {
+    heroGallery: GalleryType,
+    sliderSettings: Settings,
+    textAlign?: string
+}
+
+const Hero: FC<HeroProps> = ({heroGallery, sliderSettings, textAlign}) => {
     return (
-
-        <Slider {...heroSettings}>
-            {heroItems.map((item: any) => (
+        <Slider {...sliderSettings}>
+            {heroGallery.items.map((item: any) => (
                 <div key={item.id} className={styles.item}>
 
                     <div className={`
@@ -20,16 +26,15 @@ const Hero = ({heroItems, heroSettings, textAlign}: any) => {
                             ${textAlign === 'right' ? styles.text__container__right : ''}
                             `}>
                         <div className={styles.text__container_inner}>
-                            <h1>{item.title}</h1>
+                            <h1 className="over-title">{item.title}</h1>
                             <p className="big-text over-text">{item.description}</p>
                         </div>
                     </div>
-                    <Image className={styles.image} src={item.url} width={1900}
+                    <Image className={styles.image} src={`${heroGallery.path}${item.name}`} width={1900}
                            height={840} alt={item.name}/>
                 </div>
             ))}
         </Slider>
-
     );
 };
 

@@ -1,11 +1,11 @@
 import styles from '../../styles/footer.module.scss'
 import Logo from "../Logo/Logo";
-import React from "react";
+import React, {FC} from "react";
 import Link from 'next/link';
 import ContactsMessengers from "../ContactsMessengers/ContactsMessengers";
 import WorkingMode from "../WorkingMode/WorkingMode";
 
-const Footer = () => {
+const Footer: FC = () => {
     return (
         <footer className={styles.footer}>
             <div className={`container ${styles.footer__container}`}>

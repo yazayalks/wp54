@@ -2,45 +2,14 @@ import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
 import React from "react";
 import Hero from "../../components/Hero/Hero";
-import {HeroMoviesItems} from "../api/data/heroItems";
-import Description from "../../components/Description/Description";
+import {HeroMovies} from "../api/data/heroItems";
 import GridGallery from "../../components/GridGallery/GridGallery";
-import {gridGalleryMoviesItems} from "../api/data/gridGalleryItems";
-import SampleNextArrow from "../../components/Arrows/SampleNextArrow";
-import SamplePrevArrow from "../../components/Arrows/SamplePrevArrow";
+import {SliderSettingsGallery, SliderSettingsHero} from "../../settings";
+import {GalleryMovies} from "../api/data/galleryItems";
+import DescriptionMovies from "../../components/Description/DescriptionMovies";
 
 
 const Index = () => {
-    const heroMoviesSettings = {
-        dots: false,
-        arrows: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        appendDots: (dots: React.ReactNode) => (
-            <div style={{margin: "0px", padding: "0px", bottom: '100px'}}>
-                <ul > {dots} </ul>
-            </div>
-        ),
-    };
-    const gridGallerySliderMoviesSettings = {
-        dots: false,
-        infinite: true,
-        arrows: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        nextArrow: <SampleNextArrow/>,
-        prevArrow: <SamplePrevArrow/>,
-
-    };
     return (
         <>
             <Head>
@@ -52,13 +21,11 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <Hero heroItems = {HeroMoviesItems} heroSettings = {heroMoviesSettings} textAlign = {'right'} />
-                    <Description descriptionName={'movies'}/>
-                    <GridGallery gridGalleryItems={gridGalleryMoviesItems} gridGallerySliderSettings={gridGallerySliderMoviesSettings}/>
-
+                    <Hero heroGallery={HeroMovies} sliderSettings={SliderSettingsHero} textAlign={'right'}/>
+                    <DescriptionMovies/>
+                    <GridGallery gridGallery={GalleryMovies} sliderSettings={SliderSettingsGallery}/>
                 </main>
             </Layout>
-
         </>
     )
 };

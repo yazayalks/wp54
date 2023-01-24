@@ -1,9 +1,9 @@
 import styles from "../../styles/services.module.scss";
-import React from "react";
+import React, {FC} from "react";
 import Link from "next/link";
 
 
-const Services = () => {
+const Services: FC = () => {
     return (
         <div className="sub-container">
             <div className={styles.servicesContainer}>

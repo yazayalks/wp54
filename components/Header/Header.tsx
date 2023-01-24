@@ -1,12 +1,12 @@
 import styles from '../../styles/header.module.scss'
 import Logo from "../Logo/Logo";
-import React, {useState} from "react";
+import React, {FC, useState} from "react";
 import Checkbox from "../Сheckbox/Checkbox";
 
 import Link from "next/link";
 import {useRouter} from "next/router";
 
-const Header = () => {
+const Header: FC = () => {
 
         const {pathname} = useRouter()
         const menuItems = [
@@ -112,7 +112,7 @@ const Header = () => {
                                         ${subMenuPricesOpen ? styles.open__prices : ''}`}>
                                             {(getSubMenuItems(item.href)).map(({text, href, type}, index) => (
 
-                                                <li key={href} >
+                                                <li key={href}>
                                                     <Link href={href}
                                                           className={styles.header__nav__list__item__link}>{text} </Link>
 

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
-import Description from "../../components/Description/Description";
 import React from "react";
+import DescriptionAbout from "../../components/Description/DescriptionAbout";
 
 const Index = () => {
     return (
@@ -15,10 +15,9 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <Description descriptionName={'about'}/>
+                    <DescriptionAbout/>
                 </main>
             </Layout>
-
         </>
     )
 };

@@ -1,6 +1,7 @@
-import React from "react";
+import React, {FC} from "react";
+import {CustomArrowProps} from "react-slick";
 
-export default function SampleNextArrow(props : any) {
+const SampleNextArrow: FC<CustomArrowProps> = (props ) => {
     const {className, style, onClick} = props;
     return (
         <div
@@ -17,3 +18,5 @@ export default function SampleNextArrow(props : any) {
         />
     );
 }
+
+export default SampleNextArrow;

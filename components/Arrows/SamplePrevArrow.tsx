@@ -1,6 +1,8 @@
+import {CustomArrowProps} from "react-slick";
+import {FC} from "react";
 
 
-export default function SamplePrevArrow(props: any) {
+const SamplePrevArrow: FC<CustomArrowProps> = (props) => {
     const {className, style, onClick} = props;
     return (
         <div
@@ -17,3 +19,5 @@ export default function SamplePrevArrow(props: any) {
         />
     );
 }
+
+export default SamplePrevArrow;

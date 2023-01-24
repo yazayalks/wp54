@@ -1,27 +1,12 @@
 import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
 import Hero from "../../components/Hero/Hero";
-import {HeroGameItems} from "../api/data/heroItems";
+import {HeroGame} from "../api/data/heroItems";
 import React from "react";
-import Description from "../../components/Description/Description";
+import {SliderSettingsHero} from "../../settings";
+import DescriptionGame from "../../components/Description/DescriptionGame";
 
 const Index = () => {
-    const heroHallSettings = {
-        dots: false,
-        arrows: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        appendDots: (dots: React.ReactNode) => (
-            <div style={{margin: "0px", padding: "0px", bottom: '100px'}}>
-                <ul > {dots} </ul>
-            </div>
-        ),
-    };
     return (
         <>
             <Head>
@@ -33,11 +18,10 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <Hero heroItems = {HeroGameItems} heroSettings = {heroHallSettings} />
-                    <Description descriptionName={'game'}/>
+                    <Hero heroGallery={HeroGame} sliderSettings={SliderSettingsHero}/>
+                    <DescriptionGame/>
                 </main>
             </Layout>
-
         </>
     )
 };

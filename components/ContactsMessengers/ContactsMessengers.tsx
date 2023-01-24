@@ -1,7 +1,7 @@
 import styles from "../../styles/contactsMessengers.module.scss";
-import React from "react";
+import React, {FC} from "react";
 
-const ContactsMessengers = () => {
+const ContactsMessengers: FC = () => {
     return (
         <>
             <p className="small-text"> <strong>Контакты:</strong></p>

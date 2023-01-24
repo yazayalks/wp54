@@ -2,45 +2,14 @@ import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
 import React from "react";
 import Hero from "../../components/Hero/Hero";
-import {HeroDiscosItems} from "../api/data/heroItems";
-import Description from "../../components/Description/Description";
+import {HeroDiscos} from "../api/data/heroItems";
 import GridGallery from "../../components/GridGallery/GridGallery";
-import {gridGalleryDiscosItems} from "../api/data/gridGalleryItems";
-import SampleNextArrow from "../../components/Arrows/SampleNextArrow";
-import SamplePrevArrow from "../../components/Arrows/SamplePrevArrow";
+import {SliderSettingsGallery, SliderSettingsHero} from "../../settings";
+import {GalleryDiscos} from "../api/data/galleryItems";
+import DescriptionDiscos from "../../components/Description/DescriptionDiscos";
 
 
 const Index = () => {
-    const heroDiscosSettings = {
-        dots: false,
-        arrows: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        appendDots: (dots: React.ReactNode) => (
-            <div style={{margin: "0px", padding: "0px", bottom: '100px'}}>
-                <ul > {dots} </ul>
-            </div>
-        ),
-    };
-    const gridGallerySliderDiscosSettings = {
-        dots: false,
-        infinite: true,
-        arrows: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        nextArrow: <SampleNextArrow/>,
-        prevArrow: <SamplePrevArrow/>,
-
-    };
     return (
         <>
             <Head>
@@ -52,13 +21,11 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <Hero heroItems = {HeroDiscosItems} heroSettings = {heroDiscosSettings} textAlign = {'center'} />
-                    <Description descriptionName={'discos'}/>
-                    <GridGallery gridGalleryItems={gridGalleryDiscosItems} gridGallerySliderSettings={gridGallerySliderDiscosSettings}/>
-
+                    <Hero heroGallery={HeroDiscos} sliderSettings={SliderSettingsHero} textAlign={'center'}/>
+                    <DescriptionDiscos/>
+                    <GridGallery gridGallery={GalleryDiscos} sliderSettings={SliderSettingsGallery}/>
                 </main>
             </Layout>
-
         </>
     )
 };

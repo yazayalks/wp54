@@ -2,45 +2,14 @@ import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
 import React from "react";
 import Hero from "../../components/Hero/Hero";
-import {HeroBirthdaysItems} from "../api/data/heroItems";
-import Description from "../../components/Description/Description";
+import {HeroBirthdays} from "../api/data/heroItems";
 import GridGallery from "../../components/GridGallery/GridGallery";
-import {gridGalleryBirthdaysItems} from "../api/data/gridGalleryItems";
-import SampleNextArrow from "../../components/Arrows/SampleNextArrow";
-import SamplePrevArrow from "../../components/Arrows/SamplePrevArrow";
+import {SliderSettingsGallery, SliderSettingsHero} from "../../settings";
+import {GalleryBirthdays} from "../api/data/galleryItems";
+import DescriptionBirthdays from "../../components/Description/DescriptionBirthdays";
 
 
 const Index = () => {
-    const heroBirthdaysSettings = {
-        dots: false,
-        arrows: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        appendDots: (dots: React.ReactNode) => (
-            <div style={{margin: "0px", padding: "0px", bottom: '100px'}}>
-                <ul > {dots} </ul>
-            </div>
-        ),
-    };
-    const gridGallerySliderBirthdaysSettings = {
-        dots: false,
-        infinite: true,
-        arrows: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        nextArrow: <SampleNextArrow/>,
-        prevArrow: <SamplePrevArrow/>,
-
-    };
     return (
         <>
             <Head>
@@ -52,13 +21,11 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <Hero heroItems = {HeroBirthdaysItems} heroSettings = {heroBirthdaysSettings} textAlign = {'center'} />
-                    <Description descriptionName={'birthdays'}/>
-                    <GridGallery gridGalleryItems={gridGalleryBirthdaysItems} gridGallerySliderSettings={gridGallerySliderBirthdaysSettings}/>
-
+                    <Hero heroGallery={HeroBirthdays} sliderSettings={SliderSettingsHero} textAlign={'center'}/>
+                    <DescriptionBirthdays/>
+                    <GridGallery gridGallery={GalleryBirthdays} sliderSettings={SliderSettingsGallery}/>
                 </main>
             </Layout>
-
         </>
     )
 };

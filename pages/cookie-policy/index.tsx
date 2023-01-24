@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
-import Description from "../../components/Description/Description";
-import React from "react";
+import DescriptionCookiePolicy from "../../components/Description/DescriptionCookiePolicy";
 
 const Index = () => {
     return (
@@ -15,10 +14,9 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <Description descriptionName={'cookie-policy'}/>
+                    <DescriptionCookiePolicy/>
                 </main>
             </Layout>
-
         </>
     )
 };

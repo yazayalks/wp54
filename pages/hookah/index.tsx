@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
-import Description from "../../components/Description/Description";
 import React from "react";
 import Services from "../../components/Services/Services";
+import DescriptionHookah from "../../components/Description/DescriptionHookah";
 
 const Index = () => {
     return (
@@ -16,11 +16,10 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <Description descriptionName={'hookah'}/>
+                    <DescriptionHookah/>
                     <Services/>
                 </main>
             </Layout>
-
         </>
     )
 };
