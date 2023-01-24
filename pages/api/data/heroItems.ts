@@ -57,7 +57,7 @@ export const HeroDiscos: GalleryType = {
     items: [
         {
             id: 1,
-            name: 'img-1.jpg',
+            name: 'img1.jpg',
             title: "Дискотека для твоей компании",
             description: "Скажи Welcome тусовке",
         },
@@ -71,7 +71,7 @@ export const HeroParties: GalleryType = {
     items: [
         {
             id: 1,
-            name: 'img-1.jpg',
+            name: 'img1.jpg',
             title: "Вечеринки",
             description: "",
         },
@@ -85,7 +85,7 @@ export const HeroCorporate: GalleryType = {
     items: [
         {
             id: 1,
-            name: 'img-1.jpg',
+            name: 'img1.jpg',
             title: "Корпоративы",
             description: "",
         },
