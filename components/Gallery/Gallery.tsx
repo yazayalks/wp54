@@ -42,7 +42,7 @@ const Gallery: FC<GalleryProps> = ({gallery, sliderSettings}) => {
             <Slider {...sliderSettings}>
                 {gallery.items.map((item: GalleryItemType) => (
                     <div key={item.id} className={styles.imageCard}>
-                        <Image onClick={() => openLightboxOnSlide(item.id)} width={1000} height={1000}
+                        <Image loading="lazy" onClick={() => openLightboxOnSlide(item.id)} width={1000} height={1000}
                                className={styles.image} src={`${gallery.path}${item.name}`}
                                alt={item.name}/>
                     </div>

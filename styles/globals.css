@@ -68,6 +68,11 @@ html[data-theme='light'] {
     --border-color-hover: #9816FF;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    font-display: swap;
+}
+
 html,
 body {
     padding: 0 !important;

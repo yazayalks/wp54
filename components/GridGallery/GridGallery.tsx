@@ -57,7 +57,7 @@ const GridGallery: FC<GridGalleryProps> = ({gridGallery, sliderSettings}) => {
             <div className={styles.grid_gallery}>
                 {gridGallery.items.map((item: any) => (
                     <div key={item.id} className={styles.grid_gallery__item}>
-                        <Image width={1000} height={1000} onClick={() => openLightboxOnSlide(item.id)}
+                        <Image loading="lazy" width={1000} height={1000} onClick={() => openLightboxOnSlide(item.id)}
                                className={styles.image} src={`${gridGallery.path}${item.name}`}
                                alt={item.name}/>
                     </div>

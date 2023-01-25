@@ -30,7 +30,7 @@ const Hero: FC<HeroProps> = ({heroGallery, sliderSettings, textAlign}) => {
                             <p className="big-text over-text">{item.description}</p>
                         </div>
                     </div>
-                    <Image className={styles.image} src={`${heroGallery.path}${item.name}`} width={1900}
+                    <Image loading="lazy" className={styles.image} src={`${heroGallery.path}${item.name}`} width={1900}
                            height={840} alt={item.name}/>
                 </div>
             ))}
