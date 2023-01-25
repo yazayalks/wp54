@@ -2,10 +2,9 @@ import styles from '../../styles/contact.module.scss'
 import ContactInput from "./ContactInput";
 import emailJs from '@emailjs/browser'
 import React, {FC, MutableRefObject, useRef, useState} from "react";
-import { ToastContainer, toast } from "react-toastify";
-import { PropagateLoader } from "react-spinners";
+import {ToastContainer, toast} from "react-toastify";
+import {PropagateLoader} from "react-spinners";
 import Link from "next/link";
-
 
 
 const ContactForm: FC = () => {
@@ -13,7 +12,8 @@ const ContactForm: FC = () => {
     const [acceptWithRules, setAcceptWithRules] = useState(false);
     const [spinner, setSpinner] = useState(false);
     const toggleAcceptWithRules = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setAcceptWithRules(!acceptWithRules)}
+            setAcceptWithRules(!acceptWithRules)
+        }
     ;
     const sendForm = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -42,26 +42,27 @@ const ContactForm: FC = () => {
             <textarea className={styles.contact__textarea} maxLength={500}
                       placeholder="Введите Ваше сообщение или задайте вопрос" name="message" required></textarea>
             <button disabled={!acceptWithRules} style={{width: 'auto'}} className={styles.contact__form__btn}>
-                <strong> {spinner ? <PropagateLoader color="#fff" /> : 'Отправить заявку'}</strong>
+                <strong> {spinner ? <PropagateLoader color="#fff"/> : 'Отправить заявку'}</strong>
             </button>
             <div className={styles.contact__checkbox}>
 
-                    <label className={styles.toggle}>
-                        <input className={styles.toggle__input} onChange={(e) => toggleAcceptWithRules(e)} type="checkbox" checked={acceptWithRules}/>
-                        <span className={styles.toggle__label}>
+                <label className={styles.toggle}>
+                    <input className={styles.toggle__input} onChange={(e) => toggleAcceptWithRules(e)} type="checkbox"
+                           checked={acceptWithRules}/>
+                    <span className={styles.toggle__label}>
 
         </span>
-                    </label>
+                </label>
 
 
                 <p className={styles.contact__checkbox__text}>Нажимая на кнопку «Отправить заявку», я соглашаюсь с
-                    <Link  href='/privacy-policy'>
+                    <Link href='/privacy-policy'>
                         <strong>
                             {' '} Политикой конфиденциальности
                         </strong>
                     </Link>
-                     и даю Согласие на
-                    <Link  href='/personal-data-policy'>
+                    и даю Согласие на
+                    <Link href='/personal-data-policy'>
                         <strong>
                             {' '} обработку персональных данных
                         </strong>

@@ -1,9 +1,6 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-  openAnalyzer: false,
-});
+/** @type {import('next').NextConfig} */
 
-module.exports = withBundleAnalyzer({
+nextConfig = {
   eslint: {
     dirs: ['.'],
   },
@@ -16,34 +13,27 @@ module.exports = withBundleAnalyzer({
     defaultLocale: 'ru',
   },
   poweredByHeader: false,
+
   mode:"production",
   trailingSlash: true,
   basePath: '',
   reactStrictMode: true,
   plugins: [
-    "postcss-flexbugs-fixes",
-    [
-      "postcss-preset-env",
-      {
-        "autoprefixer": {
-          "flexbox": "no-2009"
-        },
-        "stage": 3,
-        "features": {
-          "custom-properties": false
-        }
-      }
-    ],
-    [
-      '@fullhuman/postcss-purgecss',
-      {
-        content: [
-          './pages/**/*.{js,jsx,ts,tsx}',
-          './components/**/*.{js,jsx,ts,tsx}'
-        ],
-        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
-        safelist: ["html", "body"]
-      }
-    ],
+
   ]
-});
+}
+
+
+const shouldAnalyzeBundles = process.env.ANALYZE === true;
+
+if (shouldAnalyzeBundles) {
+  const withNextBundleAnalyzer =
+      require('@next/bundle-analyzer')({
+        openAnalyzer: true,
+      });
+  nextConfig = withNextBundleAnalyzer(nextConfig);
+}
+
+module.exports = nextConfig;
+
+

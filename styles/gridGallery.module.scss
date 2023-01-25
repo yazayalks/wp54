@@ -7,7 +7,6 @@
   flex-wrap: wrap;
   gap: 15px;
   padding: 0 25px ;
-
 }
 
 
@@ -44,5 +43,8 @@
   .slider {
     display: block;
   }
-
+  .grid_gallery__item {
+    height: 500px;
+    width: 100%;
+  }
 }
