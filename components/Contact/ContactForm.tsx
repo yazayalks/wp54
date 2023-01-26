@@ -41,7 +41,8 @@ const ContactForm: FC = () => {
             <p><strong>Сообщение:</strong></p>
             <textarea className={styles.contact__textarea} maxLength={500}
                       placeholder="Введите Ваше сообщение или задайте вопрос" name="message" required></textarea>
-            <button disabled={!acceptWithRules} style={{width: 'auto'}} className={styles.contact__form__btn}>
+            <button title="Send a request" disabled={!acceptWithRules} style={{width: 'auto'}}
+                    className={styles.contact__form__btn}>
                 <strong> {spinner ? <PropagateLoader color="#fff"/> : 'Отправить заявку'}</strong>
             </button>
             <div className={styles.contact__checkbox}>

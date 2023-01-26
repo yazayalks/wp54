@@ -1,5 +1,5 @@
 export type GalleryType = {
-    title: string,
+    title: Pages,
     description: string,
     path: string
     items:  Array<GalleryItemType>,
@@ -17,4 +17,19 @@ export type ContactInputType = {
     text: string;
     placeholder: string;
     name: string;
+}
+
+export enum  Pages {
+    Main = 'Main',
+    Hall = 'Hall',
+    Game = 'Game',
+    Discos = 'Discos',
+    Parties = 'Parties',
+    Corporate = 'Corporate',
+    Birthdays = 'Birthdays',
+    Movies = 'Movies',
+    Equipment = 'Equipment',
+    Karaoke = 'Karaoke',
+    Projector = 'Projector',
+    Hookah = 'Hookah'
 }

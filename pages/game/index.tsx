@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
-import Hero from "../../components/Hero/Hero";
+import HeroSlider from "../../components/HeroSlider/HeroSlider";
 import {HeroGame} from "../api/data/heroItems";
 import React from "react";
-import {SliderSettingsHero} from "../../settings";
+import {SliderSettingsHeroMain} from "../../settings";
 import DescriptionGame from "../../components/Description/DescriptionGame";
 
 const Index = () => {
@@ -18,7 +18,7 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <Hero heroGallery={HeroGame} sliderSettings={SliderSettingsHero}/>
+                    <HeroSlider heroGallery={HeroGame} sliderSettings={SliderSettingsHeroMain}/>
                     <DescriptionGame/>
                 </main>
             </Layout>

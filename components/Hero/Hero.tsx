@@ -1,40 +1,48 @@
 import styles from '../../styles/hero.module.scss';
-import Slider, {Settings} from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
 import React, {FC} from "react";
-import {GalleryType} from "../../types";
-
+import Image from "next/image";
+import {GalleryType, Pages} from "../../types";
 
 interface HeroProps {
     heroGallery: GalleryType,
-    sliderSettings: Settings,
-    textAlign?: string
+    page?: Pages,
+
 }
 
-const Hero: FC<HeroProps> = ({heroGallery, sliderSettings, textAlign}) => {
-    return (
-        <Slider {...sliderSettings}>
-            {heroGallery.items.map((item: any) => (
-                <div key={item.id} className={styles.item}>
+const getStylePage = (page?: Pages) => {
+    if (page === Pages.Discos) {
+        return styles.hero__text__container__inner__discos
+    }
+    if (page === Pages.Parties) {
+        return styles.hero__text__container__inner__parties
+    }
+    if (page === Pages.Corporate) {
+        return styles.hero__text__container__inner__corporate
+    }
+    if (page === Pages.Birthdays) {
+        return styles.hero__text__container__inner__birthdays
+    }
+    if (page === Pages.Movies) {
+        return styles.hero__text__container__inner__movies
+    }
+    if (page === undefined) {
+        return ''
+    }
+}
 
-                    <div className={`
-                        ${styles.text__container}
-                            ${textAlign === 'center' ? styles.text__container__center : ''}
-                            ${textAlign === 'left' ? styles.text__container__left : ''}
-                            ${textAlign === 'right' ? styles.text__container__right : ''}
-                            `}>
-                        <div className={styles.text__container_inner}>
-                            <h1 className="over-title">{item.title}</h1>
-                            <p className="big-text over-text">{item.description}</p>
-                        </div>
-                    </div>
-                    <Image loading="lazy" className={styles.image} src={`${heroGallery.path}${item.name}`} width={1900}
-                           height={840} alt={item.name}/>
+const Hero: FC<HeroProps> = ({heroGallery, page}) => {
+    const heroItem = heroGallery.items[0];
+    return (
+        <div className={styles.hero}>
+            <div className={styles.hero__text__container}>
+                <div className={`${styles.hero__text__container__inner} ${getStylePage(page)}`}>
+                    <h1 className="over-title">{heroItem.title}</h1>
+                    <p className="big-text over-text">{heroItem.description}</p>
                 </div>
-            ))}
-        </Slider>
+            </div>
+            <Image priority className={styles.image} src={`${heroGallery.path}${heroItem.name}`} width={1920}
+                   height={1080} alt={heroItem.name}/>
+        </div>
     );
 };
 

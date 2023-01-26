@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
 import React from "react";
-import Hero from "../../components/Hero/Hero";
 import {HeroDiscos} from "../api/data/heroItems";
 import GridGallery from "../../components/GridGallery/GridGallery";
-import {SliderSettingsGallery, SliderSettingsHero} from "../../settings";
+import {SliderSettingsGallery} from "../../settings";
 import {GalleryDiscos} from "../api/data/galleryItems";
 import DescriptionDiscos from "../../components/Description/DescriptionDiscos";
+import Hero from "../../components/Hero/Hero";
+import {Pages} from "../../types";
 
 
 const Index = () => {
@@ -21,7 +22,7 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <Hero heroGallery={HeroDiscos} sliderSettings={SliderSettingsHero} textAlign={'center'}/>
+                    <Hero heroGallery={HeroDiscos} page={Pages.Discos}/>
                     <DescriptionDiscos/>
                     <GridGallery gridGallery={GalleryDiscos} sliderSettings={SliderSettingsGallery}/>
                 </main>

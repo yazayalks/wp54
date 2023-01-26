@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
 import React from "react";
-import Hero from "../../components/Hero/Hero";
+import HeroSlider from "../../components/HeroSlider/HeroSlider";
 import {HeroHall} from "../api/data/heroItems";
 import GridGallery from "../../components/GridGallery/GridGallery";
 import {GalleryHall} from "../api/data/galleryItems";
-import {SliderSettingsGallery, SliderSettingsHero} from "../../settings";
+import {SliderSettingsGallery, SliderSettingsHeroMain} from "../../settings";
 import DescriptionHall from "../../components/Description/DescriptionHall";
 
 
@@ -21,7 +21,7 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <Hero heroGallery={HeroHall} sliderSettings= {SliderSettingsHero} />
+                    <HeroSlider heroGallery={HeroHall} sliderSettings= {SliderSettingsHeroMain} />
                     <DescriptionHall/>
                     <GridGallery gridGallery={GalleryHall} sliderSettings={SliderSettingsGallery}/>
                 </main>

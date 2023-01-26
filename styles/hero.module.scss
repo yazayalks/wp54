@@ -1,36 +1,54 @@
-.text__container {
+.hero {
+  height: 1000px;
   position: relative;
-
+  overflow: hidden;
 }
 
-.text__container__center {
-  text-align: center;
+@media all and (max-width: 600px) {
+  .hero {
+    height: 600px;
+  }
 }
 
-.text__container__left {
-  text-align: left;
+.hero__text__container {
+  position: absolute;
+  width: 100%;
 }
 
-.text__container__right {
-  text-align: right;
-}
-
-.text__container_inner {
+.hero__text__container__inner {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  z-index: 2;
-  min-width: 230px;
-  width: 100%;
-  padding-top: 25px;
-  padding-right: 45px;
-  padding-left: 45px;
+  text-align: center;
+  padding: 25px;
+  &__discos {
+    text-align: right;
+  }
+  &__movies {
+    text-align: left;
+  }
+  &__birthdays {
+    text-align: right;
+  }
+  &__corporate {
+    text-align: left;
+  }
+  &__parties {
+    text-align: left;
+  }
+  @media all and (max-width: 800px) {
+    &__discos, &__movies, &__birthdays, &__corporate, &__parties {
+      text-align: center;
+    }
 
+  }
+  @media all  and (min-width: 2000px) {
+    &__discos, &__movies, &__birthdays, &__corporate, &__parties {
+      text-align: center;
+    }
+  }
 }
 
-
 .image {
-
   width: 100%;
   height: 100%;
   display: flex;
@@ -38,15 +56,4 @@
   justify-content: center;
   user-select: none;
   object-fit: cover;
-}
-
-.item {
-  height: 1000px;
-  overflow: hidden;
-}
-
-@media all and (max-width: 600px) {
-  .item {
-    height: 600px;
-  }
 }

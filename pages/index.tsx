@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/Layout/Layout";
-import Hero from "../components/Hero/Hero";
+import HeroSlider from "../components/HeroSlider/HeroSlider";
 import Gallery from "../components/Gallery/Gallery";
 import PriceTable from "../components/PriceTable/PriceTable";
 import Services from "../components/Services/Services";
@@ -24,7 +24,7 @@ export default function Index() {
             </Head>
             <Layout>
                 <main>
-                    <Hero heroGallery = {HeroMain} sliderSettings = {SliderSettingsHeroMain} />
+                    <HeroSlider heroGallery = {HeroMain} sliderSettings = {SliderSettingsHeroMain} />
                     <DescriptionMain/>
                     <Services/>
                     <Gallery gallery= {GalleryMain} sliderSettings={SliderSettingsGalleryMain}/>

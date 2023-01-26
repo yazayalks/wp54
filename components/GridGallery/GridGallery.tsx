@@ -1,8 +1,6 @@
 import styles from "../../styles/gridGallery.module.scss";
 import Image from "next/image";
-
 import Slider, {Settings} from "react-slick";
-
 import FsLightbox from "fslightbox-react";
 import React, {FC, useState} from "react";
 import {GalleryType} from "../../types";
@@ -33,7 +31,7 @@ const GridGallery: FC<GridGalleryProps> = ({gridGallery, sliderSettings}) => {
         return arr;
     }
     return (
-        <div className={styles.gridGalleryContainer}>
+        <div className={styles.grid_gallery__container}>
             <FsLightbox
                 toggler={lightboxController.toggler}
                 slide={lightboxController.slide}
@@ -54,7 +52,7 @@ const GridGallery: FC<GridGalleryProps> = ({gridGallery, sliderSettings}) => {
                 </Slider>
             </div>
 
-            <div className={styles.grid_gallery}>
+            <div className={styles.grid_gallery__inner}>
                 {gridGallery.items.map((item: any) => (
                     <div key={item.id} className={styles.grid_gallery__item}>
                         <Image loading="lazy" width={1000} height={1000} onClick={() => openLightboxOnSlide(item.id)}

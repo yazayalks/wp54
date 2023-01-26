@@ -128,7 +128,7 @@ const Header: FC = () => {
                     </nav>
                     <Checkbox/>
 
-                    <button className={`${styles.burger_menu} ${menuOpen ? styles.open : ''}`} onClick={handleToggleMenu}>
+                    <button title="Burger menu" className={`${styles.burger_menu} ${menuOpen ? styles.open : ''}`} onClick={handleToggleMenu}>
                         <span/>
                         <span/>
                         <span/>

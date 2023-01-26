@@ -1,7 +1,7 @@
-import {GalleryType} from "../../../types";
+import {GalleryType, Pages} from "../../../types";
 
 export const GalleryMain: GalleryType = {
-    title: 'Main',
+    title: Pages.Main,
     description: 'This is Main',
     path: '/images/galleryMain/',
     items: [
@@ -57,7 +57,7 @@ export const GalleryMain: GalleryType = {
 }
 
 export const GalleryHall: GalleryType = {
-    title: 'Hall',
+    title: Pages.Hall,
     description: 'This is hall',
     path: '/images/galleryHall/',
     items: [
@@ -98,7 +98,7 @@ export const GalleryHall: GalleryType = {
 
 
 export const GalleryDiscos: GalleryType = {
-    title: 'Discos',
+    title: Pages.Discos,
     description: 'This is discos',
     path: '/images/galleryDiscos/',
     items: [
@@ -121,7 +121,7 @@ export const GalleryDiscos: GalleryType = {
     ]
 }
 export const GalleryParties: GalleryType = {
-    title: 'Discos',
+    title: Pages.Parties,
     description: 'This is discos',
     path: '/images/galleryParties/',
     items: [
@@ -161,7 +161,7 @@ export const GalleryParties: GalleryType = {
 }
 
 export const GalleryCorporate: GalleryType = {
-    title: 'Corporate',
+    title: Pages.Corporate,
     description: 'This is corporate',
     path: '/images/galleryCorporate/',
     items: [
@@ -202,7 +202,7 @@ export const GalleryCorporate: GalleryType = {
 
 
 export const GalleryBirthdays: GalleryType = {
-    title: 'Birthdays',
+    title: Pages.Birthdays,
     description: 'This is birthdays',
     path: '/images/galleryBirthdays/',
     items: [
@@ -241,7 +241,7 @@ export const GalleryBirthdays: GalleryType = {
     ]
 }
 export const GalleryMovies: GalleryType= {
-    title: 'Movies',
+    title: Pages.Movies,
     description: 'This is movies',
     path: '/images/galleryMovies/',
     items: [

@@ -1,8 +1,8 @@
-.gridGalleryContainer {
+.grid_gallery__container {
   margin-top: 25px;
 }
 
-.grid_gallery {
+.grid_gallery__inner {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -37,7 +37,7 @@
 }
 
 @media all and (max-width: 769px) {
-  .grid_gallery {
+  .grid_gallery__inner {
     display: none;
   }
   .slider {

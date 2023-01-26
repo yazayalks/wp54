@@ -1,8 +1,8 @@
-import {GalleryType} from "../../../types";
+import {GalleryType, Pages} from "../../../types";
 
 
 export const HeroMain: GalleryType = {
-    title: 'Main',
+    title: Pages.Main,
     description: 'This is Main',
     path: '/images/heroMain/',
     items: [
@@ -24,7 +24,7 @@ export const HeroMain: GalleryType = {
 }
 
 export const HeroHall: GalleryType = {
-    title: 'Hall',
+    title: Pages.Hall,
     description: 'This is hall',
     path: '/images/heroHall/',
     items: [
@@ -34,11 +34,15 @@ export const HeroHall: GalleryType = {
             title: "Зал",
             description: "Что-то нужно написать, это помещение\n" + "15 кв.м.",
         },
+        {
+            id: 2,
+            name: 'img-2.png',
+        },
     ]
 }
 
 export const HeroGame: GalleryType = {
-    title: 'Game',
+    title: Pages.Game,
     description: 'This is game',
     path: '/images/heroGame/',
     items: [
@@ -48,10 +52,14 @@ export const HeroGame: GalleryType = {
             title: "Игровая",
             description: "Здесь тоже нужно что-то написать, это помещение\n" + "10 кв.м.",
         },
+        {
+            id: 2,
+            name: 'img-2.png',
+        },
     ]
 }
 export const HeroDiscos: GalleryType = {
-    title: 'Discos',
+    title: Pages.Discos,
     description: 'This is discos',
     path: '/images/heroDiscos/',
     items: [
@@ -65,7 +73,7 @@ export const HeroDiscos: GalleryType = {
 }
 
 export const HeroParties: GalleryType = {
-    title: 'Parties',
+    title: Pages.Parties,
     description: 'This is parties',
     path: '/images/heroParties/',
     items: [
@@ -79,7 +87,7 @@ export const HeroParties: GalleryType = {
 }
 
 export const HeroCorporate: GalleryType = {
-    title: 'Corporate',
+    title: Pages.Corporate,
     description: 'This is corporate',
     path: '/images/heroCorporate/',
     items: [
@@ -93,7 +101,7 @@ export const HeroCorporate: GalleryType = {
 }
 
 export const HeroBirthdays: GalleryType = {
-    title: 'Birthdays',
+    title: Pages.Birthdays,
     description: 'This is birthdays',
     path: '/images/heroBirthdays/',
     items: [
@@ -107,7 +115,7 @@ export const HeroBirthdays: GalleryType = {
 }
 
 export const HeroMovies: GalleryType = {
-    title: 'Movies',
+    title: Pages.Movies,
     description: 'This is movies',
     path: '/images/heroMovies/',
     items: [
