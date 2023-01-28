@@ -4,19 +4,19 @@ import React, {FC, useState} from "react";
 import Checkbox from "../Сheckbox/Checkbox";
 
 import Link from "next/link";
-import {useRouter} from "next/router";
+import {usePathname} from "next/navigation";
 
 const Header: FC = () => {
+        const pathname = usePathname();
 
-        const {pathname} = useRouter()
         const menuItems = [
             {text: 'Главная', href: '/', type: 'link'},
-            {text: 'Зал', href: '/hall', type: 'link'},
-            {text: 'Игровая', href: '/game', type: 'link'},
+            {text: 'Зал', href: '/hall/', type: 'link'},
+            {text: 'Игровая', href: '/game/', type: 'link'},
             {text: 'Услуги', href: 'services', type: 'submenu'},
             {text: 'Мероприятия', href: 'events', type: 'submenu'},
             {text: 'Цены', href: 'prices', type: 'submenu'},
-            {text: 'О нас', href: '/about', type: 'link'},
+            {text: 'О нас', href: '/about/', type: 'link'},
         ]
 
         const subMenuServicesItems = [
@@ -94,13 +94,13 @@ const Header: FC = () => {
                             {menuItems.map((item, index) => (
                                 item.type === 'link' ?
                                     <li key={item.href} className={styles.header__nav__list__item}>
-                                        <Link href={item.href}
+                                        <Link href={item.href} aria-label={`"Перейти на страницу "${item.text}`}
                                               className={`${styles.header__nav__list__item__link} ${(pathname === item.href) ? styles.header__nav__list__item__link__active : ''}`}>{item.text}</Link>
                                     </li>
                                     :
                                     <div key={item.href}>
-                                        <div onClick={() => handleToggleSubMenu(item.href)}
-                                             className={`${styles.header__nav__list__item__link} ${(pathname === item.href) ? styles.header__nav__list__item__link__active : ''}`}>{item.text}</div>
+                                        <div onClick={() => handleToggleSubMenu(item.href)} aria-label={`"Открыть список "${item.text}`}
+                                             className={`${styles.header__nav__list__item__link} ${(pathname === item.href) ? styles.header__nav__list__item__link__active : ''}`}><strong>{item.text}</strong></div>
                                         <ul className={`
                                         ${styles.sub_menu__nav__list}
                                         ${(item.href === 'services') ? styles.sub_menu__nav__list__services : ''} 
@@ -112,10 +112,9 @@ const Header: FC = () => {
                                         ${subMenuPricesOpen ? styles.open__prices : ''}`}>
                                             {(getSubMenuItems(item.href)).map(({text, href, type}, index) => (
 
-                                                <li key={href}>
-                                                    <Link href={href}
-                                                          className={styles.header__nav__list__item__link}>{text} </Link>
-
+                                                <li key={href} className={styles.sub_menu__nav__list__item}>
+                                                    <Link href={href} aria-label={`"Перейти на страницу "${item.text}`}
+                                                          className={styles.sub_menu__nav__list__item__link}>{text}</Link>
                                                 </li>
 
                                             ))}
@@ -127,8 +126,7 @@ const Header: FC = () => {
                         </ul>
                     </nav>
                     <Checkbox/>
-
-                    <button className={`${styles.burger_menu} ${menuOpen ? styles.open : ''}`} onClick={handleToggleMenu}>
+                    <button title="Burger menu" className={`${styles.burger_menu} ${menuOpen ? styles.open : ''}`} onClick={handleToggleMenu}>
                         <span/>
                         <span/>
                         <span/>

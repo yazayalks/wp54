@@ -1,10 +1,6 @@
-.switch {
-
-
-
-}
-
 .checkbox {
+  border: 0;
+  padding: 0;
   position: relative;
   width: 80px;
   height: 40px;
@@ -18,10 +14,18 @@
 
 .checkbox:checked{
   background: var(--checkbox-background-color);
+  border: 0;
+  border-radius: 20px;
+}
+
+.checkbox:focus{
+  border: 0;
+  border-radius: 20px;
 
 }
 
 .checkbox:before {
+  border: 0;
   content: '';
   position: absolute;
   width: 40px;
@@ -36,6 +40,8 @@
 }
 
 .checkbox:checked:before {
+  border: 0;
   left: 40px;
+  border-radius: 20px;
   background: var(--checkbox-color);
 }

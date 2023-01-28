@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Компонент WorkingMode Снэпшот WorkingMode 1`] = `
+<div
+  class="working_mode__inner"
+  data-testid="working_mode"
+>
+  <p
+    class="small-text"
+    data-testid="paragraph"
+  >
+    <strong>
+      Режим работы:
+    </strong>
+  </p>
+  <p
+    class="small-text"
+    data-testid="paragraph"
+  >
+    Круглосуточно
+  </p>
+  <a
+    class="small-text"
+    data-testid="paragraph"
+    href="tel:+7 (913) 381-22-81"
+  >
+    <strong>
+      +7 (913) 381-22-81
+    </strong>
+  </a>
+  <p
+    class="small-text"
+    data-testid="paragraph"
+  >
+    Ул. Ватутина, 19
+  </p>
+</div>
+`;

@@ -5,18 +5,26 @@ import {ThemeProvider} from 'next-themes'
 import {ToastContainer} from "react-toastify";
 import NextNProgress from 'nextjs-progressbar';
 
+import {Roboto} from '@next/font/google'
+const roboto = Roboto({
+    subsets: ['latin', 'cyrillic'],
+    weight: ['400','700', '900']
+})
+
 export default function App({Component, pageProps}: AppProps) {
     return (
-        <ThemeProvider>
-            <NextNProgress color="var(--icon-color-hover)"/>
-            <Component {...pageProps} />
-            <ToastContainer
-                position="top-right"
-                hideProgressBar={false}
-                closeOnClick
-                rtl={false}
-            />
-        </ThemeProvider>
+        <main className= {roboto.className} >
+            <ThemeProvider>
+                <NextNProgress color="var(--icon-color-hover)"/>
+                <Component {...pageProps} />
+                <ToastContainer
+                    position="top-right"
+                    hideProgressBar={false}
+                    closeOnClick
+                    rtl={false}
+                />
+            </ThemeProvider>
+        </main>
     )
 }
 

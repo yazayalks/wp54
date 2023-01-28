@@ -15,7 +15,7 @@ const Footer: FC = () => {
                             <Logo/>
                         </div>
                         <div className={styles.footer__map}>
-                            <iframe
+                            <iframe title="Посмотреть лофт wp54 на Яндекс карте"
                                 src="https://yandex.ru/map-widget/v1/?um=constructor%3A98a21e0f1dad03790cbcee5c2863810295a82c5784dbb4dcb61fb430a114a4c3&amp;source=constructor"
                                 width="400" height="400">
                             </iframe>

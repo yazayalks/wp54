@@ -33,7 +33,7 @@ const Gallery: FC<GalleryProps> = ({gallery, sliderSettings}) => {
     }
 
     return (
-        <div className={styles.galleryContainer}>
+        <div className={styles.gallery__container}>
             <FsLightbox
                 toggler={lightboxController.toggler}
                 slide={lightboxController.slide}
@@ -41,7 +41,7 @@ const Gallery: FC<GalleryProps> = ({gallery, sliderSettings}) => {
             />
             <Slider {...sliderSettings}>
                 {gallery.items.map((item: GalleryItemType) => (
-                    <div key={item.id} className={styles.imageCard}>
+                    <div key={item.id} className={styles.gallery__item}>
                         <Image loading="lazy" onClick={() => openLightboxOnSlide(item.id)} width={1000} height={1000}
                                className={styles.image} src={`${gallery.path}${item.name}`}
                                alt={item.name}/>

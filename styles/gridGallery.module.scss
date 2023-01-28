@@ -1,13 +1,12 @@
-.gridGalleryContainer {
+.grid_gallery__container {
   margin-top: 25px;
 }
 
-.grid_gallery {
+.grid_gallery__inner {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   padding: 0 25px ;
-
 }
 
 
@@ -38,11 +37,14 @@
 }
 
 @media all and (max-width: 769px) {
-  .grid_gallery {
+  .grid_gallery__inner {
     display: none;
   }
   .slider {
     display: block;
   }
-
+  .grid_gallery__item {
+    height: 500px;
+    width: 100%;
+  }
 }

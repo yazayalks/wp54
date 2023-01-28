@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/Layout/Layout";
-import Hero from "../components/Hero/Hero";
+import HeroSlider from "../components/HeroSlider/HeroSlider";
 import Gallery from "../components/Gallery/Gallery";
 import PriceTable from "../components/PriceTable/PriceTable";
 import Services from "../components/Services/Services";
@@ -9,6 +9,8 @@ import {SliderSettingsGalleryMain, SliderSettingsHeroMain} from "../settings";
 import {GalleryMain} from "./api/data/galleryItems";
 import {HeroMain} from "./api/data/heroItems";
 import DescriptionMain from "../components/Description/DescriptionMain";
+import React from "react";
+
 
 export default function Index() {
     return (
@@ -18,14 +20,15 @@ export default function Index() {
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE-edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <meta name="Описание" content="Описание страницы Main"/>
                 <link rel="icon" type="image/svg" sizes="32x32" href="/images/logo/wp54_icon.svg"/>
             </Head>
             <Layout>
                 <main>
-                    <Hero heroGallery = {HeroMain} sliderSettings = {SliderSettingsHeroMain} />
+                    <HeroSlider heroGallery={HeroMain} sliderSettings={SliderSettingsHeroMain}/>
                     <DescriptionMain/>
                     <Services/>
-                    <Gallery gallery= {GalleryMain} sliderSettings={SliderSettingsGalleryMain}/>
+                    <Gallery gallery={GalleryMain} sliderSettings={SliderSettingsGalleryMain}/>
                     <h2 style={{marginTop: '25px', textAlign: 'center'}}>Основные цены</h2>
                     <PriceTable/>
                     <Contact/>
