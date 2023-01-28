@@ -1,8 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import Layout from "@components/Layout/Layout";
-import Description500 from "@components/Description/Description500";
-
+import Layout from "../../components/Layout/Layout";
+import Description500 from "../../components/Description/Description500";
 
 
 const Index = () => {
