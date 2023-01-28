@@ -4,6 +4,8 @@ import Slider, {Settings} from "react-slick";
 import FsLightbox from "fslightbox-react";
 import React, {FC, useState} from "react";
 import {GalleryType} from "../../types";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface GridGalleryProps {
     gridGallery: GalleryType,
@@ -39,8 +41,6 @@ const GridGallery: FC<GridGalleryProps> = ({gridGallery, sliderSettings}) => {
             />
             <div className={styles.slider}>
                 <Slider {...sliderSettings}>
-
-
                     {gridGallery.items.map((item: any) => (
                         <div key={item.id} className={styles.grid_gallery__item}>
                             <Image loading="lazy" width={1000} height={1000} onClick={() => openLightboxOnSlide(item.id)}
@@ -48,7 +48,6 @@ const GridGallery: FC<GridGalleryProps> = ({gridGallery, sliderSettings}) => {
                                    alt={item.name}/>
                         </div>
                     ))}
-
                 </Slider>
             </div>
 
