@@ -14,6 +14,7 @@ export type GalleryItemType = {
 
 export type ContactInputType = {
     type: string;
+    title: string;
     text: string;
     placeholder: string;
     name: string;

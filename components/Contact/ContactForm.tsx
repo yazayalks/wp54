@@ -20,10 +20,8 @@ const ContactForm: FC = () => {
         setSpinner(true);
         emailJs.sendForm(`${process.env.NEXT_PUBLIC_SERVICE_ID}`, `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`, formRef.current, `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`)
             .then(result => {
-
                 setSpinner(false);
                 toast.success(`Данные отправлены`);
-
                 formRef.current.reset();
             }, error => {
                 setSpinner(false);
@@ -34,12 +32,12 @@ const ContactForm: FC = () => {
         setAcceptWithRules(!acceptWithRules);
     }
     return (
-        <form onSubmit={sendForm} className={styles.contact__form} ref={formRef}>
-            <ContactInput type="text" text="ФИО" placeholder="Укажите Ваше ФИО" name="fullName"/>
-            <ContactInput type="phone" text="Телефон" placeholder="Укажите Ваш телефон" name="phone"/>
-            <ContactInput type="email" text="Почта" placeholder="Укажите Вашу почту" name="email"/>
+        <form title="Форма отправки заявеи" onSubmit={sendForm} className={styles.contact__form} ref={formRef}>
+            <ContactInput type="text" title="ФИО" text="ФИО" placeholder="Укажите Ваше ФИО" name="fullName"/>
+            <ContactInput type="phone" title="Телефон" text="Телефон" placeholder="Укажите Ваш телефон" name="phone"/>
+            <ContactInput type="email" title="Почта" text="Почта" placeholder="Укажите Вашу почту" name="email"/>
             <p><strong>Сообщение:</strong></p>
-            <textarea className={styles.contact__textarea} maxLength={500}
+            <textarea title="Cообщение или вопрос" className={styles.contact__textarea} maxLength={500}
                       placeholder="Введите Ваше сообщение или задайте вопрос" name="message" required></textarea>
             <button title="Send a request" disabled={!acceptWithRules} style={{width: 'auto'}}
                     className={styles.contact__form__btn}>
@@ -48,22 +46,19 @@ const ContactForm: FC = () => {
             <div className={styles.contact__checkbox}>
 
                 <label className={styles.toggle}>
-                    <input className={styles.toggle__input} onChange={(e) => toggleAcceptWithRules(e)} type="checkbox"
+                    <input title="Принять политику конфиденциальности и обработку персональных данных" className={styles.toggle__input} onChange={(e) => toggleAcceptWithRules(e)} type="checkbox"
                            checked={acceptWithRules}/>
                     <span className={styles.toggle__label}>
-
         </span>
                 </label>
-
-
                 <p className={styles.contact__checkbox__text}>Нажимая на кнопку «Отправить заявку», я соглашаюсь с
-                    <Link href='/privacy-policy'>
+                    <Link aria-label="Перейти на страницу политики конфиденциальности" href='/privacy-policy'>
                         <strong>
-                            {' '} Политикой конфиденциальности
+                            {' '} Политикой конфиденциальности {' '}
                         </strong>
                     </Link>
                     и даю Согласие на
-                    <Link href='/personal-data-policy'>
+                    <Link aria-label="Перейти на страницу обработки персональных данных" href='/personal-data-policy'>
                         <strong>
                             {' '} обработку персональных данных
                         </strong>

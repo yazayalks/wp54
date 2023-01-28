@@ -9,14 +9,9 @@ nextConfig = {
     defaultLocale: 'ru',
   },
   poweredByHeader: false,
-
-  mode:"production",
   trailingSlash: true,
   basePath: '',
   reactStrictMode: true,
-  plugins: [
-
-  ]
 }
 
 

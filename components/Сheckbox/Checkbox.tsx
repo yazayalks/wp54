@@ -12,7 +12,7 @@ const Checkbox: FC = () => {
     }
     return (
         <div className={styles.switch}>
-            <input className={styles.checkbox} type="checkbox" onClick={handleThemeClick}/>
+            <input title="Смена темы" className={styles.checkbox} type="checkbox" onClick={handleThemeClick}/>
         </div>
     );
 };

@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "jest",
+    "coverage": "jest --coverage"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
@@ -37,6 +39,7 @@
     "purgecss-webpack-plugin": "^5.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-router-dom": "^6.8.0",
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "react-spinners": "^0.13.7",
@@ -47,7 +50,11 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
     "@zeit/next-css": "^1.0.1",
+    "jest": "^29.4.1",
+    "jest-environment-jsdom": "^29.4.1",
     "next-bundle-analyzer": "^0.6.7",
     "next-purgecss": "^4.0.0"
   }

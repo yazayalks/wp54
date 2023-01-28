@@ -1,0 +1,467 @@
+.background_animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -100;
+    background-color: var(--background-color);
+    overflow: hidden;
+    transition: background-color 500ms linear;
+}
+
+.ball_one, .ball_two, .ball_three, .ball_four, .ball_five, .ball_six {
+    -webkit-filter: blur(var( --ball--blur));
+    -moz-filter: blur(var( --ball--blur));
+    -o-filter: blur(var( --ball--blur));
+    -ms-filter: blur(var( --ball--blur));
+    filter: blur(var( --ball--blur));
+    height: var(--ball-size);
+    width: var(--ball-size);
+    position: absolute;
+    border-radius: 100%;
+}
+
+.ball_one {
+    background: radial-gradient(at center, var(--bright-purple-color) 0%, var(--light-purple-color) 43.75%, var(--purple--color) 68.75%);
+    transition: all 15s;
+    animation: move1 15s infinite;
+    -webkit-animation: move1 15s infinite;
+}
+
+.ball_two {
+    background: radial-gradient(at center, var(--bright-green-color) 0%, var(--light-green-color) 43.75%, var(--green--color) 68.75%);
+    transition: all 15s;
+    animation: move2 30s infinite;
+    -webkit-animation: move2 30s infinite;
+}
+
+.ball_three {
+    background: radial-gradient(at center, var(--bright-blue-color) 0%, var(--light-blue-color) 43.75%, var(--blue--color) 68.75%);
+    transition: all 15s;
+    animation: move3 15s infinite;
+    -webkit-animation: move3 15s infinite;
+}
+
+.ball_four {
+    background: radial-gradient(at center, var(--bright-purple-color) 0%, var(--light-purple-color) 43.75%, var(--purple--color) 68.75%);
+    transition: all 15s;
+    animation: move4 15s infinite;
+    -webkit-animation: move4 15s infinite;
+}
+
+.ball_five {
+    background: radial-gradient(at center, var(--bright-green-color) 0%, var(--light-green-color) 43.75%, var(--green--color) 68.75%);
+    transition: all 15s;
+    animation: move5 20s infinite;
+    -webkit-animation: move5 20s infinite;
+}
+
+.ball_six {
+    background: radial-gradient(at center, var(--bright-blue-color) 0%, var(--light-blue-color) 43.75%, var(--blue--color) 68.75%);
+    transition: all 15s;
+    animation: move6 20s infinite;
+    -webkit-animation: move6 20s infinite;
+}
+
+
+@keyframes move1 {
+    0% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    5.50% {
+        transform: translate3d(calc(37.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    11% {
+        transform: translate3d(calc(62.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    16.50% {
+        transform: translate3d(calc(87.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    22% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    27.50% {
+        transform: translate3d(calc(62.5vw - var(--ball-half-size)), calc(37.5vh - var(--ball-half-size)), 0);
+    }
+    33% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    38.50% {
+        transform: translate3d(calc(37.5vw - var(--ball-half-size)), calc(62.5vh - var(--ball-half-size)), 0);
+    }
+    44% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    49.50% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    55% {
+        transform: translate3d(calc(37.5vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    60.50% {
+        transform: translate3d(calc(62.5vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    66% {
+        transform: translate3d(calc(87.5vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    71.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    77% {
+        transform: translate3d(calc(62.5vw - var(--ball-half-size)), calc(62.5vh - var(--ball-half-size)), 0);
+    }
+    82.50% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    88% {
+        transform: translate3d(calc(37.5vw - var(--ball-half-size)), calc(37.5vh - var(--ball-half-size)), 0);
+    }
+    93.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    100% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+}
+
+
+@keyframes move2 {
+
+    0% {
+        transform: translate3d(calc(0vw), calc(0vh), 0);
+    }
+    2.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(6.25vh - var(--ball-half-size)), 0);
+    }
+    5% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    7.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(18.75vh - var(--ball-half-size)), 0);
+    }
+    10% {
+        transform: translate3d(calc(100vw - var(--ball-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    12.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(31.25vh - var(--ball-half-size)), 0);
+    }
+    15% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(37.5vh - var(--ball-half-size)), 0);
+    }
+
+    17.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(43.75vh - var(--ball-half-size)), 0);
+    }
+    20% {
+        transform: translate3d(calc(0vw), calc(50vh - var(--ball-half-size)), 0);
+    }
+    22.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(56.25vh - var(--ball-half-size)), 0);
+    }
+    25% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(62.5vh - var(--ball-half-size)), 0);
+    }
+    27.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(68.75vh - var(--ball-half-size)), 0);
+    }
+    30% {
+        transform: translate3d(calc(100vw - var(--ball-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    32.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(81.25vh - var(--ball-half-size)), 0);
+    }
+    35% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    37.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(93.75vh - var(--ball-half-size)), 0);
+    }
+    40% {
+        transform: translate3d(calc(0vw), calc(100vh - var(--ball-size)), 0);
+    }
+    42.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(100vh - var(--ball-size)), 0);
+    }
+    45% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(100vh - var(--ball-size)), 0);
+    }
+    47.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(100vh - var(--ball-size)), 0);
+    }
+    50% {
+        transform: translate3d(calc(100vw - var(--ball-size)), calc(100vh - var(--ball-size)), 0);
+    }
+    52.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(93.75vh - var(--ball-half-size)), 0);
+    }
+    55% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    57.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(81.25vh - var(--ball-half-size)), 0);
+    }
+    60% {
+        transform: translate3d(calc(0vw), calc(75vh - var(--ball-half-size)), 0);
+    }
+    62.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(68.75vh - var(--ball-half-size)), 0);
+    }
+    65% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(62.5vh - var(--ball-half-size)), 0);
+    }
+    67.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(56.25vh - var(--ball-half-size)), 0);
+    }
+    70% {
+        transform: translate3d(calc(100vw - var(--ball-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    72.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(43.75vh - var(--ball-half-size)), 0);
+    }
+    75% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(37.5vh - var(--ball-half-size)), 0);
+    }
+    77.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(31.25vh - var(--ball-half-size)), 0);
+    }
+    80% {
+        transform: translate3d(calc(0vw), calc(25vh - var(--ball-half-size)), 0);
+    }
+    82.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(18.75vh - var(--ball-half-size)), 0);
+    }
+    85% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    87.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(6.25vh - var(--ball-half-size)), 0);
+    }
+    90% {
+        transform: translate3d(calc(100vw - var(--ball-size)), calc(0vh), 0);
+    }
+    92.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(0vh), 0);
+    }
+    95% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(0vh), 0);
+    }
+    97.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(0vh), 0);
+    }
+    100% {
+        transform: translate3d(calc(0vw), calc(0vh), 0);
+    }
+}
+
+
+@keyframes move3 {
+    0% {
+        transform: translate3d(calc(87.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    5.50% {
+        transform: translate3d(calc(87.5vw - var(--ball-half-size)), calc(37.5vh - var(--ball-half-size)), 0);
+    }
+    11% {
+        transform: translate3d(calc(87.5vw - var(--ball-half-size)), calc(62.5vh - var(--ball-half-size)), 0);
+    }
+    16.50% {
+        transform: translate3d(calc(87.5vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    22% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    27.50% {
+        transform: translate3d(calc(62.5vw - var(--ball-half-size)), calc(62.5vh - var(--ball-half-size)), 0);
+    }
+    33% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    38.50% {
+        transform: translate3d(calc(37.5vw - var(--ball-half-size)), calc(37.5vh - var(--ball-half-size)), 0);
+    }
+    44% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    49.50% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    55% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(37.5vh - var(--ball-half-size)), 0);
+    }
+    60.50% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(62.5vh - var(--ball-half-size)), 0);
+    }
+    66% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    71.50% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    77% {
+        transform: translate3d(calc(37.5vw - var(--ball-half-size)), calc(62.5vh - var(--ball-half-size)), 0);
+    }
+    82.50% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    88% {
+        transform: translate3d(calc(62.5vw - var(--ball-half-size)), calc(37.5vh - var(--ball-half-size)), 0);
+    }
+    93.50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    100% {
+        transform: translate3d(calc(87.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+}
+
+
+@keyframes move4 {
+    0% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    4.16% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    8% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(37.5vh - var(--ball-half-size)), 0);
+    }
+    12.48% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    17% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(62.5vh - var(--ball-half-size)), 0);
+    }
+    20.80% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    25% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    29.12% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    33% {
+        transform: translate3d(calc(37.5vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    37.44% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    42% {
+        transform: translate3d(calc(62.5vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    45.76% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    50% {
+        transform: translate3d(calc(87.5vw - var(--ball-half-size)), calc(87.5vh - var(--ball-half-size)), 0);
+    }
+    54.08% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    58% {
+        transform: translate3d(calc(87.5vw - var(--ball-half-size)), calc(62.5vh - var(--ball-half-size)), 0);
+    }
+    62.40% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    67% {
+        transform: translate3d(calc(87.5vw - var(--ball-half-size)), calc(37.5vh - var(--ball-half-size)), 0);
+    }
+    70.72% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    75% {
+        transform: translate3d(calc(87.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    79.04% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    83% {
+        transform: translate3d(calc(62.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    87% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    91.52% {
+        transform: translate3d(calc(37.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+    96% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    100% {
+        transform: translate3d(calc(12.5vw - var(--ball-half-size)), calc(12.5vh - var(--ball-half-size)), 0);
+    }
+}
+
+@keyframes move5 {
+    0% {
+        transform: translate3d(calc(0vw), calc(0vh), 0);
+    }
+    12.50% {
+        transform: translate3d(calc(0vw), calc(50vh - var(--ball-half-size)), 0);
+    }
+    25% {
+        transform: translate3d(calc(0vw), calc(100vh - var(--ball-size)), 0);
+    }
+    37.50% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(100vh - var(--ball-size)), 0);
+    }
+    50% {
+        transform: translate3d(calc(100vw - var(--ball-size)), calc(100vh - var(--ball-size)), 0);
+    }
+    62.50% {
+        transform: translate3d(calc(100vw - var(--ball-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    75% {
+        transform: translate3d(calc(100vw - var(--ball-size)), calc(0vh), 0);
+    }
+    87.50% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(0vh), 0);
+    }
+    100% {
+        transform: translate3d(calc(0vw), calc(0vh), 0);
+    }
+}
+
+@keyframes move6 {
+    0% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    8.33% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    17% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    24.99% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+    33% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    41.65% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    50% {
+        transform: translate3d(calc(75vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    58.31% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    67% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    75% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(75vh - var(--ball-half-size)), 0);
+    }
+    83.30% {
+        transform: translate3d(calc(50vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    92% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(50vh - var(--ball-half-size)), 0);
+    }
+    100% {
+        transform: translate3d(calc(25vw - var(--ball-half-size)), calc(25vh - var(--ball-half-size)), 0);
+    }
+}

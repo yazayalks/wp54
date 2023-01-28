@@ -42,13 +42,12 @@
 
     &__icons {
       white-space: nowrap;
-
     }
 
-    p {
-      color: var(--text-color);
-      margin: 0 0 10px 0;
-    }
+    //p {
+    //  color: var(--text-color);
+    //  margin: 0 0 10px 0;
+    //}
 
     .icon {
       margin: 0;
@@ -64,14 +63,14 @@
     grid-template-columns: 1fr 1fr;
     margin: 25px 0 0 0;
 
-    &__item__link {
-
-      color: var(--link-color);
-
-      &:hover {
-        color: var(--link-color-hover);
-      }
-    }
+    //&__item__link {
+    //
+    //  color: var(--link-color);
+    //
+    //  &:hover {
+    //    color: var(--link-color-hover);
+    //  }
+    //}
   &__item {
     list-style-type: none;
     margin-left: 0;
@@ -96,15 +95,6 @@
   &__copyright {
     text-align: center;
     margin-top: 25px;
-
-    &__link {
-      color: var(--link-color);
-      margin: 25px 0 25px 0;
-
-      &:hover {
-        color: var(--link-color-hover);
-      }
-    }
   }
 }
 

@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "../../styles/logo.module.scss"
 import {FC} from "react";
 
-const Logo: FC = () => <Link href='/' className={styles.link}>
+const Logo: FC = () => <Link aria-label="Вернуться на главную страницу"  href='/' className={styles.link}>
     <svg className={styles.wp54_logo} preserveAspectRatio="none" x="0px" y="0px" width="75" height="75"
          viewBox="0 0 1020 1020">
         <path className={styles.logo} fill="white" stroke="none" d="

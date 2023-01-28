@@ -36,8 +36,8 @@ const Hero: FC<HeroProps> = ({heroGallery, page}) => {
         <div className={styles.hero}>
             <div className={styles.hero__text__container}>
                 <div className={`${styles.hero__text__container__inner} ${getStylePage(page)}`}>
-                    <h1 className="over-title">{heroItem.title}</h1>
-                    <p className="big-text over-text">{heroItem.description}</p>
+                    <h1 className="title--contour">{heroItem.title}</h1>
+                    <p className="text--big text--unchanged text--contour"><strong>{heroItem.description}</strong></p>
                 </div>
             </div>
             <Image priority className={styles.image} src={`${heroGallery.path}${heroItem.name}`} width={1920}

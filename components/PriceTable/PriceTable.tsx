@@ -6,8 +6,8 @@ const PriceTable: FC = () => {
 
         <div className="sub-container">
             <div className={styles.price_table__container}>
-                <table className={styles.priceTable}>
-                    <caption><h2 className="text">ЦЕНЫ ПН-ЧТ:</h2></caption>
+                <table className={styles.price_table}>
+                    <caption><h2 className="text__separate">ЦЕНЫ ПН-ЧТ:</h2></caption>
                     <thead>
                     <tr>
                         <td><h3>ЧАСЫ АРЕНДЫ</h3></td>
@@ -26,8 +26,8 @@ const PriceTable: FC = () => {
                     </tbody>
                 </table>
 
-                <table className={styles.priceTable}>
-                    <caption><h2 className="text">ЦЕНЫ ПТ-ВС:</h2></caption>
+                <table className={styles.price_table}>
+                    <caption><h2 className="text__separate">ЦЕНЫ ПТ-ВС:</h2></caption>
                     <thead>
 
                     <tr>

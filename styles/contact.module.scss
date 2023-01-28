@@ -25,21 +25,12 @@
   align-items: center;
   text-align: center;
   grid-area: m;
-
-  p {
-    font-size: 20px;
-  }
-
-
 }
 
 .contact__form {
   grid-area: f;
-
-
   display: flex;
   flex-direction: column;
-
 }
 
 @media all and (max-width: 800px) {
@@ -54,61 +45,27 @@
 }
 
 .contact__input {
-
   margin-bottom: 15px;
-  font-size: 20px;
-  padding: 10px;
   width: 100%;
-  border: 3px solid var(--text-color);
-  border-radius: 5px;
-  background-color: transparent;
-
-  &:focus {
-    border: 3px solid var(--border-color-hover);
-  }
-
-  &::placeholder {
-    font-size: 20px;
-    color: var(--text-color);
-  }
 }
 
 .contact__textarea {
   resize: none;
   height: 100px;
   margin-bottom: 15px;
-  font-size: 20px;
   padding: 10px;
   width: 100%;
-  border: 3px solid var(--text-color);
-  border-radius: 5px;
-  background-color: transparent;
-  font-family: 'Roboto';
-
-  &:focus {
-    border: 3px solid var(--border-color-hover);
-  }
-
-  &::placeholder {
-    font-family: 'Roboto';
-    font-size: 20px;
-    color: var(--text-color);
-  }
 }
 
 .contact {
   &__checkbox {
     position: relative;
-  margin-top: 25px;
+    margin-top: 25px;
     display: flex;
-    &__link {
-      color: #0CAED5;
-    }
     &__text {
       width: auto;
       overflow: hidden;
       text-overflow: ellipsis;
-
     }
   }
 }
@@ -154,16 +111,16 @@
   border-bottom-style: solid;
   border-color: var(--icon-color);
   position: absolute;
-  top: .5428em;
-  left: .25em;
+  top: .45em;
+  left: .15em;
   z-index: 3;
   transform-origin: left top;
   transform: rotate(-40deg) skew(10deg);
 }
 
 .toggle__input:checked ~ .toggle__label::before{
-  --uiToggleArrowWidth: var(--toggleArrowWidth, 2px);
-  width: .5em;
+  --uiToggleArrowWidth: var(--toggleArrowWidth, 3px);
+  width: .4em;
   height: .3em;
   border-left-width: var(--uiToggleArrowWidth);
   border-bottom-width: var(--uiToggleArrowWidth);
