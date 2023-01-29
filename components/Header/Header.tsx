@@ -1,6 +1,6 @@
 import styles from '../../styles/header.module.scss'
 import Logo from "../Logo/Logo";
-import React, {FC, useState} from "react";
+import React, {FC, useEffect, useRef, useState} from "react";
 import Checkbox from "../Сheckbox/Checkbox";
 
 import Link from "next/link";
@@ -54,7 +54,9 @@ const Header: FC = () => {
             return [];
         }
 
-        function handleToggleSubMenu(href: any) {
+        function handleToggleSubMenu(e: any, href: any) {
+
+
             if (href === 'services') {
                 setSubMenuServicesOpen(!subMenuServicesOpen)
                 setSubMenuEventsOpen(false)
@@ -72,7 +74,13 @@ const Header: FC = () => {
             }
         }
 
+        function closeSubMenu() {
+            setSubMenuServicesOpen(false)
+            setSubMenuEventsOpen(false)
+            setSubMenuPricesOpen(false)
+        }
 
+        const refItems = useRef<any[]>([]) ;
         const handleToggleMenu = () => {
             setMenuOpen(!menuOpen);
         }
@@ -83,12 +91,27 @@ const Header: FC = () => {
         const [subMenuEventsOpen, setSubMenuEventsOpen] = useState(false);
         const [subMenuPricesOpen, setSubMenuPricesOpen] = useState(false);
 
+        useEffect(() => {
+            const handleClickOutside = (e: any) => {
+                let isSelected = false;
+                refItems.current.forEach(function (current) {
+                    if (current.contains(e.target)) {
+                        isSelected = true;
+                        return
+                    }
+                });
+                if (!isSelected) {
+                    closeSubMenu();
+                }
+            };
+            window.addEventListener('click', handleClickOutside, true);
+            return () => window.removeEventListener('click', handleClickOutside,true);
+        }, [refItems])
+
         return (
             <header>
-
                 <div className={`container ${styles.header__container}`}>
                     <Logo/>
-
                     <nav className={`${styles.header__nav} ${(menuOpen) ? styles.open : ''}`}>
                         <ul className={styles.header__nav__list}>
                             {menuItems.map((item, index) => (
@@ -98,9 +121,11 @@ const Header: FC = () => {
                                               className={`${styles.header__nav__list__item__link} ${(pathname === item.href) ? styles.header__nav__list__item__link__active : ''}`}>{item.text}</Link>
                                     </li>
                                     :
-                                    <div key={item.href}>
-                                        <div onClick={() => handleToggleSubMenu(item.href)} aria-label={`"Открыть список "${item.text}`}
-                                             className={`${styles.header__nav__list__item__link} ${(pathname === item.href) ? styles.header__nav__list__item__link__active : ''}`}><strong>{item.text}</strong></div>
+                                    <div ref={el => refItems.current[index] = el} key={item.href}>
+                                        <div onClick={(e) => handleToggleSubMenu(e, item.href)}
+                                             aria-label={`"Открыть список "${item.text}`}
+                                             className={`${styles.header__nav__list__item__link} ${(pathname === item.href) ? styles.header__nav__list__item__link__active : ''}`}>
+                                            <strong>{item.text}</strong></div>
                                         <ul className={`
                                         ${styles.sub_menu__nav__list}
                                         ${(item.href === 'services') ? styles.sub_menu__nav__list__services : ''} 
@@ -120,19 +145,17 @@ const Header: FC = () => {
                                             ))}
                                         </ul>
                                     </div>
-
                             ))}
-
                         </ul>
                     </nav>
                     <Checkbox/>
-                    <button title="Burger menu" className={`${styles.burger_menu} ${menuOpen ? styles.open : ''}`} onClick={handleToggleMenu}>
+                    <button title="Burger menu" className={`${styles.burger_menu} ${menuOpen ? styles.open : ''}`}
+                            onClick={handleToggleMenu}>
                         <span/>
                         <span/>
                         <span/>
                     </button>
                 </div>
-
             </header>
         );
     }

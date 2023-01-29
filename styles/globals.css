@@ -264,7 +264,7 @@ li {
     margin-left: 25px;
 }
 
-input, textarea, td {
+input, textarea {
     font-weight: 400;
     font-size: 20px;
     font-family: inherit;
@@ -273,6 +273,13 @@ input, textarea, td {
     border: 3px solid var(--border-color);
     transition: border 300ms linear;
     border-radius: 5px;
+}
+td {
+    background: var(--background-color-over);
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: inherit;
+    padding: 10px;
 }
 
 textarea::placeholder, input::placeholder {
