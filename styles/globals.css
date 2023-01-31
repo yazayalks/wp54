@@ -265,6 +265,10 @@ li {
     margin-left: 25px;
 }
 
+br {
+    margin-bottom: 25px;
+}
+
 input, textarea {
     font-weight: 400;
     font-size: 20px;
@@ -275,6 +279,7 @@ input, textarea {
     transition: border 300ms linear;
     border-radius: 5px;
 }
+
 td {
     background: var(--background-color-over);
     border-radius: 5px;
@@ -314,6 +319,7 @@ td {
 footer {
     font-size: 16px;
 }
+
 .container {
     max-width: 2500px;
     padding: 0 25px;

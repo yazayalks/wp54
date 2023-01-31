@@ -15,6 +15,7 @@ const Index = () => {
             <Layout>
                 <main>
                     <DescriptionBasicPrices/>
+                    <br/>
                     <PriceTable/>
                     <Services/>
                 </main>

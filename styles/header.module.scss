@@ -46,6 +46,9 @@
   text-transform: uppercase;
   margin-right: 25px;
   transition: color 500ms linear;
+  &:hover {
+    color: var(--title-color);
+  }
 }
 
 .sub_menu__nav__list {

@@ -8,17 +8,17 @@ export const HeroMain: GalleryType = {
     items: [
         {
             id: 1,
-            name: 'img-1.png',
-            title: "Лофт для мероприятий",
-            description: "ЗАЛ и игровая комната, до 30 человек ОТ 1000 РУБ/ЧАС\n" + "85 кв.м.",
+            name: 'img-1.jpg',
+            title: "Лофт для мероприятий, скажи «welcome» тусовке!",
+            description: "Зал и игровая комната до 30 человек ОТ 1000 РУБ/ЧАС 85 кв.м.",
         },
         {
             id: 2,
-            name: 'img-2.png',
+            name: 'img-2.jpg',
         },
         {
             id: 3,
-            name: 'img-3.png',
+            name: 'img-3.jpg',
         },
     ]
 }
@@ -32,11 +32,11 @@ export const HeroHall: GalleryType = {
             id: 1,
             name: 'img-1.jpg',
             title: "Зал",
-            description: "Что-то нужно написать, это помещение\n" + "15 кв.м.",
+            description: "Всё начинается здесь!",
         },
         {
             id: 2,
-            name: 'img-2.png',
+            name: 'img-2.jpg',
         },
     ]
 }
@@ -54,7 +54,7 @@ export const HeroGame: GalleryType = {
         },
         {
             id: 2,
-            name: 'img-2.png',
+            name: 'img-2.jpg',
         },
     ]
 }

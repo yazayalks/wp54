@@ -5,7 +5,7 @@ import Gallery from "../components/Gallery/Gallery";
 import PriceTable from "../components/PriceTable/PriceTable";
 import Services from "../components/Services/Services";
 import Contact from "../components/Contact/Contact";
-import {SliderSettingsGalleryMain, SliderSettingsHeroMain} from "../settings";
+import {SliderSettingsGalleryMain, SliderSettingsHero} from "../settings";
 import {GalleryMain} from "./api/data/galleryItems";
 import {HeroMain} from "./api/data/heroItems";
 import DescriptionMain from "../components/Description/DescriptionMain";
@@ -22,7 +22,7 @@ export default function Index() {
             </Head>
             <Layout>
                 <main>
-                    <HeroSlider heroGallery={HeroMain} sliderSettings={SliderSettingsHeroMain}/>
+                    <HeroSlider heroGallery={HeroMain} sliderSettings={SliderSettingsHero}/>
                     <DescriptionMain/>
                     <Services/>
                     <Gallery gallery={GalleryMain} sliderSettings={SliderSettingsGalleryMain}/>

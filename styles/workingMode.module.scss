@@ -1,12 +1,20 @@
 .working_mode__inner{
-  width: 245px;
+  width: auto;
   p:nth-child(1) {
     margin-bottom: 10px;
   }
 }
 
-@media all and (max-width: 295px) {
-  .working_mode__inner{
-    width: 150px;
-  }
-}
+//@media all and (max-width: 800px) {
+//  .working_mode__inner{
+//    width: 150px;
+//
+//  }
+//}
+//
+//@media all and (max-width: 600px) {
+//  .working_mode__inner{
+//    width: 200px;
+//
+//  }
+//}

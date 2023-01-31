@@ -4,7 +4,7 @@ import styles from "../../styles/description.module.scss";
 const DescriptionBasicPrices: FC = () => {
     return (
         <div className="sub-container">
-            <div className={`${styles.description__container} ${styles.description__container}`}>
+            <div className={styles.description__container}>
                 <h1>
                     Основные цены
                 </h1>

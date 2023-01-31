@@ -117,13 +117,13 @@ const Header: FC = () => {
                             {menuItems.map((item, index) => (
                                 item.type === 'link' ?
                                     <li key={item.href} className={styles.header__nav__list__item}>
-                                        <Link href={item.href} aria-label={`"Перейти на страницу "${item.text}`}
+                                        <Link href={item.href} title={`Перейти на страницу ${item.text}`}
                                               className={`${styles.header__nav__list__item__link} ${(pathname === item.href) ? styles.header__nav__list__item__link__active : ''}`}>{item.text}</Link>
                                     </li>
                                     :
                                     <div ref={el => refItems.current[index] = el} key={item.href}>
                                         <div onClick={(e) => handleToggleSubMenu(e, item.href)}
-                                             aria-label={`"Открыть список "${item.text}`}
+                                             title={`Открыть список ${item.text}`}
                                              className={`${styles.header__nav__list__item__link} ${(pathname === item.href) ? styles.header__nav__list__item__link__active : ''}`}>
                                             <strong>{item.text}</strong></div>
                                         <ul className={`
@@ -138,7 +138,7 @@ const Header: FC = () => {
                                             {(getSubMenuItems(item.href)).map(({text, href, type}, index) => (
 
                                                 <li key={href} className={styles.sub_menu__nav__list__item}>
-                                                    <Link href={href} aria-label={`"Перейти на страницу "${item.text}`}
+                                                    <Link href={href} title={`Перейти на страницу ${text}`}
                                                           className={styles.sub_menu__nav__list__item__link}>{text}</Link>
                                                 </li>
 

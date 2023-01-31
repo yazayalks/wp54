@@ -3,6 +3,11 @@ import Layout from "../../components/Layout/Layout";
 import React from "react";
 import Services from "../../components/Services/Services";
 import DescriptionEquipment from "../../components/Description/DescriptionEquipment";
+import HeroSlider from "@components/HeroSlider/HeroSlider";
+import {HeroMain} from "@pages/api/data/heroItems";
+import {SliderSettingsGallery, SliderSettingsHero} from "../../settings";
+import GridGallery from "@components/GridGallery/GridGallery";
+import {GalleryEquipment, GalleryHall} from "@pages/api/data/galleryItems";
 
 const Index = () => {
     return (
@@ -15,6 +20,7 @@ const Index = () => {
                 <main>
                     <DescriptionEquipment/>
                     <Services/>
+                    <GridGallery gridGallery={GalleryEquipment} sliderSettings={SliderSettingsGallery}/>
                 </main>
             </Layout>
         </>

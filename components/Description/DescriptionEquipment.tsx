@@ -85,6 +85,7 @@ const DescriptionEquipment: FC = () => {
                     </li>
 
                 </ul>
+                <br/>
                 <h3>
                     Также из удобств:
                 </h3>

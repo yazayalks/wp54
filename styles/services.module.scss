@@ -32,3 +32,10 @@ justify-content: center;
 
   }
 }
+
+@media all and (max-width: 500px) {
+  .icon {
+    width: 75px;
+    height: 75px;
+  }
+}

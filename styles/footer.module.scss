@@ -18,9 +18,11 @@
 
   &__logo {
     grid-area: logo;
+    width: 245px;
   }
 
   &__working_mode {
+    width: 245px;
     margin-top: 25px;
     grid-area: work;
     text-align: center;
@@ -62,13 +64,7 @@
     list-style-type: none;
     margin-left: 0;
   }
-    &__item:nth-child(1), {
-      margin-bottom: 10px;
-    }
 
-    &__item:nth-child(2) {
-      margin-bottom: 10px;
-    }
 
     &__item:nth-child(odd) {
       text-align: left;
@@ -123,9 +119,18 @@
     &__working_mode {
       margin-top: 0;
       text-align: center;
+      width: auto;
       justify-self: right;
 
+
     }
+  }
+
+}
+
+@media all and (max-width: 800px) {
+  .footer__logo {
+    width: auto;
   }
 }
 

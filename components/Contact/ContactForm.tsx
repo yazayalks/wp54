@@ -32,8 +32,8 @@ const ContactForm: FC = () => {
         setAcceptWithRules(!acceptWithRules);
     }
     return (
-        <form title="Форма отправки заявеи" onSubmit={sendForm} className={styles.contact__form} ref={formRef}>
-            <ContactInput type="text" title="ФИО" text="ФИО" placeholder="Укажите Ваше ФИО" name="fullName"/>
+        <form title="Форма отправки заявки" onSubmit={sendForm} className={styles.contact__form} ref={formRef}>
+            <ContactInput type="text" title="Фамилия Имя Отчество" text="ФИО" placeholder="Укажите Ваше ФИО" name="fullName"/>
             <ContactInput type="phone" title="Телефон" text="Телефон" placeholder="Укажите Ваш телефон" name="phone"/>
             <ContactInput type="email" title="Почта" text="Почта" placeholder="Укажите Вашу почту" name="email"/>
             <p><strong>Сообщение:</strong></p>
@@ -45,20 +45,20 @@ const ContactForm: FC = () => {
             </button>
             <div className={styles.contact__checkbox}>
 
-                <label className={styles.toggle}>
+                <label title="Принять политику конфиденциальности и обработку персональных данных" className={styles.toggle}>
                     <input title="Принять политику конфиденциальности и обработку персональных данных" className={styles.toggle__input} onChange={(e) => toggleAcceptWithRules(e)} type="checkbox"
                            checked={acceptWithRules}/>
                     <span className={styles.toggle__label}>
         </span>
                 </label>
                 <p className={styles.contact__checkbox__text}>Нажимая на кнопку «Отправить заявку», я соглашаюсь с
-                    <Link aria-label="Перейти на страницу политики конфиденциальности" href='/privacy-policy'>
+                    <Link title="Перейти на страницу политики конфиденциальности" href='/privacy-policy'>
                         <strong>
                             {' '} Политикой конфиденциальности {' '}
                         </strong>
                     </Link>
-                    и даю Согласие на
-                    <Link aria-label="Перейти на страницу обработки персональных данных" href='/personal-data-policy'>
+                    и даю согласие на
+                    <Link title="Перейти на страницу обработки персональных данных" href='/personal-data-policy'>
                         <strong>
                             {' '} обработку персональных данных
                         </strong>

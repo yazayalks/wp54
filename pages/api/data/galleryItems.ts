@@ -263,3 +263,26 @@ export const GalleryMovies: GalleryType= {
         },
     ]
 }
+export const GalleryEquipment: GalleryType= {
+    title: Pages.Movies,
+    description: 'This is equipment',
+    path: '/images/galleryEquipment/',
+    items: [
+        {
+            id: 1,
+            name:'img-1.jpg',
+        },
+        {
+            id: 2,
+            name: 'img-2.jpg',
+        },
+        {
+            id: 3,
+            name: 'img-3.jpg',
+        },
+        {
+            id: 4,
+            name: 'img-4.jpg',
+        },
+    ]
+}

@@ -32,24 +32,7 @@ const Footer: FC = () => {
                     <div className={styles.footer__item}>
                         <ul className={styles.footer__politics__list}>
                             <li className={styles.footer__politics__list__item}>
-                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/cookie-policy'>
-                                    <strong>
-                                        Политика
-                                        использования
-                                        файлов cookie
-                                    </strong>
-                                </Link>
-                            </li>
-                            <li className={styles.footer__politics__list__item}>
-                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/personal-data-policy'>
-                                    <strong>
-                                        Политика обработки
-                                        персональных данных
-                                    </strong>
-                                </Link>
-                            </li>
-                            <li className={styles.footer__politics__list__item}>
-                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/privacy-policy'>
+                                <Link title="Перейти на страницу  политики конфиденциальности" className={`${styles.footer__politics__list__item__link} small-text`} href='/privacy-policy'>
                                     <strong>
                                         Политика
                                         конфиденциальности
@@ -57,10 +40,9 @@ const Footer: FC = () => {
                                 </Link>
                             </li>
                             <li className={styles.footer__politics__list__item}>
-                                <Link className={`${styles.footer__politics__list__item__link} small-text`} href='/personal-data-of-clients'>
+                                <Link title="Перейти на страницу политики защиты и обработки персональных данных" className={`${styles.footer__politics__list__item__link} small-text`} href='/personal-data-policy'>
                                     <strong>
-                                        Согласие на
-                                        обработку персональных данных клиентов - физических лиц
+                                        Политика защиты и обработки персональных данных
                                     </strong>
                                 </Link>
                             </li>
@@ -68,13 +50,12 @@ const Footer: FC = () => {
                     </div>
                     <div className={styles.footer__item}>
                         <div className={styles.footer__copyright}>
-                            <a className={`${styles.footer__copyright__link} small-text`}
+                            <a title="Заказать сайт у автора" className={`${styles.footer__copyright__link} small-text`}
                                href='https://vk.com/ya_za_ya'>
                                 <strong>
-                                    © 2022-2023 «lks studio»
+                                    © «lks studio», 2022-2023
                                 </strong>
                             </a>
-
                         </div>
                     </div>
                 </div>

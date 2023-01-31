@@ -2,6 +2,7 @@ import Head from "next/head";
 import Layout from "../../components/Layout/Layout";
 import React from "react";
 import DescriptionAbout from "../../components/Description/DescriptionAbout";
+import Contact from "@components/Contact/Contact";
 
 const Index = () => {
     return (
@@ -13,6 +14,7 @@ const Index = () => {
             <Layout>
                 <main>
                     <DescriptionAbout/>
+                    <Contact/>
                 </main>
             </Layout>
         </>

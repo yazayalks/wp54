@@ -3,7 +3,7 @@ import Layout from "../../components/Layout/Layout";
 import HeroSlider from "../../components/HeroSlider/HeroSlider";
 import {HeroGame} from "../api/data/heroItems";
 import React from "react";
-import {SliderSettingsHeroMain} from "../../settings";
+import {SliderSettingsHero} from "../../settings";
 import DescriptionGame from "../../components/Description/DescriptionGame";
 
 const Index = () => {
@@ -15,7 +15,7 @@ const Index = () => {
             </Head>
             <Layout>
                 <main>
-                    <HeroSlider heroGallery={HeroGame} sliderSettings={SliderSettingsHeroMain}/>
+                    <HeroSlider heroGallery={HeroGame} sliderSettings={SliderSettingsHero}/>
                     <DescriptionGame/>
                 </main>
             </Layout>

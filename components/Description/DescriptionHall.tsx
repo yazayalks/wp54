@@ -6,7 +6,7 @@ const DescriptionHall: FC = () => {
         <div className="sub-container">
             <div className={styles.description__container}>
                 <div className={styles.description__title__left}>
-                    <h2>Дайте этому парню заголовок!</h2>
+                    <h2>Всё что нужно для классного времяпрепровождение находится здесь</h2>
                 </div>
                 <div className={styles.description__text__left}>
                     <p>Не знаю сколько квадратных метров пространства.</p>
