@@ -1,11 +1,12 @@
 .wp54_logo {
 
-  .logo {
+  path {
     fill: var(--icon-color);
     transition: fill 500ms linear
   }
+
   &:hover {
-    .logo {
+    path {
       fill: var(--icon-color-hover);
       transition: fill 500ms linear;
     }

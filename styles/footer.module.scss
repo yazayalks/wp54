@@ -44,11 +44,6 @@
       white-space: nowrap;
     }
 
-    //p {
-    //  color: var(--text-color);
-    //  margin: 0 0 10px 0;
-    //}
-
     .icon {
       margin: 0;
     }
@@ -63,14 +58,6 @@
     grid-template-columns: 1fr 1fr;
     margin: 25px 0 0 0;
 
-    //&__item__link {
-    //
-    //  color: var(--link-color);
-    //
-    //  &:hover {
-    //    color: var(--link-color-hover);
-    //  }
-    //}
   &__item {
     list-style-type: none;
     margin-left: 0;
@@ -114,7 +101,7 @@
   }
 }
 
-@media all and (max-width: 910px) {
+@media all and (max-width: 1000px) {
   .footer {
 
     &__map {

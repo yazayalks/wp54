@@ -20,7 +20,10 @@ const Contact: FC = () => {
                     <div className={styles.contact__contacts_messengers}>
 
                         <ContactsMessengers/>
-                        <WorkingMode/>
+                        <div className={styles.contact__working_mode}>
+
+                            <WorkingMode/>
+                        </div>
                     </div>
                     <div className={styles.contact__form}>
 

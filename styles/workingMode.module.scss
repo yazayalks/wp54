@@ -1,7 +1,12 @@
 .working_mode__inner{
-  width: 180px;
-  //p {
-  //  color: var(--text-color);
-  //  margin: 0;
-  //}
+  width: 245px;
+  p:nth-child(1) {
+    margin-bottom: 10px;
+  }
+}
+
+@media all and (max-width: 295px) {
+  .working_mode__inner{
+    width: 150px;
+  }
 }

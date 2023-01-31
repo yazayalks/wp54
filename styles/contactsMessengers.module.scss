@@ -1,14 +1,27 @@
 .contacts_messengers__inner {
   margin-top: 10px;
   white-space: nowrap;
+
+  a {
+    &:nth-child(2) {
+      margin: 0 15px;
+    }
+
+    &:nth-child(3) {
+      margin-right: 15px;
+    }
+  }
 }
 
 .icon {
   cursor: pointer;
+  border-radius: 5px;
 
   &:hover {
     path {
       fill: var(--icon-color-over-hover);
+      transform-origin: 50px 50px;
+      transform: rotate(10deg) scale(1.2);
     }
   }
 
@@ -17,8 +30,24 @@
     transition: fill 300ms linear;
   }
 
-  &:nth-child(2) {
-    margin: 0 15px;
-  }
 
+}
+
+@media all and (max-width: 295px) {
+  .contacts_messengers__inner {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+
+    a {
+      &:nth-child(2) {
+        margin: 0;
+      }
+
+      &:nth-child(3) {
+        margin: 0;
+      }
+    }
+  }
 }
