@@ -9,7 +9,6 @@
     "lint": "next lint",
     "test": "jest",
     "coverage": "jest --coverage",
-    "export": "next build && next export",
     "postbuild": "next-sitemap"
   },
   "dependencies": {

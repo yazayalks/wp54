@@ -1,6 +1,6 @@
 import {Html, Head, Main, NextScript} from 'next/document'
 import React from "react";
-import {YMInitializer} from "react-yandex-metrika";
+
 
 
 export default function Document() {
@@ -14,7 +14,6 @@ export default function Document() {
                 <link rel="icon" type="image/svg" sizes="32x32" href="/images/logo/wp54_icon.svg"/>
             </Head>
             <body>
-            <YMInitializer accounts={[92328730]}/>
             <Main/>
             <NextScript/>
             </body>

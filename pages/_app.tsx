@@ -4,8 +4,9 @@ import type {AppProps} from 'next/app'
 import {ThemeProvider} from 'next-themes'
 import {ToastContainer} from "react-toastify";
 import NextNProgress from 'nextjs-progressbar';
-
 import {Roboto} from '@next/font/google'
+import {YMInitializer} from "react-yandex-metrika";
+import React from "react";
 const roboto = Roboto({
     subsets: ['latin', 'cyrillic'],
     weight: ['400','700', '900']
@@ -23,6 +24,7 @@ export default function App({Component, pageProps}: AppProps) {
                     closeOnClick
                     rtl={false}
                 />
+                <YMInitializer accounts={[92328730]}/>
             </ThemeProvider>
         </main>
     )
