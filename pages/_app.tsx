@@ -24,7 +24,7 @@ export default function App({Component, pageProps}: AppProps) {
                     closeOnClick
                     rtl={false}
                 />
-                <YMInitializer accounts={[92328730]}  options={{webvisor: true}}/>
+                <YMInitializer accounts={[92328730]}  options={{webvisor: true}}  version="2"/>
             </ThemeProvider>
         </main>
     )
