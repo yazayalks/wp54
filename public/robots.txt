@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wp-54.ru
+
+# Sitemaps
+Sitemap: https://wp-54.ru/sitemap.xml
