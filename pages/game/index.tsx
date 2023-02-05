@@ -11,7 +11,8 @@ const Index = () => {
         <>
             <Head>
                 <title>wp54 | Game</title>
-                <meta name="Описание" content="Описание страницы Game"/>
+                <meta name="Описание" content="Описание страницы Game, у нас вы можете поиграть в рахные игры на x-box, есть два джостика и мягкие пуфы"/>
+                <meta name="Keywords" content="Лофт, wp54, Новосибирск, аренда помещения,x-box, пуфы, джостики "/>
             </Head>
             <Layout>
                 <main>

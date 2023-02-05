@@ -50,7 +50,7 @@ const Footer: FC = () => {
                     </div>
                     <div className={styles.footer__item}>
                         <div className={styles.footer__copyright}>
-                            <a title="Заказать сайт у автора" className={`${styles.footer__copyright__link} small-text`}
+                            <a target="_blank" rel="noreferrer" title="Заказать сайт у автора" className={`${styles.footer__copyright__link} small-text`}
                                href='https://vk.com/ya_za_ya'>
                                 <strong>
                                     © «lks studio», 2022-2023

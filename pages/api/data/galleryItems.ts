@@ -7,51 +7,51 @@ export const GalleryMain: GalleryType = {
     items: [
         {
             id: 1,
-            name: 'img1.jpeg',
+            name: 'img1.jpg',
         },
         {
             id: 2,
-            name: 'img2.jpeg',
+            name: 'img2.jpg',
         },
         {
             id: 3,
-            name: 'img3.jpeg',
+            name: 'img3.jpg',
         },
         {
             id: 4,
-            name: 'img4.jpeg',
+            name: 'img4.jpg',
         },
         {
             id: 5,
-            name: 'img5.jpeg',
+            name: 'img5.jpg',
         },
         {
             id: 6,
-            name: 'img6.jpeg',
+            name: 'img6.jpg',
         },
         {
             id: 7,
-            name: 'img7.jpeg',
+            name: 'img7.jpg',
         },
         {
             id: 8,
-            name: 'img8.jpeg',
+            name: 'img8.jpg',
         },
         {
             id: 9,
-            name: 'img9.jpeg',
+            name: 'img9.jpg',
         },
         {
             id: 10,
-            name: 'img10.jpeg',
+            name: 'img10.jpg',
         },
         {
             id: 11,
-            name: 'img11.jpeg',
+            name: 'img11.jpg',
         },
         {
             id: 12,
-            name: 'img12.jpeg',
+            name: 'img12.jpg',
         },
     ]
 }
@@ -77,30 +77,13 @@ export const GalleryHall: GalleryType = {
             id: 4,
             name: 'img4.jpg',
         },
-        {
-            id: 5,
-            name: 'img5.jpg',
-        },
-        {
-            id: 6,
-            name: 'img6.jpg',
-        },
-        {
-            id: 7,
-            name: 'img7.jpg',
-        },
-        {
-            id: 8,
-            name: 'img8.jpg',
-        },
     ]
 }
 
-
-export const GalleryDiscos: GalleryType = {
-    title: Pages.Discos,
-    description: 'This is discos',
-    path: '/images/galleryDiscos/',
+export const GalleryProjector: GalleryType = {
+    title: Pages.Hall,
+    description: 'This is projector',
+    path: '/images/galleryProjector/',
     items: [
         {
             id: 1,
@@ -114,48 +97,68 @@ export const GalleryDiscos: GalleryType = {
             id: 3,
             name: 'img3.jpg',
         },
+    ]
+}
+
+export const GalleryDiscos: GalleryType = {
+    title: Pages.Discos,
+    description: 'This is discos',
+    path: '/images/galleryTemporaryBackground/',
+    items: [
+        {
+            id: 1,
+            name: 'img.png',
+        },
+        {
+            id: 2,
+            name: 'img.png',
+        },
+        {
+            id: 3,
+            name: 'img.png',
+        },
         {
             id: 4,
-            name: 'img4.jpg',
+            name: 'img.png',
         },
     ]
 }
 export const GalleryParties: GalleryType = {
     title: Pages.Parties,
     description: 'This is discos',
-    path: '/images/galleryParties/',
+    path: '/images/galleryTemporaryBackground/',
     items: [
         {
             id: 1,
-            name: 'img1.jpg',
+            name: 'img.png',
         },
         {
             id: 2,
-            name: 'img2.jpg',
+            name: 'img.png',
         },
         {
             id: 3,
-            name: 'img3.jpg',
+            name: 'img.png',
         },
         {
             id: 4,
-            name: 'img4.jpg',
+            name: 'img.png',
         },
         {
             id: 5,
-            name: 'img5.jpg',
+            name: 'img.png',
         },
         {
             id: 6,
-            name: 'img6.jpg',
+            name: 'img.png',
         },
         {
             id: 7,
-            name: 'img7.jpg',
+            name: 'img.png',
         },
         {
             id: 8,
-            name: 'img8.jpg',
+            name: 'img.png',
         },
     ]
 }
@@ -163,39 +166,39 @@ export const GalleryParties: GalleryType = {
 export const GalleryCorporate: GalleryType = {
     title: Pages.Corporate,
     description: 'This is corporate',
-    path: '/images/galleryCorporate/',
+    path: '/images/galleryTemporaryBackground/',
     items: [
         {
             id: 1,
-            name: 'img1.jpg',
+            name: 'img.png',
         },
         {
             id: 2,
-            name: 'img2.jpg',
+            name: 'img.png',
         },
         {
             id: 3,
-            name: 'img3.jpg',
+            name: 'img.png',
         },
         {
             id: 4,
-            name: 'img4.jpg',
+            name: 'img.png',
         },
         {
             id: 5,
-            name: 'img5.jpg',
+            name: 'img.png',
         },
         {
             id: 6,
-            name: 'img6.jpg',
+            name: 'img.png',
         },
         {
             id: 7,
-            name: 'img7.jpg',
+            name: 'img.png',
         },
         {
             id: 8,
-            name: 'img8.jpg',
+            name: 'img.png',
         },
     ]
 }
@@ -204,39 +207,39 @@ export const GalleryCorporate: GalleryType = {
 export const GalleryBirthdays: GalleryType = {
     title: Pages.Birthdays,
     description: 'This is birthdays',
-    path: '/images/galleryBirthdays/',
+    path: '/images/galleryTemporaryBackground/',
     items: [
         {
             id: 1,
-            name: 'img1.jpg',
+            name: 'img.png',
         },
         {
             id: 2,
-            name: 'img2.jpg',
+            name: 'img.png',
         },
         {
             id: 3,
-            name: 'img3.jpg',
+            name: 'img.png',
         },
         {
             id: 4,
-            name: 'img4.jpg',
+            name: 'img.png',
         },
         {
             id: 5,
-            name: 'img5.jpg',
+            name: 'img.png',
         },
         {
             id: 6,
-            name: 'img6.jpg',
+            name: 'img.png',
         },
         {
             id: 7,
-            name: 'img7.jpg',
+            name: 'img.png',
         },
         {
             id: 8,
-            name: 'img8.jpg',
+            name: 'img.png',
         },
     ]
 }
@@ -283,6 +286,22 @@ export const GalleryEquipment: GalleryType= {
         {
             id: 4,
             name: 'img-4.jpg',
+        },
+        {
+            id: 5,
+            name: 'img-5.jpg',
+        },
+        {
+            id: 6,
+            name: 'img-6.jpg',
+        },
+        {
+            id: 7,
+            name: 'img-7.jpg',
+        },
+        {
+            id: 8,
+            name: 'img-8.jpg',
         },
     ]
 }

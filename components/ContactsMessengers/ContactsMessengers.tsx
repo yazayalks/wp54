@@ -6,7 +6,7 @@ const ContactsMessengers: FC = () => {
         <>
             <p className="small-text"><strong>Контакты:</strong></p>
             <div className={styles.contacts_messengers__inner}>
-                <a href='https://vk.com/ya_za_ya' title="Instagram">
+                <a target="_blank" rel="noreferrer" href='https://instagram.com/welcome_party54?igshid=YmMyMTA2M2Y=' title="Instagram">
                     <svg className={styles.icon} width={50} height={50}
                          viewBox="0 0 100 100">
                         <path
@@ -14,7 +14,7 @@ const ContactsMessengers: FC = () => {
                             fill="#010101"/>
                     </svg>
                 </a>
-                <a href='https://vk.com/ya_za_ya' title="VKontakte">
+                <a target="_blank" rel="noreferrer" href='https://vk.com/welcome_party54' title="VKontakte">
                     <svg className={styles.icon} width={50} height={50}
                          viewBox="0 0 100 100">
                         <path
@@ -22,7 +22,7 @@ const ContactsMessengers: FC = () => {
                             fill="#010101"/>
                     </svg>
                 </a>
-                <a href='https://vk.com/ya_za_ya' title="WhatsApp">
+                <a target="_blank" rel="noreferrer" href='https://wa.me/79133812281?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82!%20%D0%9C%D0%B5%D0%BD%D1%8F%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D0%BB%D0%BE%D1%84%D1%82%20%D0%BF%D0%BE%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F%20wp54.' title="WhatsApp">
                     <svg className={styles.icon} width={50} height={50}
                          viewBox="0 0 100 100">
                         <path
@@ -30,7 +30,7 @@ const ContactsMessengers: FC = () => {
                             fill="#010101"/>
                     </svg>
                 </a>
-                <a href='https://vk.com/ya_za_ya' title="Telegram">
+                <a target="_blank" rel="noreferrer" href='https://t.me/welcome_party54' title="Telegram">
                     <svg className={styles.icon} width={50} height={50}
                          viewBox="0 0 100 100">
                         <path

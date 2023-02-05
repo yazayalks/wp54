@@ -10,7 +10,8 @@ const Index = () => {
         <>
             <Head>
                 <title>wp54 | Basic prices</title>
-                <meta name="Описание" content="Описание страницы Basic prices"/>
+                <meta name="Описание" content="Описание страницы Basic prices, у нас самые дешёвые цены и есть акции"/>
+                <meta name="Keywords" content="Лофт, wp54, Новосибирск, аренда помещения, цены "/>
             </Head>
             <Layout>
                 <main>

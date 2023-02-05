@@ -15,7 +15,8 @@ const Index = () => {
         <>
             <Head>
                 <title>wp54 | Corporate</title>
-                <meta name="Описание" content="Описание страницы Corporate"/>
+                <meta name="Описание" content="Описание страницы Corporate, проведения корпоротива в новосибирске, встретьтое праздники со своим начальстом и получите потом премию"/>
+                <meta name="Keywords" content="Лофт, wp54, Новосибирск, аренда помещения, корпоратив "/>
             </Head>
             <Layout>
                 <main>

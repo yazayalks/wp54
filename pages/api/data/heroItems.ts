@@ -9,8 +9,8 @@ export const HeroMain: GalleryType = {
         {
             id: 1,
             name: 'img-1.jpg',
-            title: "Лофт для мероприятий, скажи «welcome» тусовке!",
-            description: "Зал и игровая комната до 30 человек ОТ 1000 РУБ/ЧАС 85 кв.м.",
+            title: "Лофт для мероприятий",
+            description: "Скажи «welcome» вечеринке",
         },
         {
             id: 2,
@@ -32,7 +32,7 @@ export const HeroHall: GalleryType = {
             id: 1,
             name: 'img-1.jpg',
             title: "Зал",
-            description: "Всё начинается здесь!",
+            description: "Всё начинается здесь",
         },
         {
             id: 2,
@@ -50,7 +50,7 @@ export const HeroGame: GalleryType = {
             id: 1,
             name: 'img-1.jpg',
             title: "Игровая",
-            description: "Здесь тоже нужно что-то написать, это помещение\n" + "10 кв.м.",
+            description: "Чтобы выигрывать, нужно играть",
         },
         {
             id: 2,
@@ -61,13 +61,13 @@ export const HeroGame: GalleryType = {
 export const HeroDiscos: GalleryType = {
     title: Pages.Discos,
     description: 'This is discos',
-    path: '/images/heroDiscos/',
+    path: '/images/heroTemporaryBackground/',
     items: [
         {
             id: 1,
-            name: 'img1.jpg',
+            name: 'img.png',
             title: "Дискотека для твоей компании",
-            description: "Скажи Welcome тусовке",
+            description: "Вы любите дискотеки, а мы любим их устраивать",
         },
     ]
 }
@@ -75,13 +75,13 @@ export const HeroDiscos: GalleryType = {
 export const HeroParties: GalleryType = {
     title: Pages.Parties,
     description: 'This is parties',
-    path: '/images/heroParties/',
+    path: '/images/heroTemporaryBackground/',
     items: [
         {
             id: 1,
-            name: 'img1.jpg',
+            name: 'img.png',
             title: "Вечеринки",
-            description: "",
+            description: "Двое — просто компания, трое — уже вечеринка",
         },
     ]
 }
@@ -89,13 +89,13 @@ export const HeroParties: GalleryType = {
 export const HeroCorporate: GalleryType = {
     title: Pages.Corporate,
     description: 'This is corporate',
-    path: '/images/heroCorporate/',
+    path: '/images/heroTemporaryBackground/',
     items: [
         {
             id: 1,
-            name: 'img1.jpg',
+            name: 'img.png',
             title: "Корпоративы",
-            description: "",
+            description: "Корпоратив удался — это когда заходишь на работу под свист и аплодисменты коллег",
         },
     ]
 }
@@ -103,13 +103,13 @@ export const HeroCorporate: GalleryType = {
 export const HeroBirthdays: GalleryType = {
     title: Pages.Birthdays,
     description: 'This is birthdays',
-    path: '/images/heroBirthdays/',
+    path: '/images/heroTemporaryBackground/',
     items: [
         {
             id: 1,
-            name: 'img1.jpg',
+            name: 'img.png',
             title: "Дни рождения",
-            description: "",
+            description: "Возраст не имеет значения",
         },
     ]
 }
@@ -123,7 +123,7 @@ export const HeroMovies: GalleryType = {
             id: 1,
             name: 'img1.jpg',
             title: "Киновечер",
-            description: "",
+            description: "Устройте свой личный кинотеатр",
         },
     ]
 }
