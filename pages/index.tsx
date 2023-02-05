@@ -11,7 +11,6 @@ import {HeroMain} from "./api/data/heroItems";
 import DescriptionMain from "../components/Description/DescriptionMain";
 import React from "react";
 
-
 export default function Index() {
     return (
         <>

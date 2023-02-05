@@ -5,7 +5,6 @@ import {ThemeProvider} from 'next-themes'
 import {ToastContainer} from "react-toastify";
 import NextNProgress from 'nextjs-progressbar';
 import {Roboto} from '@next/font/google'
-import {YMInitializer} from "react-yandex-metrika";
 import React from "react";
 const roboto = Roboto({
     subsets: ['latin', 'cyrillic'],
@@ -24,7 +23,6 @@ export default function App({Component, pageProps}: AppProps) {
                     closeOnClick
                     rtl={false}
                 />
-                <YMInitializer accounts={[92333901]}  options={{webvisor: true}}  version="2"/>
             </ThemeProvider>
         </main>
     )
