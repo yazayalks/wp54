@@ -4,7 +4,7 @@ import styles from "../../styles/description.module.scss";
 const DescriptionPersonalDataPolicy: FC = () => {
     return (
         <div className="sub-container">
-            <div className={`${styles.description__container} ${styles.description__container__left}`}>
+            <div className={styles.description__container__left}>
                 <h1>Политика в отношении обработки персональных данных</h1>
                 <h3> 1. Общие положения</h3>
                 <p>
@@ -13,7 +13,7 @@ const DescriptionPersonalDataPolicy: FC = () => {
                     закона от 27.07.2006. № 152-ФЗ «О персональных данных» (далее — Закон о персональных данных) и
                     определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных
                     данных,
-                    предпринимаемые Welcom party 54 (далее — Оператор).
+                    предпринимаемые welcome_party54 (далее — Оператор).
                 </p>
 
                 <p>
