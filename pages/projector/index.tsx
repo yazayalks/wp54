@@ -3,8 +3,8 @@ import Layout from "../../components/Layout/Layout";
 import Services from "../../components/Services/Services";
 import DescriptionProjector from "../../components/Description/DescriptionProjector";
 import React from "react";
-import GridGallery from "@components/GridGallery/GridGallery";
-import {GalleryEquipment, GalleryProjector} from "@pages/api/data/galleryItems";
+import GridGallery from "../../components/GridGallery/GridGallery";
+import {GalleryProjector} from "../../pages/api/data/galleryItems";
 import {SliderSettingsGallery} from "../../settings";
 
 const Index = () => {
