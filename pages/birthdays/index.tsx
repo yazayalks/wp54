@@ -15,8 +15,8 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | Birthdays</title>
-                <meta name="Описание" content="Описание страницы Birthdays, место для проведения дня рождения в новосибирске"/>
+                <title>wp54 | Дни рождения, Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
+                <meta name="description" content="Описание страницы Birthdays, место для проведения дня рождения в новосибирске"/>
                 <meta name="Keywords" content="Лофт, wp54, Новосибирск, аренда помещения, день рождение, праздник"/>
             </Head>
             <Layout>

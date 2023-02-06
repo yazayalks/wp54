@@ -8,8 +8,8 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | New year prices</title>
-                <meta name="Описание" content="Описание страницы  New year prices"/>
+                <title>wp54 | Новогодние цены, Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
+                <meta name="description" content="Описание страницы  New year prices"/>
             </Head>
             <Layout>
                 <main>

@@ -10,8 +10,8 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | Game</title>
-                <meta name="Описание" content="Описание страницы Game, у нас вы можете поиграть в рахные игры на x-box, есть два джостика и мягкие пуфы"/>
+                <title>wp54 | Игровая, Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
+                <meta name="description" content="Описание страницы Game, у нас вы можете поиграть в рахные игры на x-box, есть два джостика и мягкие пуфы"/>
                 <meta name="Keywords" content="Лофт, wp54, Новосибирск, аренда помещения,x-box, пуфы, джостики "/>
             </Head>
             <Layout>

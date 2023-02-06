@@ -15,9 +15,9 @@ export default function Index() {
     return (
         <>
             <Head>
-                <title>wp54 | Main</title>
-                <meta name="Описание" content="Описание страницы Main"/>
-                <meta name="Keywords" content="Лофт, wp54, Новосибирск, аренда помещения"/>
+                <title>wp54 | Главная, Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
+                <meta name="description" content="Описание страницы Main"/>
+                <meta name="keywords" content="Лофт, wp54, Новосибирск, аренда помещения"/>
             </Head>
             <Layout>
                 <main>

@@ -7,8 +7,8 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | Personal data policy</title>
-                <meta name="Описание" content="Описание страницы Personal data policy"/>
+                <title>wp54 | Политика обработки персональных данных, Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
+                <meta name="description" content="Описание страницы Personal data policy"/>
             </Head>
             <Layout>
                 <main>

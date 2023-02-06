@@ -7,8 +7,8 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | 404</title>
-                <meta name="Описание" content="Описание страницы 404"/>
+                <title>wp54 | 404, Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
+                <meta name="description" content="Описание страницы 404"/>
             </Head>
             <Layout>
                 <main>
