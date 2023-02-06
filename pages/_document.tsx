@@ -9,6 +9,8 @@ export default function Document() {
                 <meta name="robots" content="index, follow"/>
                 <link rel="icon" type="image/svg+xml" sizes="32x32" href="/favicon.svg"/>
                 <link rel="icon" href="/favicon.ico"/>
+                <link rel="apple-touch-icon" href="/logo512.png"/>
+                <link rel="manifest" href="/manifest.json"/>
             </Head>
             <body>
             <Main/>
