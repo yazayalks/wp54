@@ -20,24 +20,40 @@ export default function Document() {
             <script
                 dangerouslySetInnerHTML={{
                     __html: `
-                   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+                   (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter92333901 = new Ya.Metrika({
+                    id:92333901,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
 
-   ym(92333901, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
+        var n = d.getElementsByTagName("script")[0],
+            x = "https://mc.yandex.ru/metrika/watch.js",
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        for (var i = 0; i < document.scripts.length; i++) {
+            if (document.scripts[i].src === x) { return; }
+        }
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = x;
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
               `,
                 }}
             />
             <noscript>
-                <div><Image src="https://mc.yandex.ru/watch/92333901" style={{position: "absolute", left: "-9999px"}}
-                          alt=""/></div>
+                <div><Image src="https://mc.yandex.ru/watch/92333901" style={{position: 'absolute', left: '-9999px'}}
+                            alt=""/></div>
             </noscript>
             </body>
         </Html>
