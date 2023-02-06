@@ -10,7 +10,7 @@ const Index = () => {
             <Head>
                 <title>wp54 | Акции, Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
                 <meta name="description" content="Описание страницы Stock, акция для проведения дня рождения в лофте, 10% от общей стоимости бронирования"/>
-                <meta name="Keywords" content="Лофт, wp54, Новосибирск, аренда помещения, акции, день рождения"/>
+                <meta name="keywords" content="Лофт, wp54, Новосибирск, аренда помещения, акции, день рождения"/>
             </Head>
             <Layout>
                 <main>

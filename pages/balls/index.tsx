@@ -9,7 +9,7 @@ const Index = () => {
             <Head>
                 <title>wp54 | Balls</title>
                 <meta name="description" content="Эту страницу можно классно использовать для заставки монитора"/>
-                <meta name="Keywords" content="Лофт, wp54, Новосибирск, аренда помещения, заставка монитора, шарики"/>
+                <meta name="keywords" content="Лофт, wp54, Новосибирск, аренда помещения, заставка монитора, шарики"/>
             </Head>
             <div className={styles.background_animation}>
                 <div className={styles.ball_one}></div>

@@ -7,7 +7,7 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | Политика конфиденциальности, Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
+                <title>wp54 | Политика конфиденциальности аренды лофта для мероприятий в Новосибирске welcome_party54</title>
                 <meta name="description" content="Описание страницы Privacy policy"/>
             </Head>
             <Layout>

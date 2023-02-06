@@ -14,9 +14,9 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | Корпоративы, Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
+                <title>wp54 | Корпоративы в аренде лофта для мероприятий в Новосибирске welcome_party54</title>
                 <meta name="description" content="Описание страницы Corporate, проведения корпоротива в новосибирске, встретьтое праздники со своим начальстом и получите потом премию"/>
-                <meta name="Keywords" content="Лофт, wp54, Новосибирск, аренда помещения, корпоратив "/>
+                <meta name="keywords" content="Лофт, wp54, Новосибирск, аренда помещения, корпоратив "/>
             </Head>
             <Layout>
                 <main>

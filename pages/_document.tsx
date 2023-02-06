@@ -1,8 +1,4 @@
 import {Html, Head, Main, NextScript} from 'next/document'
-import React from "react";
-import Image from "next/image";
-
-
 export default function Document() {
 
     return (
@@ -10,15 +6,13 @@ export default function Document() {
             <Head>
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE-edge"/>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta name="robots" content="index, follow"/>
-                <link rel="icon" href="/images/logo/wp54.ico"/>
-                <link rel="icon" type="image/svg+xml" sizes="32x32" href="/images/logo/wp54.svg"/>
+                <link rel="icon" type="image/svg+xml" sizes="32x32" href="/favicon.svg"/>
+                <link rel="icon" href="/favicon.ico"/>
             </Head>
             <body>
             <Main/>
             <NextScript/>
-
             <script
                 dangerouslySetInnerHTML={{
                     __html: `
@@ -54,8 +48,10 @@ export default function Document() {
                 }}
             />
             <noscript>
-                <div><img src="https://mc.yandex.ru/watch/92333901" style={{position: 'absolute', left: '-9999px'}}
-                            alt=""/></div>
+                <div>
+                    <img src="https://mc.yandex.ru/watch/92333901" style={{position: 'absolute', left: '-9999px'}}
+                          alt=""/>
+                </div>
             </noscript>
             </body>
         </Html>

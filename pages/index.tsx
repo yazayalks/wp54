@@ -15,7 +15,7 @@ export default function Index() {
     return (
         <>
             <Head>
-                <title>wp54 | Главная, Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
+                <title>wp54 | Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
                 <meta name="description" content="Описание страницы Main"/>
                 <meta name="keywords" content="Лофт, wp54, Новосибирск, аренда помещения"/>
             </Head>

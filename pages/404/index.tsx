@@ -7,7 +7,7 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | 404, Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
+                <title>wp54 | 404, страница не найдена</title>
                 <meta name="description" content="Описание страницы 404"/>
             </Head>
             <Layout>
