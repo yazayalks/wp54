@@ -7,8 +7,8 @@ export default function Document() {
                 <meta charSet="UTF-8"/>
                 <meta httpEquiv="X-UA-Compatible" content="IE-edge"/>
                 <meta name="robots" content="index, follow"/>
-                <link rel="icon" type="image/svg+xml" sizes="32x32" href="/favicon.svg"/>
-                <link rel="icon" href="/favicon.ico"/>
+                <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+                <link rel="icon" href="/favicon.ico"  type="image/x-icon"/>
                 <link rel="apple-touch-icon" href="/logo512.png"/>
                 <link rel="manifest" href="/manifest.json"/>
             </Head>
