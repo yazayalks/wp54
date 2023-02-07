@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# wp54
 
-## Getting Started
+Development of a website for the organization welcome_party54 for renting loft space in Novosibirsk. You can view the
+site
+by domain [wp-54.ru](https://wp-54.ru/).
 
-First, run the development server:
+# Description
+
+The finished project is a multi-page website through which users can read all the necessary
+information about renting a room and view its photos, and also have the opportunity to send a request for communication
+or
+go to social networks for further communication.
+
+* This project was implemented using the programming language [TypeScript](https://www.typescriptlang.org/) libraries
+  for creating user interfaces [React](https://reactjs.org/)
+  and [Next.js](https://nextjs.org/)
+* [MongoDB](https://www.mongodb.com/) is used as the database
+* [Vercel](https://vercel.com//) is used to deploy the project
+* Testing was performed using [Jest](https://jestjs.io/)
+* Sending a request for communication was carried out using the [EmailJS](https://www.emailjs.com/) service
+* The project uses [Yandex.Metrica](https://metrika.yandex.ru/welcome/)
+
+# Installation and launch of the project
+
+After cloning the repository, you need to install the packages, I used [npm](https://www.npmjs.com/)
+
+```bash
+npm install
+```
+
+Then you need to create an environment variables file **.env.local** in the root of the project
+
+```
+NEXT_PUBLIC_SERVICE_ID = "<serviceID from EmailJS>"
+NEXT_PUBLIC_TEMPLATE_ID = "<templateID from EmailJS>"
+NEXT_PUBLIC_PUBLIC_KEY = "<publicKey from EmailJS>"
+```
+
+You can learn more about the EmailJS service [here](https://www.emailjs.com/docs/sdk/send-form/).
+
+To launch a project, use:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+To build a project, use:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm run build
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To start the project build, use:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run start
+```
 
-## Learn More
+To run the tests, use:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Site Performance
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* On mobile devices
 
-## Deploy on Vercel
+![alt text](readmeImages/performanceMobileDevices.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* On desktop devices
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![alt text](readmeImages/performanceDesktopDevices.png)

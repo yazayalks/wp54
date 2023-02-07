@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# wp54
 
-## Getting Started
+Разработка сайта для организации welcome_party54 по сдачи в аренду лофт помещения в Новосибирске. Посмотреть сайт можно
+по домену [wp-54.ru](https://wp-54.ru/).
 
-First, run the development server:
+# Описание
+
+Готовый проект представляет собой многостраничный сайт, с помощью которого пользователи могут прочитать всю необходимую
+информацию об аренде помещения и посмотреть его фотографии, а также имеют возможность отправить заявку для связи или
+перейти в социальные сети для дальнейшего общения.
+
+* Данный проект выполнен с помощью языка программирования [TypeScript](https://www.typescriptlang.org/) и библиотек
+  создания пользовательских интерфейсов [React](https://reactjs.org/)
+  и [Next.js](https://nextjs.org/)
+* В качестве базы данных используется [MongoDB](https://www.mongodb.com/)
+* Для
+  развёртывания проекта используется [Vercel](https://vercel.com/)
+* Тестирование выполнено с
+  помощью [Jest](https://jestjs.io/)
+* Отправка заявки для связи осуществлена с помощью сервиса [EmailJS](https://www.emailjs.com/)
+* В проекте используется [Яндекс.Метрика](https://metrika.yandex.ru/welcome/)
+
+# Установка и запуск проекта
+
+После клонирования репозитория необходимо выполнить установку пакетов, я использовал [npm](https://www.npmjs.com/)
+
+```bash
+npm install
+```
+
+Затем необходимо создать файл переменных окружения **.env.local** в корне проекта
+
+```
+NEXT_PUBLIC_SERVICE_ID = "<serviceID из сервиса EmailJS>"
+NEXT_PUBLIC_TEMPLATE_ID = "<templateID из сервиса EmailJS>"
+NEXT_PUBLIC_PUBLIC_KEY = "<publicKey из сервиса EmailJS>"
+```
+
+Подробнее с сервисом EmailJS Вы можете ознакомиться [здесь](https://www.emailjs.com/docs/sdk/send-form/).
+
+Для запуска проекта используется:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000)  в своём браузере для локального просмотра.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Для сборки проекта используется:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm run build
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Для запуска сборки проекта используется:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm run start
+```
 
-## Learn More
+Для запуска тестов используется:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Производительность сайта
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* На мобильных устройствах
 
-## Deploy on Vercel
+![alt text](readmeImages/performanceMobileDevices.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* На ПК устройствах
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![alt text](readmeImages/performanceDesktopDevices.png)
+
+
