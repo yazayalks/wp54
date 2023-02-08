@@ -12,7 +12,6 @@
 * Данный проект выполнен с помощью языка программирования [TypeScript](https://www.typescriptlang.org/) и библиотек
   создания пользовательских интерфейсов [React](https://reactjs.org/)
   и [Next.js](https://nextjs.org/)
-* В качестве базы данных используется [MongoDB](https://www.mongodb.com/)
 * Для
   развёртывания проекта используется [Vercel](https://vercel.com/)
 * Тестирование выполнено с

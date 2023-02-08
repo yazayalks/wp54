@@ -14,7 +14,6 @@ go to social networks for further communication.
 * This project was implemented using the programming language [TypeScript](https://www.typescriptlang.org/) libraries
   for creating user interfaces [React](https://reactjs.org/)
   and [Next.js](https://nextjs.org/)
-* [MongoDB](https://www.mongodb.com/) is used as the database
 * [Vercel](https://vercel.com//) is used to deploy the project
 * Testing was performed using [Jest](https://jestjs.io/)
 * Sending a request for communication was carried out using the [EmailJS](https://www.emailjs.com/) service
