@@ -1,74 +1,76 @@
 # wp54
 
-Development of a website for the organization welcome_party54 for renting loft space in Novosibirsk. You can view the
-site
-by domain [wp-54.ru](https://wp-54.ru/).
+Разработка сайта для организации welcome_party54 по сдачи в аренду лофт помещения в Новосибирске. Посмотреть сайт можно
+по url [wp-54.ru](https://wp-54.ru/).
 
-# Description
+# Описание
 
-The finished project is a multi-page website through which users can read all the necessary
-information about renting a room and view its photos, and also have the opportunity to send a request for communication
-or
-go to social networks for further communication.
+Готовый проект представляет собой многостраничный сайт, с помощью которого пользователи могут прочитать всю необходимую
+информацию об аренде помещения и посмотреть его фотографии, а также имеют возможность отправить заявку для связи или
+перейти в социальные сети для дальнейшего общения.
 
-* This project was implemented using the programming language [TypeScript](https://www.typescriptlang.org/) libraries
-  for creating user interfaces [React](https://reactjs.org/)
-  and [Next.js](https://nextjs.org/)
-* [Vercel](https://vercel.com//) is used to deploy the project
-* Testing was performed using [Jest](https://jestjs.io/)
-* Sending a request for communication was carried out using the [EmailJS](https://www.emailjs.com/) service
-* The project uses [Yandex.Metrica](https://metrika.yandex.ru/welcome/)
+* Данный проект выполнен с помощью языка программирования [TypeScript](https://www.typescriptlang.org/) и библиотек
+  создания пользовательских интерфейсов [React](https://reactjs.org/)
+  и [Next.js](https://nextjs.org/)
+* Для
+  развёртывания проекта используется [Vercel](https://vercel.com/)
+* Тестирование выполнено с
+  помощью [Jest](https://jestjs.io/)
+* Отправка заявки для связи осуществлена с помощью сервиса [EmailJS](https://www.emailjs.com/)
+* В проекте используется [Яндекс.Метрика](https://metrika.yandex.ru/welcome/)
 
-# Installation and launch of the project
+# Установка и запуск проекта
 
-After cloning the repository, you need to install the packages, I used [npm](https://www.npmjs.com/)
+После клонирования репозитория необходимо выполнить установку пакетов, я использовал [npm](https://www.npmjs.com/)
 
 ```bash
 npm install
 ```
 
-Then you need to create an environment variables file **.env.local** in the root of the project
+Затем необходимо создать файл переменных окружения **.env.local** в корне проекта
 
 ```
-NEXT_PUBLIC_SERVICE_ID = "<serviceID from EmailJS>"
-NEXT_PUBLIC_TEMPLATE_ID = "<templateID from EmailJS>"
-NEXT_PUBLIC_PUBLIC_KEY = "<publicKey from EmailJS>"
+NEXT_PUBLIC_SERVICE_ID = "<serviceID из сервиса EmailJS>"
+NEXT_PUBLIC_TEMPLATE_ID = "<templateID из сервиса EmailJS>"
+NEXT_PUBLIC_PUBLIC_KEY = "<publicKey из сервиса EmailJS>"
 ```
 
-You can learn more about the EmailJS service [here](https://www.emailjs.com/docs/sdk/send-form/).
+Подробнее с сервисом EmailJS Вы можете ознакомиться [здесь](https://www.emailjs.com/docs/sdk/send-form/).
 
-To launch a project, use:
+Для запуска проекта используется:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Откройте [http://localhost:3000](http://localhost:3000)  в своём браузере для локального просмотра.
 
-To build a project, use:
+Для сборки проекта используется:
 
 ```bash
 npm run build
 ```
 
-To start the project build, use:
+Для запуска сборки проекта используется:
 
 ```bash
 npm run start
 ```
 
-To run the tests, use:
+Для запуска тестов используется:
 
 ```bash
 npm run test
 ```
 
-# Site Performance
+# Производительность сайта
 
-* On mobile devices
+* На мобильных устройствах
 
 ![alt text](readmeImages/performanceMobileDevices.png)
 
-* On desktop devices
+* На ПК устройствах
 
 ![alt text](readmeImages/performanceDesktopDevices.png)
+
+
