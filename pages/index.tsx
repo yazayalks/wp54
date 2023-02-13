@@ -10,6 +10,7 @@ import {GalleryMain} from "./api/data/galleryItems";
 import {HeroMain} from "./api/data/heroItems";
 import DescriptionMain from "../components/Description/DescriptionMain";
 import React from "react";
+import Image from "next/image";
 
 export default function Index() {
     return (
@@ -20,7 +21,9 @@ export default function Index() {
                 <meta name="keywords" content="Лофт, wp54, Новосибирск, аренда помещения"/>
             </Head>
             <Layout>
+
                 <main>
+
                     <HeroSlider heroGallery={HeroMain} sliderSettings={SliderSettingsHero}/>
                     <DescriptionMain/>
                     <Services/>

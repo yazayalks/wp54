@@ -1,4 +1,5 @@
 import {Html, Head, Main, NextScript} from 'next/document'
+import Image from "next/image";
 export default function Document() {
 
     return (
@@ -9,7 +10,7 @@ export default function Document() {
                 <meta name="robots" content="index, follow"/>
                 <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
                 <link rel="icon" href="/favicon.ico"  type="image/x-icon"/>
-                <link rel="apple-touch-icon" href="/logo512.png"/>
+                <link rel="apple-touch-icon" href="/logo512.png" type="image/png"/>
                 <link rel="manifest" href="/manifest.json"/>
             </Head>
             <body>
@@ -51,7 +52,7 @@ export default function Document() {
             />
             <noscript>
                 <div>
-                    <img src="https://mc.yandex.ru/watch/92333901" style={{position: 'absolute', left: '-9999px'}}
+                    <Image src="https://mc.yandex.ru/watch/92333901" style={{position: 'absolute', left: '-9999px'}}
                           alt=""/>
                 </div>
             </noscript>
