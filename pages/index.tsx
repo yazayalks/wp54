@@ -12,32 +12,31 @@ import DescriptionMain from "../components/Description/DescriptionMain";
 import MapWp from "../components/Map/Map";
 
 
-
 export default function Index() {
-
 
 
     return (
         <>
             <Head>
-                <title>wp54 | Аренда лофта для мероприятий в Новосибирске welcome_party54</title>
-                <meta name="description" content="Описание страницы Main"/>
+                <title>wp54 | Аренда лофта для мероприятий в Новосибирске - welcome_party54</title>
+                <meta name="description"
+                      content="Аренда лофта для мероприятий в Новосибирске – wp54 зал под праздник, вечеринку, день рождения, корпоратив, конференц зал, банкетный зал, кинотеатр. Помещение только для Вашей компании. Кальян, караоке, проектор, Xbox!"/>
                 <meta name="keywords" content="Лофт, wp54, Новосибирск, аренда помещения"/>
             </Head>
             <Layout>
 
-                    <main>
+                <main>
 
-                        <HeroSlider heroGallery={HeroMain} sliderSettings={SliderSettingsHero}/>
-                        <DescriptionMain/>
-                        <Services/>
-                        <Gallery gallery={GalleryMain} sliderSettings={SliderSettingsGalleryMain}/>
-                        <h2 style={{marginTop: '25px', textAlign: 'center'}}>Основные цены</h2>
-                        <PriceTable/>
-                        <MapWp/>
-                        <Contact/>
+                    <HeroSlider heroGallery={HeroMain} sliderSettings={SliderSettingsHero}/>
+                    <DescriptionMain/>
+                    <Services/>
+                    <Gallery gallery={GalleryMain} sliderSettings={SliderSettingsGalleryMain}/>
+                    <h2 style={{marginTop: '25px', textAlign: 'center'}}>Основные цены</h2>
+                    <PriceTable/>
+                    <MapWp/>
+                    <Contact/>
 
-                    </main>
+                </main>
 
             </Layout>
         </>

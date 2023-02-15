@@ -5,11 +5,11 @@ import styles from '../../styles/map.module.scss'
 const MapWp: FC = () => {
 
     function toiletEnterHandler() {
-        console.log(123)
+
     }
 
     function toiletLeaveHandler() {
-        console.log(123)
+
     }
 
 
@@ -17,7 +17,7 @@ const MapWp: FC = () => {
     return (
         <div className="sub-container">
             <div className={styles.map__container}>
-                <h2>Карта лофта</h2>
+                <h2>Планировка лофта</h2>
                 <div className={styles.map__inner}>
 
                     <div className={styles.text__inner}>

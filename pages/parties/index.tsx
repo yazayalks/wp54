@@ -15,7 +15,7 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>wp54 | Вечеринки в лофте для мероприятий в Новосибирске welcome_party54</title>
+                <title>wp54 | Вечеринки в лофте для мероприятий в Новосибирске - welcome_party54</title>
                 <meta name="description" content="Описание страницы Parties, вечеринки с дузьями только у нас "/>
                 <meta name="keywords" content="Лофт, wp54, Новосибирск, аренда помещения, вечеринки"/>
             </Head>
