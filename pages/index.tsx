@@ -9,10 +9,14 @@ import {SliderSettingsGalleryMain, SliderSettingsHero} from "../settings";
 import {GalleryMain} from "./api/data/galleryItems";
 import {HeroMain} from "./api/data/heroItems";
 import DescriptionMain from "../components/Description/DescriptionMain";
-import React from "react";
-import Image from "next/image";
+import MapWp from "../components/Map/Map";
+
+
 
 export default function Index() {
+
+
+
     return (
         <>
             <Head>
@@ -22,16 +26,19 @@ export default function Index() {
             </Head>
             <Layout>
 
-                <main>
+                    <main>
 
-                    <HeroSlider heroGallery={HeroMain} sliderSettings={SliderSettingsHero}/>
-                    <DescriptionMain/>
-                    <Services/>
-                    <Gallery gallery={GalleryMain} sliderSettings={SliderSettingsGalleryMain}/>
-                    <h2 style={{marginTop: '25px', textAlign: 'center'}}>Основные цены</h2>
-                    <PriceTable/>
-                    <Contact/>
-                </main>
+                        <HeroSlider heroGallery={HeroMain} sliderSettings={SliderSettingsHero}/>
+                        <DescriptionMain/>
+                        <Services/>
+                        <Gallery gallery={GalleryMain} sliderSettings={SliderSettingsGalleryMain}/>
+                        <h2 style={{marginTop: '25px', textAlign: 'center'}}>Основные цены</h2>
+                        <PriceTable/>
+                        <MapWp/>
+                        <Contact/>
+
+                    </main>
+
             </Layout>
         </>
     )

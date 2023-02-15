@@ -1,0 +1,89 @@
+.map__container {
+  margin-top: 25px;
+  text-align: center;
+
+}
+
+.map__inner {
+  position: relative;
+}
+
+.text__inner {
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+  "toilet toilet"
+  ". ."
+  "game hall"
+  "staff_only hall"
+  "guestbook hall"
+  "entrance .";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 15% 10% 15% 20% 25% 15%;
+}
+
+
+.text_toilet {
+
+
+  grid-area: toilet;
+}
+
+.text_game {
+  grid-area: game;
+}
+
+.text_hall {
+  grid-area: hall;
+}
+
+
+.text_staff_only {
+  grid-area: staff_only;
+}
+
+
+.text_guestbook {
+  grid-area: guestbook;
+}
+
+
+.text_entrance {
+  grid-area: entrance;
+}
+
+
+
+
+@media all and (max-width: 725px) {
+  .text_entrance {
+    justify-self: center;
+    writing-mode: vertical-lr;
+    letter-spacing: -5px;
+    text-orientation: upright;
+  }
+}
+
+
+.walls {
+  fill: var(--icon-color);
+  transition: fill 300ms linear;
+}
+
+.entrance, .guestbook, .staff_only, .game, .toilet, .hall {
+  fill: rgba(0, 0, 0, 0);
+
+  &:hover {
+    cursor: pointer;
+    fill: var(--title-color);
+  }
+}
