@@ -17,7 +17,7 @@ const PriceTable: FC = () => {
                     <tbody>
                     <tr>
                         <td>менее 7 часов</td>
-                        <td>1200 руб</td>
+                        <td>1300 руб</td>
                     </tr>
                     <tr>
                         <td>7 и более часов</td>

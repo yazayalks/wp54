@@ -3,6 +3,8 @@ import Layout from "../../components/Layout/Layout";
 import React from "react";
 import Services from "../../components/Services/Services";
 import DescriptionNewYearPrices from "../../components/Description/DescriptionNewYearPrices";
+import PriceTable from "@components/PriceTable/PriceTable";
+import NewYearPriceTable from "@components/NewYearPriceTable/NewYearPriceTable";
 
 const Index = () => {
     return (
@@ -14,6 +16,8 @@ const Index = () => {
             <Layout>
                 <main>
                     <DescriptionNewYearPrices/>
+                    <br/>
+                    <NewYearPriceTable/>
                     <Services/>
                 </main>
             </Layout>

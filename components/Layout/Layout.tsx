@@ -1,7 +1,7 @@
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import React, {FC, ReactNode} from "react";
-import styles from "../../styles/backgroundAnimation.module.css"
+import styles from "../../styles/backgroundAnimation.module.scss"
 
 
 

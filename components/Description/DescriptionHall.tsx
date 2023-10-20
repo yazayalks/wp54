@@ -6,7 +6,7 @@ const DescriptionHall: FC = () => {
         <div className="sub-container">
             <div className={styles.description__container}>
                 <div className={styles.description__title__left}>
-                    <h2>КЛАССНОЕ ВРЕМЯПРЕПРОВОЖДЕНИЯ В НОВОСИБИРСКЕ НАХОДИТСЯ ЗДЕСЬ</h2>
+                    <h2>КЛАССНОЕ ВРЕМЯПРЕПРОВОЖДЕНИЕ В НОВОСИБИРСКЕ НАХОДИТСЯ ЗДЕСЬ</h2>
                 </div>
                 <div className={styles.description__text__left}>
                     <p>
