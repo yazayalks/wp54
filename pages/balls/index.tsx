@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import styles from "../../styles/backgroundAnimation.module.css";
+import styles from "../../styles/backgroundAnimation.module.scss";
 
 
 const Index = () => {
