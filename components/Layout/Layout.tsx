@@ -2,9 +2,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import React, {FC, ReactNode} from "react";
 import styles from "../../styles/backgroundAnimation.module.scss"
-import Warning from "@components/Warning/Warning";
-
-
+import Warning from "../Warning/Warning";
 
 type LayoutProps = {
     children: ReactNode,
