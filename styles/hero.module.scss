@@ -4,6 +4,29 @@
   overflow: hidden;
 }
 
+.warning {
+  font-size: 40px;
+  padding: 25px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--transparent-red-color);
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+  color: #8a6d3b;
+}
+
 @media all and (max-width: 600px) {
   .hero {
     height: 600px;
